@@ -1,0 +1,128 @@
+@import "./variables.scss";
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+svg {
+  color: $icon-color;
+}
+
+a {
+  color: inherit;
+}
+
+.dg-btn {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 22px;
+  gap: 8px;
+  height: 48px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  outline: 0px;
+  border: 0px;
+  vertical-align: middle;
+  appearance: none;
+  cursor: pointer;
+  color: #151452;
+  border: $border-width solid $border-color;
+
+  &.secondary {
+    background-color: $bg-color;
+  }
+
+  &.primary {
+    background-color: $primary-color;
+    color: $white-color;
+    border-color: $primary-color;
+  }
+
+  &.full {
+    width: 100%;
+  }
+}
+
+input,
+textarea {
+  cursor: pointer;
+
+  &[type="checkbox"],
+  &[type="radio"] {
+    accent-color: #1c0ec5;
+    margin-right: 10px;
+    margin-left: 3px;
+  }
+
+  &[type="radio"] {
+    transform: scale(1.54);
+  }
+  &[type="checkbox"] {
+    transform: scale(1.4);
+  }
+
+  + label {
+    cursor: pointer;
+    font-size: $font-base;
+    font-weight: 400;
+    line-height: 22px;
+    color: $text-subdued;
+    display: inline-block;
+  }
+}
+
+.input-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+
+  .input-inner {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+  }
+
+  &:has(input[type="radio"]) {
+    gap: 32px;
+  }
+
+  &:has(input[type="text"]),
+  &:has(textarea) {
+    column-gap: 16px;
+
+    label {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 13px;
+      color: #919ead;
+      z-index: 1;
+      position: absolute;
+      background-color: $white-color;
+      top: -6px;
+      left: 16px;
+      padding-left: 2px;
+      padding-right: 3px;
+    }
+
+    input,
+    textarea {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: $text-subdued;
+      padding: 15px 14px;
+      border-radius: 8px;
+      border: 1px solid #919eab52;
+      width: 100%;
+      &:focus {
+        outline: 2px solid $primary-color;
+      }
+    }
+  }
+}

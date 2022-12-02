@@ -1,0 +1,23 @@
+{
+  "name": "digins",
+  "version": "1.0.0",
+  "description": "Digins site.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass src/style.scss -o src/ --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lqthanq/digins.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lqthanq/digins/issues"
+  },
+  "homepage": "https://github.com/lqthanq/digins#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

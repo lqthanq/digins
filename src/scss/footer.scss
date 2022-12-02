@@ -1,0 +1,124 @@
+@import "./variables.scss";
+
+footer {
+  background-color: $bg-color;
+}
+
+.dg-footer {
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 24px;
+    padding-bottom: 25px;
+    padding-top: 80px;
+
+    h3 {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 18px;
+      text-transform: uppercase;
+      color: $text-subdued;
+    }
+
+    &-links,
+    &-resources,
+    &-contacts {
+      &-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        row-gap: 16px;
+      }
+      &-item {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $text-subdued;
+      }
+    }
+
+    &-links {
+      width: 10.7%;
+    }
+
+    &-resources {
+      width: 18.7%;
+    }
+
+    &-contacts {
+      width: 24.56%;
+    }
+
+    &-links,
+    &-resources,
+    &-contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 20px;
+    }
+
+    &-site {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 40px;
+      max-width: 32.1%;
+
+      .logo {
+        width: 104px;
+        height: 40px;
+        object-fit: cover;
+      }
+      .bio {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $text-subdued;
+      }
+
+      .social-wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        a {
+          display: inline-block;
+          padding: 8px;
+        }
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    border-top: $border-base;
+    padding: 24px 0;
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $text-subdued;
+      font-style: normal;
+
+      + p {
+        border-left: $border-base;
+        padding-left: 24px;
+      }
+    }
+
+    &-policy {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 24px;
+      flex-grow: 1;
+    }
+  }
+}
