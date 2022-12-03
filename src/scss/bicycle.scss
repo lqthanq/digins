@@ -18,7 +18,7 @@
       background-size: 90%;
     }
 
-    .container {
+    .dg-container {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -130,7 +130,7 @@
   }
 
   .dg-information {
-    background-color: $bg-color;
+    background-color: #f9fafb;
     background-image: url(../../assets/images/bike-3.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -155,7 +155,7 @@
     }
 
     &__content {
-      margin-top: 65px;
+      margin-top: 35px;
       display: flex;
       flex-direction: column;
       max-width: 555px;
@@ -194,128 +194,11 @@
 
   .dg-registers {
     background-color: $bg-color;
-    h2 {
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 48px;
-      color: $text-subdued;
-    }
+    padding-top: 30px;
 
     &__wrap {
-      display: flex;
-      flex-direction: row;
-      column-gap: 24px;
       padding-bottom: 60px;
-    }
-
-    &__card {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      background-color: $bg-color;
-      box-shadow: 0px 0px 2px #919eab33, 0px 12px 24px -4px #919eab1f;
-      border-radius: 16px;
-
-      &.form {
-        max-width: 35.4%;
-        height: fit-content;
-        .dg-registers__card-content {
-          padding: 32px 16px 20px;
-        }
-      }
-
-      &.info {
-        flex-grow: 1;
-      }
-
-      &-actions {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        row-gap: 8px;
-      }
-
-      &-title {
-        border-bottom: 1px solid #919eab3d;
-        width: 100%;
-        padding: 20px 24px;
-        h3 {
-          font-weight: 700;
-          font-size: 18px;
-          line-height: 28px;
-          color: $text-subdued;
-        }
-      }
-
-      &-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        row-gap: 24px;
-        padding: 24px;
-        width: 100%;
-
-        &-item {
-          display: flex;
-          flex-direction: row;
-          align-items: flex-start;
-          column-gap: 16px;
-
-          .content {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            row-gap: 8px;
-
-            .label {
-              font-weight: 600;
-              font-size: 16px;
-              line-height: 24px;
-              color: $text-color;
-            }
-
-            .description {
-              font-weight: 400;
-              font-size: 14px;
-              line-height: 22px;
-              color: $text-disabled;
-            }
-
-            a {
-              font-weight: 700;
-              font-size: 14px;
-              line-height: 24px;
-              color: $secondary-color;
-            }
-          }
-        }
-      }
-
-      &-footer {
-        padding: 24px;
-        border-top: $border-base;
-
-        h4 {
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 24px;
-          color: $text-color;
-        }
-
-        p,
-        ul {
-          font-size: 13px;
-          line-height: 20px;
-          font-weight: 400;
-          color: $text-subdued;
-        }
-
-        ul {
-          padding-left: 16px;
-          list-style-type: disc;
-          margin-left: 8px;
-        }
-      }
+      padding-top: 20px;
     }
   }
 

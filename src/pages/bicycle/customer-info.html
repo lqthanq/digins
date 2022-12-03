@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông tin xe</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Public+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="dg-customer">
+      <div class="dg-container">
+        <h2 title="Đăng ký mua bảo hiểm">Đăng ký mua bảo hiểm</h2>
+        <div class="dg-layout">
+          <div class="dg-layout__item">
+            <div class="dg-card">
+              <div class="dg-card__title">
+                <h3 title="Thông tin người mua">Thông tin người mua</h3>
+              </div>
+              <div class="dg-card__content">
+                <div class="dg-input-wrap">
+                  <div class="input-inner">
+                    <label title="Họ tên" aria-required class="required"
+                      >Họ tên</label
+                    >
+                    <input
+                      name="ho-ten"
+                      type="text"
+                      id="ho-ten"
+                      placeholder="Nguyễn Ngọc Thế Anh"
+                    />
+                  </div>
+                  <div class="input-inner">
+                    <label title="Số CMT/CCCD" aria-required class="required"
+                      >Số CMT/CCCD</label
+                    >
+                    <input
+                      name="so-cmtnd"
+                      type="text"
+                      id="so-cmtnd"
+                      placeholder="21110000291029"
+                    />
+                  </div>
+                </div>
+                <div class="dg-input-wrap">
+                  <div class="input-inner">
+                    <label title="Ngày sinh">Ngày sinh</label>
+                    <input name="ngay-sinh" type="date" id="ngay-sinh" />
+                  </div>
+                  <div class="input-inner">
+                    <label title="Giới tính">Giới tính</label>
+                    <input
+                      name="gioi-tinh"
+                      type="text"
+                      id="gioi-tinh"
+                      list="gioi-tinh"
+                    />
+                    <datalist id="gioi-tinh">
+                      <option value="nam" aria-checked checked>Nam</option>
+                      <option value="nu">Nữ</option>
+                    </datalist>
+                  </div>
+                </div>
+                <div class="dg-input-wrap">
+                  <div class="input-inner">
+                    <label title="Địa chỉ">Địa chỉ</label>
+                    <input
+                      name="dia-chi"
+                      type="text"
+                      id="dia-chi"
+                      placeholder="121 Hoàng Quốc Việt, Cầu Giấy, Hà Nội"
+                    />
+                  </div>
+                </div>
+                <div class="dg-input-wrap">
+                  <div class="input-inner">
+                    <label title="Số điện thoại">Số điện thoại</label>
+                    <input
+                      name="so-dien-thoai"
+                      type="text"
+                      id="so-dien-thoai"
+                      placeholder="0989 889 889"
+                    />
+                  </div>
+                  <div class="input-inner">
+                    <label title="Email">Email</label>
+                    <input
+                      name="email"
+                      type="text"
+                      id="email"
+                      placeholder="theanh9281@gmail.com"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="dg-card__footer">
+                <h4 title="Lưu ý">Lưu ý:</h4>
+                <p
+                  title="Giấy chứng nhận điện tử TNDS sẽ được gửi vào Email và số điện thoại cung cấp. Quý khách vui lòng nhập chính xác"
+                >
+                  Giấy chứng nhận điện tử TNDS sẽ được gửi vào Email và số điện
+                  thoại cung cấp. Quý khách vui lòng nhập chính xác
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="dg-layout__item secondary">
+            <div class="dg-card">
+              <div class="dg-card__title">
+                <h3 title="Thông tin đơn hàng">Thông tin đơn hàng</h3>
+              </div>
+              <div class="dg-card__content">
+                <div class="dg-card__content-item">
+                  <label class="label" title="Phí bảo hiểm">Phí bảo hiểm</label>
+                  <span class="value">0 đ</span>
+                </div>
+                <div class="dg-card__content-item">
+                  <div class="dg-input-wrap">
+                    <div class="input-inner">
+                      <label class="label" title="Mã giảm giá"
+                        >Mã giảm giá</label
+                      >
+                      <input
+                        name="ma-giam-gia"
+                        type="text"
+                        id="ma-giam-gia"
+                        placeholder="JHA100000"
+                      />
+                      <button class="dg-btn primary" type="button">
+                        Áp dụng
+                      </button>
+                      <small class="help-text" title="Bạn được giảm 100,000 đ"
+                        >Bạn được giảm 100,000 đ</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="dg-card__content-item total-price">
+                  <label class="label" title="Tổng phí thanh toán"
+                    >Tổng phí thanh toán</label
+                  >
+                  <span class="value">0 đ</span>
+                </div>
+                <div class="dg-card__content-item">
+                  <div class="dg-input-wrap">
+                    <div class="input-inner">
+                      <label
+                        title="Phương thức thanh toán"
+                        aria-required
+                        class="required"
+                        >Phương thức thanh toán</label
+                      >
+                      <input
+                        name="phuong-thuc-thanh-toan"
+                        type="text"
+                        id="phuong-thuc-thanh-toan"
+                        list="phuong-thuc-thanh-toan"
+                      />
+                      <datalist id="phuong-thuc-thanh-toan">
+                        <option value="VNPay" aria-checked checked>
+                          Thanh toán qua VNPay
+                        </option>
+                        <option value="VNPay2">Thanh toán qua VNPay 2</option>
+                        <option value="VNPay3">Thanh toán qua VNPay 3</option>
+                      </datalist>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dg-input-wrap">
+              <input type="checkbox" id="cam-ket" />
+              <label
+                for="cam-ket"
+                label="Tôi cam kết các thông tin khai báo là chính xác, trung thực và hoàn toàn chịu trách nhiệm về các thông tin đã khai báo. Đồng thời tôi đã đọc, hiểu và đồng ý với Điều kiện, Điều khoản và Quy tắc của VNI"
+                >Tôi cam kết các thông tin khai báo là chính xác, trung thực và
+                hoàn toàn chịu trách nhiệm về các thông tin đã khai báo. Đồng
+                thời tôi đã đọc, hiểu và đồng ý với Điều kiện, Điều khoản và Quy
+                tắc của VNI</label
+              >
+            </div>
+            <div class="dg-actions">
+              <button class="dg-btn primary full">Thanh toán</button>
+              <button class="dg-btn secondary full">Quay lại</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
