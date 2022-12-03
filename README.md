@@ -1,4 +1,5 @@
 # Digins
  Digins site.
 
-Page layout: /src/pages
+Page layout: 
+    /src/pages
