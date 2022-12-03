@@ -458,7 +458,8 @@ input[role="combobox"]:focus + datalist {
           outline: 0; }
 
 .dg-customer-info {
-  padding-top: 40px; }
+  padding-top: 40px;
+  padding-bottom: 40px; }
   .dg-customer-info .dg-layout {
     margin-top: 20px; }
   .dg-customer-info .dg-layout__item.secondary .dg-card__content-item:not(:last-child) {
