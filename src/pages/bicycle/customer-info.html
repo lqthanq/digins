@@ -14,9 +14,11 @@
     />
   </head>
   <body>
-    <section class="dg-customer">
+    <section class="dg-customer-info">
       <div class="dg-container">
-        <h2 title="Đăng ký mua bảo hiểm">Đăng ký mua bảo hiểm</h2>
+        <h2 class="dg-section__title" title="Đăng ký mua bảo hiểm">
+          Đăng ký mua bảo hiểm
+        </h2>
         <div class="dg-layout">
           <div class="dg-layout__item">
             <div class="dg-card">
@@ -50,26 +52,52 @@
                 </div>
                 <div class="dg-input-wrap">
                   <div class="input-inner">
-                    <label title="Ngày sinh">Ngày sinh</label>
+                    <label title="Ngày sinh" aria-required class="required"
+                      >Ngày sinh</label
+                    >
                     <input name="ngay-sinh" type="date" id="ngay-sinh" />
+                    <span class="input-icon">
+                      <svg
+                        width="18"
+                        height="20"
+                        viewBox="0 0 18 20"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
+                          fill="#637381"
+                        />
+                      </svg>
+                    </span>
                   </div>
                   <div class="input-inner">
                     <label title="Giới tính">Giới tính</label>
-                    <input
-                      name="gioi-tinh"
-                      type="text"
-                      id="gioi-tinh"
-                      list="gioi-tinh"
-                    />
-                    <datalist id="gioi-tinh">
+                    <select name="gioi-tinh">
                       <option value="nam" aria-checked checked>Nam</option>
                       <option value="nu">Nữ</option>
-                    </datalist>
+                    </select>
+                    <span class="input-icon">
+                      <svg
+                        width="14"
+                        height="7"
+                        viewBox="0 0 15 8"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </span>
                   </div>
                 </div>
                 <div class="dg-input-wrap">
                   <div class="input-inner">
-                    <label title="Địa chỉ">Địa chỉ</label>
+                    <label title="Địa chỉ" aria-required class="required"
+                      >Địa chỉ</label
+                    >
                     <input
                       name="dia-chi"
                       type="text"
@@ -80,7 +108,9 @@
                 </div>
                 <div class="dg-input-wrap">
                   <div class="input-inner">
-                    <label title="Số điện thoại">Số điện thoại</label>
+                    <label title="Số điện thoại" aria-required class="required"
+                      >Số điện thoại</label
+                    >
                     <input
                       name="so-dien-thoai"
                       type="text"
@@ -117,8 +147,12 @@
               </div>
               <div class="dg-card__content">
                 <div class="dg-card__content-item">
-                  <label class="label" title="Phí bảo hiểm">Phí bảo hiểm</label>
-                  <span class="value">0 đ</span>
+                  <div class="dg-input-wrap">
+                    <label class="label" title="Phí bảo hiểm"
+                      >Phí bảo hiểm</label
+                    >
+                    <span class="value">241,000 đ</span>
+                  </div>
                 </div>
                 <div class="dg-card__content-item">
                   <div class="dg-input-wrap">
@@ -132,20 +166,24 @@
                         id="ma-giam-gia"
                         placeholder="JHA100000"
                       />
-                      <button class="dg-btn primary" type="button">
-                        Áp dụng
-                      </button>
-                      <small class="help-text" title="Bạn được giảm 100,000 đ"
-                        >Bạn được giảm 100,000 đ</small
-                      >
+                      <div class="action">
+                        <button class="dg-btn primary" type="button">
+                          Áp dụng
+                        </button>
+                      </div>
                     </div>
+                    <small class="help-text" title="Bạn được giảm 100,000 đ"
+                      >Bạn được giảm 100,000 đ</small
+                    >
                   </div>
                 </div>
                 <div class="dg-card__content-item total-price">
-                  <label class="label" title="Tổng phí thanh toán"
-                    >Tổng phí thanh toán</label
-                  >
-                  <span class="value">0 đ</span>
+                  <div class="dg-input-wrap">
+                    <label class="label" title="Tổng phí thanh toán"
+                      >Tổng phí thanh toán</label
+                    >
+                    <span class="value">141,000 đ</span>
+                  </div>
                 </div>
                 <div class="dg-card__content-item">
                   <div class="dg-input-wrap">
@@ -156,36 +194,45 @@
                         class="required"
                         >Phương thức thanh toán</label
                       >
-                      <input
-                        name="phuong-thuc-thanh-toan"
-                        type="text"
-                        id="phuong-thuc-thanh-toan"
-                        list="phuong-thuc-thanh-toan"
-                      />
-                      <datalist id="phuong-thuc-thanh-toan">
+                      <select name="phuong-thuc-thanh-toan">
                         <option value="VNPay" aria-checked checked>
                           Thanh toán qua VNPay
                         </option>
                         <option value="VNPay2">Thanh toán qua VNPay 2</option>
                         <option value="VNPay3">Thanh toán qua VNPay 3</option>
-                      </datalist>
+                      </select>
+                      <span class="input-icon">
+                        <svg
+                          width="14"
+                          height="7"
+                          viewBox="0 0 15 8"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="dg-input-wrap">
+            <div class="commit">
               <input type="checkbox" id="cam-ket" />
               <label
                 for="cam-ket"
                 label="Tôi cam kết các thông tin khai báo là chính xác, trung thực và hoàn toàn chịu trách nhiệm về các thông tin đã khai báo. Đồng thời tôi đã đọc, hiểu và đồng ý với Điều kiện, Điều khoản và Quy tắc của VNI"
                 >Tôi cam kết các thông tin khai báo là chính xác, trung thực và
                 hoàn toàn chịu trách nhiệm về các thông tin đã khai báo. Đồng
-                thời tôi đã đọc, hiểu và đồng ý với Điều kiện, Điều khoản và Quy
-                tắc của VNI</label
+                thời tôi đã đọc, hiểu và đồng ý với <a href="#">Điều kiện</a>,
+                <a href="#">Điều khoản</a> và <a href="#">Quy tắc</a> của
+                VNI</label
               >
             </div>
-            <div class="dg-actions">
+            <div class="dg-actions-group vertical">
               <button class="dg-btn primary full">Thanh toán</button>
               <button class="dg-btn secondary full">Quay lại</button>
             </div>

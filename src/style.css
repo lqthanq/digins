@@ -205,6 +205,11 @@ input[role="combobox"]:focus {
 input[role="combobox"]:focus + datalist {
   display: block; }
 
+.required::after {
+  content: "*";
+  color: #ff5630;
+  margin-left: 5px; }
+
 .dg-container {
   max-width: 1140px;
   margin: 0 auto; }
@@ -352,7 +357,8 @@ input[role="combobox"]:focus + datalist {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-      column-gap: 16px; }
+      column-gap: 16px;
+      width: 100%; }
       .dg-card__content-item .content {
         display: flex;
         flex-direction: column;
@@ -450,6 +456,53 @@ input[role="combobox"]:focus + datalist {
           margin-left: 2px; }
         .dg-upload__inner-control .dg-upload__input:active {
           outline: 0; }
+
+.dg-customer-info {
+  padding-top: 40px; }
+  .dg-customer-info .dg-layout {
+    margin-top: 20px; }
+  .dg-customer-info .dg-layout__item.secondary .dg-card__content-item:not(:last-child) {
+    border-bottom: 1px solid #919eab3d;
+    padding-bottom: 16px; }
+  .dg-customer-info .dg-layout__item.secondary .dg-card__content-item.total-price .label {
+    font-size: 16px;
+    text-transform: uppercase; }
+  .dg-customer-info .dg-layout__item.secondary .dg-card__content-item.total-price .value {
+    font-size: 32px;
+    line-height: 40px; }
+  .dg-customer-info .dg-layout__item.secondary .commit {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-start; }
+    .dg-customer-info .dg-layout__item.secondary .commit input {
+      margin-top: 7px;
+      margin-right: 15px; }
+    .dg-customer-info .dg-layout__item.secondary .commit a {
+      text-decoration: underline;
+      color: #1C0EC5; }
+  .dg-customer-info .dg-layout__item.secondary .dg-input-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 8px; }
+    .dg-customer-info .dg-layout__item.secondary .dg-input-wrap .label {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: #000; }
+    .dg-customer-info .dg-layout__item.secondary .dg-input-wrap .value {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: #1C0EC5; }
+    .dg-customer-info .dg-layout__item.secondary .dg-input-wrap .input-inner {
+      width: 100%; }
+      .dg-customer-info .dg-layout__item.secondary .dg-input-wrap .input-inner .action {
+        position: absolute;
+        right: 12px; }
+        .dg-customer-info .dg-layout__item.secondary .dg-input-wrap .input-inner .action button {
+          padding: 6px 16px;
+          height: 36px; }
 
 input,
 select,

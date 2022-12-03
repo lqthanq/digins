@@ -45,6 +45,12 @@ input[role="combobox"]:focus + datalist {
   display: block;
 }
 
+.required::after {
+  content: "*";
+  color: #ff5630;
+  margin-left: 5px;
+}
+
 .dg {
   &-container {
     max-width: $max-width;
@@ -218,6 +224,7 @@ input[role="combobox"]:focus + datalist {
         flex-direction: row;
         align-items: flex-start;
         column-gap: 16px;
+        width: 100%;
 
         .content {
           display: flex;
@@ -349,6 +356,81 @@ input[role="combobox"]:focus + datalist {
           }
           &:active {
             outline: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-customer-info {
+    padding-top: 40px;
+    .dg-layout {
+      margin-top: 20px;
+    }
+
+    .dg-layout__item.secondary {
+      .dg-card__content-item {
+        &:not(:last-child) {
+          border-bottom: $border-base;
+          padding-bottom: 16px;
+        }
+        &.total-price {
+          .label {
+            font-size: 16px;
+            text-transform: uppercase;
+          }
+
+          .value {
+            font-size: 32px;
+            line-height: 40px;
+          }
+        }
+      }
+
+      .commit {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: flex-start;
+
+        input {
+          margin-top: 7px;
+          margin-right: 15px;
+        }
+        a {
+          text-decoration: underline;
+          color: $primary-color;
+        }
+      }
+      .dg-input-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 8px;
+
+        .label {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: $text-color;
+        }
+
+        .value {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 30px;
+          color: $primary-color;
+        }
+
+        .input-inner {
+          width: 100%;
+
+          .action {
+            position: absolute;
+            right: 12px;
+            button {
+              padding: 6px 16px;
+              height: 36px;
+            }
           }
         }
       }
