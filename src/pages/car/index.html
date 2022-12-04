@@ -14,38 +14,36 @@
     />
   </head>
   <body class="dg-page-car">
-    <header>
-      <div class="dg-header__wrap dg-container">
-        <img class="dg-header__logo" src="../../../assets/images/logo.png" />
-        <nav>
-          <ul class="dg-header__menu">
-            <li class="dg-header__menu-item">
-              <a href="#" target="_blank" rel="noopener noreferrer"
-                >Giới thiệu</a
-              >
-            </li>
-            <li class="dg-header__menu-item">
-              <a href="#" target="_blank" rel="noopener noreferrer"
-                >Gói bảo hiểm</a
-              >
-            </li>
-            <li class="dg-header__menu-item">
-              <a href="#" target="_blank" rel="noopener noreferrer">FAQs</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main>
+    <div class="dg-header">
+      <header>
+        <div class="dg-header__wrap dg-container">
+          <img class="dg-header__logo" src="../../../assets/images/logo.png" />
+          <nav>
+            <ul class="dg-header__menu">
+              <li class="dg-header__menu-item">
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                  >Giới thiệu</a
+                >
+              </li>
+              <li class="dg-header__menu-item">
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                  >Gói bảo hiểm</a
+                >
+              </li>
+              <li class="dg-header__menu-item">
+                <a href="#" target="_blank" rel="noopener noreferrer">FAQs</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
       <section class="dg-hero__wrap">
         <div class="dg-hero">
-          <div class="dg-hero__background"></div>
           <div class="dg-container">
             <div class="dg-hero__info">
               <p class="dg-hero__info-title">Bảo hiểm TNDS ô tô</p>
               <p class="dg-hero__info-description">
-                An tâm xa lộ
-                Bảo hộ toàn dân
+                An tâm xa lộ Bảo hộ toàn dân
               </p>
               <small class="dg-hero__info-sub-title"
                 >Nhận giấy chứng nhận điện tử chỉ trong 1 phút!</small
@@ -70,7 +68,9 @@
                       checked
                       aria-checked
                     />
-                    <label for="kinh-doanh" title="Kinh doanh">Kinh doanh</label>
+                    <label for="kinh-doanh" title="Kinh doanh"
+                      >Kinh doanh</label
+                    >
                   </div>
                   <div class="input-inner">
                     <input type="radio" id="Khong-kinh-doanh" name="type" />
@@ -79,42 +79,69 @@
                 </div>
                 <div class="dg-input-wrap">
                   <div class="input-inner">
-                    <label title="Loại xe">Loại xe</label>
-                    <input
-                      name="loai-xe"
-                      type="text"
-                      id="loai-xe"
-                      list="loai-xe"
-                    />
-                    <datalist id="loai-xe">
-                      <option value="xe-cuu-ho-1" aria-checked checked>Xe cứu hộ</option>
-                      <option value="xe-cuu-ho-2">Xe cứu hộ 2</option>
-                      <option value="xe-cuu-ho-3">Xe cứu hộ 3</option>
-                    </datalist>
+                    <fieldset>
+                      <legend title="Loại xe">Loại xe</legend>
+                      <select name="loai-xe">
+                        <option value="xe-cuu-ho-1" aria-checked checked>
+                          Xe cứu hộ
+                        </option>
+                        <option value="xe-cuu-ho-2">Xe cứu hộ 2</option>
+                        <option value="xe-cuu-ho-3">Xe cứu hộ 3</option>
+                      </select>
+                      <span class="input-icon">
+                        <svg
+                          width="14"
+                          height="7"
+                          viewBox="0 0 15 8"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </span>
+                    </fieldset>
                   </div>
                   <div class="input-inner">
-                    <label title="Trọng tải"
-                      >Trọng tải</label
-                    >
-                    <input
-                      name="trong-tai"
-                      type="text"
-                      id="trong-tai"
-                      placeholder="12 Tấn"
-                    />
+                    <fieldset>
+                      <legend title="Trọng tải">Trọng tải</legend>
+                      <input
+                        name="trong-tai"
+                        type="text"
+                        id="trong-tai"
+                        placeholder="12 Tấn"
+                      />
+                    </fieldset>
                   </div>
                 </div>
                 <div class="dg-input-wrap">
                   <div class="input-inner">
-                    <label title="Phí bảo hiểm TNDS bắt buộc"
-                      >Phí bảo hiểm TNDS bắt buộc</label
-                    >
-                    <input
-                      name="phi-bao-hiem"
-                      type="text"
-                      id="phi-bao-hiem"
-                      placeholder="60,000 đ"
-                    />
+                    <fieldset>
+                      <legend title="Ngày hiệu lực" aria-required>
+                        Ngày hiệu lực *
+                      </legend>
+                      <input
+                        name="ngay-hieu-luc"
+                        type="date"
+                        id="ngay-hieu-luc"
+                      />
+                      <span class="input-icon">
+                        <svg
+                          width="18"
+                          height="20"
+                          viewBox="0 0 18 20"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
+                            fill="#637381"
+                          />
+                        </svg>
+                      </span>
+                    </fieldset>
                   </div>
                 </div>
                 <div class="dg-input-wrap confirm">
@@ -132,35 +159,47 @@
                 </div>
                 <div class="dg-input-wrap">
                   <div class="input-inner">
-                    <label title="Quyền lợi">Quyền lợi</label>
-                    <input
-                      name="quyen-loi"
-                      type="text"
-                      id="quyen-loi"
-                      list="quyen-loi"
-                    />
-                    <datalist id="quyen-loi">
-                      <option value="100.000.000" aria-checked checked>
-                        100,000,000 đ / Người / Vụ
-                      </option>
-                      <option value="200.000.000">
-                        200,000,000 đ / Người / Vụ
-                      </option>
-                      <option value="300.000.000">
-                        300,000,000 đ / Người / Vụ
-                      </option>
-                    </datalist>
+                    <fieldset>
+                      <legend title="Quyền lợi">Quyền lợi</legend>
+                      <select name="quyen-loi">
+                        <option value="100.000.000" aria-checked checked>
+                          100,000,000 đ / Người / Vụ
+                        </option>
+                        <option value="200.000.000">
+                          200,000,000 đ / Người / Vụ
+                        </option>
+                        <option value="300.000.000">
+                          300,000,000 đ / Người / Vụ
+                        </option>
+                      </select>
+                      <span class="input-icon">
+                        <svg
+                          width="14"
+                          height="7"
+                          viewBox="0 0 15 8"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </span>
+                    </fieldset>
                   </div>
                   <div class="input-inner">
-                    <label title="Phí BH tai nạn người ngồi trên xe"
-                      >Phí BH tai nạn người ngồi trên xe</label
-                    >
-                    <input
-                      name="phi-bh-tai-nan"
-                      type="text"
-                      id="phi-bh-tai-nan"
-                      placeholder="60,000 đ"
-                    />
+                    <fieldset>
+                      <legend title="Phí BH tai nạn người ngồi trên xe">
+                        Phí BH tai nạn người ngồi trên xe
+                      </legend>
+                      <input
+                        name="phi-bh-tai-nan"
+                        type="text"
+                        id="phi-bh-tai-nan"
+                        placeholder="60,000 đ"
+                      />
+                    </fieldset>
                   </div>
                 </div>
                 <div class="dg-hero__form-actions">
@@ -195,54 +234,43 @@
           </div>
         </div>
       </section>
+    </div>
+    <main>
       <section class="dg-information">
         <div class="dg-container">
           <div class="dg-information__wrap">
-            <h2 title="Tự tin trên mọi nẻo đường">Tự tin trên mọi nẻo đường</h2>
+            <h2 lass="dg-section__title" title="Tự tin trên mọi nẻo đường">
+              Tự tin trên mọi nẻo đường
+            </h2>
             <p class="sub-title">
-              Bảo hiểm TNDS xe máy là bảo hiểm bắt buộc đối với chủ xe cơ giới
-              khi tham gia giao thông. Khi mua bảo hiểm xe máy bắt buộc, bạn và
-              tài sản của bạn sẽ được bảo vệ trước những tai nạn giao thông có
-              thể xảy ra.
+              Bảo hiểm TNDS oto là bảo hiểm bắt buộc đối với chủ xe cơ giới khi
+              tham gia giao thông. Khi mua bảo hiểm xe máy bắt buộc, bạn và tài
+              sản của bạn sẽ được bảo vệ trước những tai nạn giao thông có thể
+              xảy ra.
             </p>
-
             <div class="dg-information__content">
               <div class="dg-information__content-item">
                 <div class="icon-wrap">
                   <svg
-                    width="38"
-                    height="39"
-                    viewBox="0 0 38 39"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M22.3116 29.3645C22.3116 28.0146 21.2135 26.917 19.8636 26.917H17.9463C16.5964 26.917 15.4988 28.0149 15.4988 29.3645V36.5527C15.4988 37.9025 16.5966 39.0007 17.9463 39.0007H19.8636C21.2135 39.0007 22.3116 37.9025 22.3116 36.5527V29.3645ZM20.2216 37.0902H17.5886V36.2363H20.2216V37.0902ZM20.2216 34.6207H17.5886V33.7668H20.2216V34.6207ZM20.2216 32.1509H17.5886V31.2969H20.2216V32.1509ZM20.2216 29.6816H17.5886V28.8277H20.2216V29.6816Z"
-                      fill="#1939B7"
-                    />
-                    <path
-                      d="M28.1764 8.2254H23.6394C22.5937 9.72007 20.8625 10.7012 18.9044 10.7012C16.9463 10.7012 15.2152 9.72007 14.1697 8.2254H9.63276C8.83007 10.1957 3.77036 23.2468 7.82897 29.5322C9.1899 31.6395 11.4828 32.7779 14.6436 32.9244L14.6439 29.363C14.6439 27.5422 16.1251 26.0613 17.9456 26.0613H19.863C21.6841 26.0613 23.165 27.5425 23.165 29.363V32.9247C26.3261 32.7779 28.6187 31.6395 29.9799 29.5319C34.04 23.2427 28.9797 10.1954 28.1764 8.2251L28.1764 8.2254ZM14.3033 14.959H23.5052V15.813H14.3033V14.959ZM25.0737 20.6052H12.7348V19.7513H25.0737V20.6052Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M33.7931 10.1445C35.3931 10.4204 36.7172 11.8548 36.9379 12.1307L39.3656 16.71L43.0622 17.2066C43.5035 17.2617 44.0002 17.6479 44.0002 18.0894V19.0273C44.0002 19.4686 43.614 19.7997 43.2278 19.7997H41.076C41.4622 20.1858 43.2278 21.3997 43.283 25.6477C43.3381 29.2339 43.3381 32.7648 43.3381 36.3511C43.3381 36.958 42.7863 37.5098 42.1794 37.5098H36.8828C36.2207 37.5098 35.669 36.958 35.669 36.3511V34.9167C27.8895 35.4134 20.1101 35.4134 12.2758 34.9167V36.3511C12.2758 36.958 11.7792 37.5098 11.1171 37.5098H5.8205C5.15844 37.5098 4.66181 36.958 4.66181 36.3511V25.6477C4.71695 21.3995 6.5377 20.1856 6.92387 19.7997H4.7721C4.3308 19.7997 3.99976 19.4687 3.99976 19.0273V18.0894C3.99976 17.6481 4.49641 17.2617 4.88256 17.2066L8.57918 16.71L11.062 12.1307C11.2827 11.8548 12.5517 10.4204 14.1517 10.1445C20.2757 9.26172 27.7245 9.26172 33.7931 10.1445ZM29.4897 29.5651C29.8207 29.5651 30.0966 29.2892 30.0966 28.9582C30.0966 28.572 29.8207 28.2961 29.4897 28.2961H18.5103C18.1241 28.2961 17.8482 28.572 17.8482 28.9582C17.8482 29.2892 18.1241 29.5651 18.5103 29.5651H29.4897ZM29.4897 27.1374C29.8207 27.1374 30.0966 26.8064 30.0966 26.4754C30.0966 26.0892 29.8207 25.8133 29.4897 25.8133H18.5103C18.1241 25.8133 17.8482 26.0892 17.8482 26.4754C17.8482 26.8064 18.1241 27.1374 18.5103 27.1374H29.4897ZM37.3794 17.7032C36.6622 16.2688 36.0002 14.8893 35.2828 13.5101C34.7861 12.7377 34.1794 12.517 33.6277 12.3514C27.2277 11.579 20.7728 11.579 14.3728 12.3514C13.7659 12.517 13.2141 12.7375 12.7177 13.5101C12.0005 14.8893 11.2833 16.2688 10.5659 17.7032H37.3794ZM7.58628 25.7032H11.7242L13.3794 29.7308H7.58622L7.58628 25.7032ZM40.3589 25.7032H36.2761L34.5658 29.7308H40.3589L40.3589 25.7032Z"
                       fill="#091A7A"
                     />
                     <path
-                      d="M8.20298 7.37214H13.6787C13.3284 6.62751 13.1271 5.79977 13.1271 4.92411C13.1271 4.04844 13.3287 3.22066 13.6787 2.47607H8.20298C6.8528 2.47607 5.75464 3.57424 5.75464 4.92441C5.75434 6.27398 6.8528 7.37222 8.20298 7.37222V7.37214Z"
-                      fill="#091A7A"
+                      d="M39.3656 16.71L43.0622 17.2066C43.5035 17.2617 44.0002 17.6479 44.0002 18.0894V19.0274C44.0002 19.4687 43.614 19.7997 43.2278 19.7997H41.076L39.3656 16.71Z"
+                      fill="#1969B7"
                     />
                     <path
-                      d="M0.0844727 4.15283V5.69485H4.99549C4.93562 5.44734 4.90077 5.18969 4.90077 4.92403C4.90077 4.65805 4.93592 4.4004 4.99549 4.15291L0.0844727 4.15283Z"
-                      fill="#091A7A"
-                    />
-                    <path
-                      d="M18.9046 9.84795C21.6198 9.84795 23.8287 7.63904 23.8287 4.92383C23.8287 2.2083 21.6198 0 18.9046 0C16.1897 0 13.9805 2.20891 13.9805 4.92383C13.9805 7.63851 16.1897 9.84795 18.9046 9.84795Z"
-                      fill="#1939B7"
-                    />
-                    <path
-                      d="M37.7253 5.69485V4.15283H32.814C32.8738 4.40094 32.9087 4.65799 32.9087 4.92396C32.9087 5.18965 32.8735 5.44699 32.814 5.69478L37.7253 5.69485Z"
-                      fill="#091A7A"
-                    />
-                    <path
-                      d="M24.1311 7.37221H29.6066C30.9565 7.37221 32.0541 6.27405 32.0541 4.92471C32.0541 3.57454 30.9562 2.47637 29.6066 2.47637L24.1311 2.47607C24.4814 3.22071 24.6827 4.04844 24.6827 4.92411C24.6827 5.79977 24.4817 6.62756 24.1311 7.37215V7.37221Z"
-                      fill="#091A7A"
+                      d="M6.92387 19.7997H4.7721C4.3308 19.7997 3.99976 19.4687 3.99976 19.0274V18.0894C3.99976 17.6481 4.49641 17.2618 4.88256 17.2066L8.57918 16.71L6.92387 19.7997Z"
+                      fill="#1969B7"
                     />
                   </svg>
                 </div>
@@ -250,9 +278,10 @@
                   <label class="label" title="Phí bảo hiểm xe"
                     >Phí bảo hiểm xe</label
                   >
-                  <p class="description">Xe máy trên 50cc: 66.000 VNĐ/xe</p>
+                  <p class="description">Ô tô dưới 6 chỗ: 480.700 VNĐ/xe</p>
+                  <p class="description">Ô tô 6-11 chỗ ngồi: 873.400 VNĐ/xe</p>
                   <p class="descrtiption">
-                    Xe máy dưới 50cc, xe máy điện: 60.500 VNĐ/xe
+                    Ô tô 12-24 chỗ ngồi: 1.397.000 VNĐ/xe
                   </p>
                 </div>
               </div>
@@ -300,7 +329,7 @@
                     thứ ba và hành khách theo HĐVC hành khách).
                   </p>
                   <p class="description">
-                    Về tài sản: 50 triệu đồng/xe/1 vụ tai nạn
+                    Về tài sản: 100 triệu đồng/xe/1 vụ tai nạn
                   </p>
                 </div>
               </div>
@@ -342,9 +371,7 @@
                   <p class="description">
                     Nhận giấy chứng nhận điện tử tại địa chỉ email/SMS bạn đăng
                     ký. Khi được yêu cầu xuất trình giấy tờ, bạn cung cấp GCN
-                    điện tử hoặc mã Code để CSGT quét tra cứu thông tin. Khi có
-                    tai nạn xảy ra, chụp ảnh hiện trường và tình trạng tổn thất
-                    của xe và khai báo và nhận bồi thường trực tiếp trên app.
+                    điện tử hoặc mã Code để CSGT quét tra cứu thông tin.
                   </p>
                 </div>
               </div>
@@ -354,338 +381,426 @@
       </section>
       <section class="dg-registers">
         <div class="dg-container">
-          <h2 title="Đăng ký mua bảo hiểm">Đăng ký mua bảo hiểm</h2>
-          <div class="dg-registers__wrap">
-            <div class="dg-registers__card info">
-              <div class="dg-registers__card-title">
-                <h3 title="Thông tin người được bảo hiểm">
-                  Thông tin người được bảo hiểm
-                </h3>
-              </div>
-              <div class="dg-registers__card-content">
-                <div class="upload-wrap">
-                  <div class="upload-inner">
-                    <div class="upload-inner__image"></div>
-                    <div class="upload-inner__control">
-                      <label class="label" title="Ảnh đăng ký xe"
-                        >Ảnh đăng ký xe</label
-                      >
-                      <small title="(Không bắt buộc)">(Không bắt buộc)</small>
-                      <div class="upload-inner__control-text">
-                        <p>
-                          Thả ảnh vào đây hoặc
-                          <input type="file" title="Tải lên" /> từ thiết bị của
-                          bạn để nhập thông tin nhanh.
-                        </p>
+          <h2 class="dg-section__title" title="Đăng ký mua bảo hiểm">
+            Đăng ký mua bảo hiểm
+          </h2>
+          <div class="dg-registers__wrap dg-layout">
+            <div class="dg-layout__item">
+              <div class="dg-card">
+                <div class="dg-card__title">
+                  <h3 title="Thông tin xe">Thông tin xe</h3>
+                </div>
+                <div class="dg-card__content">
+                  <div class="dg-upload">
+                    <div class="dg-upload__inner">
+                      <div class="dg-upload__inner-img"></div>
+                      <div class="dg-upload__inner-control">
+                        <label class="label" title="Ảnh đăng ký xe"
+                          >Ảnh đăng ký xe</label
+                        >
+                        <small title="(Không bắt buộc)">(Không bắt buộc)</small>
+                        <div class="dg-upload__inner-control-text-wrap">
+                          <p class="dg-upload__inner-control-text">
+                            Thả ảnh vào đây hoặc
+                            <input
+                              type="file"
+                              title="Tải lên"
+                              class="dg-upload__input"
+                            />
+                            từ thiết bị của bạn để nhập thông tin nhanh.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div class="dg-input-wrap type">
+                    <div class="input-inner">
+                      <input
+                        type="radio"
+                        id="kinh-doanh-2"
+                        name="type-2"
+                        checked
+                        aria-checked
+                      />
+                      <label for="kinh-doanh-2" title="Kinh doanh"
+                        >Kinh doanh</label
+                      >
+                    </div>
+                    <div class="input-inner">
+                      <input
+                        type="radio"
+                        id="Khong-kinh-doanh-2"
+                        name="type-2"
+                      />
+                      <label for="Khong-kinh-doanh-2">Không kinh doanh</label>
+                    </div>
+                  </div>
+                  <div class="dg-input-wrap">
+                    <div class="input-inner">
+                      <label title="Loại xe">Loại xe</label>
+                      <select name="loai-xe-2">
+                        <option value="xe-cuu-ho-1" aria-checked checked>
+                          Xe cứu hộ
+                        </option>
+                        <option value="xe-cuu-ho-2">Xe cứu hộ 2</option>
+                        <option value="xe-cuu-ho-3">Xe cứu hộ 3</option>
+                      </select>
+                      <span class="input-icon">
+                        <svg
+                          width="14"
+                          height="7"
+                          viewBox="0 0 15 8"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="input-inner">
+                      <label title="Trọng tải">Trọng tải</label>
+                      <input
+                        name="trong-tai-2"
+                        type="text"
+                        id="trong-tai-2"
+                        placeholder="12 Tấn"
+                      />
+                    </div>
+                  </div>
+                  <div class="dg-input-wrap">
+                    <div class="input-inner">
+                      <label
+                        title="Ngày hiệu lực"
+                        aria-required
+                        class="required"
+                        >Ngày hiệu lực</label
+                      >
+                      <input
+                        name="ngay-hieu-luc-2"
+                        type="date"
+                        id="ngay-hieu-luc-2"
+                      />
+                      <span class="input-icon">
+                        <svg
+                          width="18"
+                          height="20"
+                          viewBox="0 0 18 20"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
+                            fill="#637381"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="input-inner">
+                      <label title="Biển số xe">Biển số xe</label>
+                      <input
+                        name="bien-so-xe"
+                        type="text"
+                        id="bien-so-xe"
+                        placeholder="Biển số xe"
+                      />
+                    </div>
+                  </div>
+                  <div class="dg-input-wrap">
+                    <div class="input-inner">
+                      <label title="Số khung">Số khung</label>
+                      <input
+                        name="so-khung"
+                        type="text"
+                        id="so-khung"
+                        placeholder="Số khung"
+                      />
+                    </div>
+                    <div class="input-inner">
+                      <label title="Số máy">Số máy</label>
+                      <input
+                        name="so-may"
+                        type="text"
+                        id="so-may"
+                        placeholder="Số máy"
+                      />
+                    </div>
+                  </div>
+                  <div class="dg-input-wrap">
+                    <div class="input-inner">
+                      <label title="Tên chủ xe">Tên chủ xe</label>
+                      <input
+                        name="ten-chu-xe"
+                        type="text"
+                        id="ten-chu-xe"
+                        placeholder="Tên chủ xe"
+                      />
+                    </div>
+                    <div class="input-inner">
+                      <label title="Địa chỉ chủ xe">Địa chỉ chủ xe</label>
+                      <input
+                        name="dia-chi-chu-xe"
+                        type="text"
+                        id="dia-chi-chu-xe"
+                        placeholder="Địa chỉ chủ xe"
+                      />
+                    </div>
+                  </div>
+                  <div class="dg-input-wrap">
+                    <div class="input-inner">
+                      <label title="Phí bảo hiểm TNDS bắt buộc"
+                        >Phí bảo hiểm TNDS bắt buộc</label
+                      >
+                      <input
+                        name="phi-bao-hiem"
+                        type="text"
+                        id="phi-bao-hiem"
+                        placeholder="181,000 đ"
+                      />
+                      <span class="input-icon">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.00008 0.666504C4.40008 0.666504 0.666748 4.39984 0.666748 8.99984C0.666748 13.5998 4.40008 17.3332 9.00008 17.3332C13.6001 17.3332 17.3334 13.5998 17.3334 8.99984C17.3334 4.39984 13.6001 0.666504 9.00008 0.666504ZM9.83341 13.1665H8.16675V8.1665H9.83341V13.1665ZM9.83341 6.49984H8.16675V4.83317H9.83341V6.49984Z"
+                            fill="#637381"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="dg-input-wrap">
+                    <div class="input-inner">
+                      <input type="checkbox" id="bao-hiem-tai-nan-xe-2" />
+                      <label
+                        for="bao-hiem-tai-nan-xe-2"
+                        title="Bảo hiểm tai nạn lái xe, phụ xe, người ngồi trên xe"
+                        >Bảo hiểm tai nạn lái xe, phụ xe, người ngồi trên
+                        xe</label
+                      >
+                    </div>
+                  </div>
+                  <div class="dg-actions-group vertical">
+                    <button class="dg-btn primary full">Tiếp tục</button>
+                    <button class="dg-btn secondary full">
+                      Đặt lại thông tin
+                    </button>
+                  </div>
                 </div>
-                <div class="dg-input-wrap type">
-                  <div class="input-inner">
-                    <input
-                      type="radio"
-                      id="bao-hiem-xe-dien=2"
-                      name="type-2"
-                      checked
-                      aria-checked
-                    />
-                    <label for="bao-hiem-xe-dien-2">Bảo hiểm xe điện</label>
-                  </div>
-                  <div class="input-inner">
-                    <input type="radio" id="xe-may-duoi-50cc-2" name="type-2" />
-                    <label for="xe-may-duoi-50cc-2">Xe máy dưới 50cc</label>
-                  </div>
-                  <div class="input-inner">
-                    <input type="radio" id="xe-may-tren-50cc-2" name="type-2" />
-                    <label for="xe-may-tren-50cc-2">Xe máy trên 50cc</label>
-                  </div>
+                <div class="dg-card__footer">
+                  <h4 title="Lưu ý">Lưu ý:</h4>
+                  <p>
+                    Đối với xe mới chưa có biển số xe, Quý khách vui lòng nhập
+                    đủ số khung và số máy
+                  </p>
                 </div>
-                <div class="dg-input-wrap">
-                  <div class="input-inner">
-                    <label
-                      title="Thời hạn mua-2"
-                      class="required"
-                      aria-required="true"
-                      >Thời hạn mua</label
-                    >
-                    <input
-                      name="thoi-han-mua-2"
-                      type="text"
-                      id="thoi-han-mua-2"
-                      list="thoi-han-mua"
-                    />
-                    <datalist id="thoi-han-mua-2">
-                      <option value="1nam" aria-checked checked>1 năm</option>
-                      <option value="2nam">2 năm</option>
-                      <option value="3nam">3 năm</option>
-                    </datalist>
-                  </div>
-                  <div class="input-inner">
-                    <label title="Tên chủ xe" class="required" aria-required
-                      >Tên chủ xe *</label
-                    >
-                    <input
-                      name="ten-chu-xe"
-                      type="text"
-                      id="ten-chu-xe"
-                      placeholder="Nguyễn Thành Lâm"
-                    />
-                  </div>
-                </div>
-                <div class="dg-input-wrap">
-                  <div class="input-inner">
-                    <label title="Địa chỉ chủ xe">Địa chỉ chủ xe</label>
-                    <input
-                      name="dia-chi-chu-xe"
-                      type="text"
-                      id="dia-chi-chu-xe"
-                      placeholder="Địa chỉ chủ xe"
-                    />
-                  </div>
-                </div>
-                <div class="dg-input-wrap">
-                  <div class="input-inner">
-                    <label title="Ngày hiệu lực">Ngày hiệu lực</label>
-                    <input
-                      name="ngay-hieu-luc-2"
-                      type="text"
-                      id="ngay-hieu-luc-2"
-                      placeholder="Ngày hiệu lực"
-                    />
-                  </div>
-                  <div class="input-inner">
-                    <label title="Biển số xe">Biển số xe</label>
-                    <input
-                      name="bien-so-xe"
-                      type="text"
-                      id="bien-so-xe"
-                      placeholder="Biển số xe"
-                    />
-                  </div>
-                </div>
-                <div class="dg-input-wrap">
-                  <div class="input-inner">
-                    <label title="Số khung">Số khung</label>
-                    <input
-                      name="so-khung"
-                      type="text"
-                      id="so-khung"
-                      placeholder="Số khung"
-                    />
-                  </div>
-                  <div class="input-inner">
-                    <label title="Số máy">Số máy</label>
-                    <input
-                      name="so-may"
-                      type="text"
-                      id="so-may"
-                      placeholder="Số khung"
-                    />
-                  </div>
-                </div>
-                <div class="dg-input-wrap">
-                  <div class="input-inner">
-                    <label title="Phí bảo hiểm TNDS bắt buộc"
-                      >Phí bảo hiểm TNDS bắt buộc</label
-                    >
-                    <input
-                      name="phi-bao-hiem"
-                      type="text"
-                      id="phi-bao-hiem"
-                      placeholder="181,000 đ"
-                    />
-                  </div>
-                </div>
-                <div class="dg-input-wrap">
-                  <div class="input-inner">
-                    <input type="checkbox" id="bao-hiem-tai-nan-xe-2" />
-                    <label
-                      for="bao-hiem-tai-nan-xe-2"
-                      title="Bảo hiểm tai nạn lái xe, phụ xe, người ngồi trên xe"
-                      >Bảo hiểm tai nạn lái xe, phụ xe, người ngồi trên
-                      xe</label
-                    >
-                  </div>
-                </div>
-                <div class="dg-registers__card-actions">
-                  <button class="dg-btn primary full">Tiếp tục</button>
-                  <button class="dg-btn secondary full">
-                    Đặt lại thông tin
-                  </button>
-                </div>
-              </div>
-              <div class="dg-registers__card-footer">
-                <h4 title="Lưu ý">Lưu ý:</h4>
-                <p>Các trường hợp xe cơ giới không được mua 2 năm / 3 năm:</p>
-                <ul>
-                  <li>
-                    Xe cơ giới nước ngoài tạm nhập, tái xuất có thời hạn tham
-                    gia giao thông trên lãnh thổ Việt Nam
-                  </li>
-                  <li>
-                    Niên hạn sử dụng của xe cơ giới nhỏ hơn 1 năm theo quy định
-                    pháp luật
-                  </li>
-                  <li>
-                    Xe cơ giới thuộc đối tượng đăng ký tạm thời theo quy định bộ
-                    công an
-                  </li>
-                </ul>
-                <p>
-                  Đối với xe mới chưa có biển số, Quý khách vui lòng nhập đầy đủ
-                  số khung và số máy
-                </p>
               </div>
             </div>
-            <div class="dg-registers__card form">
-              <div class="dg-registers__card-title">
-                <h3 title="Thông tin gói bảo hiểm">Thông tin gói bảo hiểm</h3>
-              </div>
-              <div class="dg-registers__card-content">
-                <div class="dg-registers__card-content-item">
-                  <div class="icon-wrap">
-                    <svg
-                      width="35"
-                      height="38"
-                      viewBox="0 0 35 38"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M24.1076 24.8984V19.761C24.1076 16.0503 21.1002 13.043 17.3891 13.043C13.679 13.043 10.6707 16.0503 10.6707 19.761V27.0072C10.6707 28.0984 11.5554 28.9836 12.647 28.9836H13.1077V33.3136C13.1077 35.6766 15.0243 37.5945 17.39 37.5945C19.7553 37.5945 21.6715 35.6756 21.6715 33.3136V28.9836H22.1326C23.2242 28.9836 24.1085 28.0984 24.1085 27.0072L24.108 24.8984H24.1076Z"
-                        fill="#091A7A"
-                      />
-                      <path
-                        d="M21.8691 7.9698C21.8691 10.4443 19.8635 12.4499 17.389 12.4499C14.915 12.4499 12.9094 10.4443 12.9094 7.9698C12.9094 5.49576 14.915 3.48975 17.389 3.48975C19.8635 3.48975 21.8691 5.49576 21.8691 7.9698Z"
-                        fill="#091A7A"
-                      />
-                      <path
-                        d="M28.2972 8.95821C30.7693 8.95821 32.7744 6.95314 32.7744 4.4791C32.7744 2.00507 30.7693 0 28.2972 0C25.8217 0 23.8171 2.00507 23.8171 4.4791C23.8171 6.95314 25.8208 8.95821 28.2972 8.95821Z"
-                        fill="#091A7A"
-                      />
-                      <path
-                        d="M11.039 4.54454C11.039 7.01857 9.03346 9.02411 6.55943 9.02411C4.08586 9.02411 2.08032 7.01857 2.08032 4.54454C2.08032 2.07097 4.08586 0.0654297 6.55943 0.0654297C9.03346 0.0654297 11.039 2.07097 11.039 4.54454Z"
-                        fill="#1939B7"
-                      />
-                      <path
-                        d="M28.0053 9.4616C25.2673 9.4616 22.9146 11.1037 21.8674 13.4546C23.9142 14.7114 25.284 16.9615 25.284 19.5387V27.24C25.284 28.2108 24.6192 29.0218 23.7229 29.2603V29.7321C23.7229 32.0968 25.6405 34.0144 28.0043 34.0144C30.3682 34.0144 32.2843 32.0964 32.2843 29.7321V25.4038H32.7454C33.8371 25.4038 34.7233 24.5186 34.7233 23.4265L34.7237 21.3191V16.1817C34.7251 12.4693 31.7159 9.46143 28.0052 9.46143L28.0053 9.4616Z"
-                        fill="#091A7A"
-                      />
-                      <path
-                        d="M9.57142 27.2407V19.5386C9.57142 16.9613 10.9414 14.7114 12.9866 13.4544C11.9399 11.1035 9.58801 9.46143 6.84968 9.46143C3.13904 9.46143 0.130371 12.4693 0.130371 16.1812V20.7904L0.130834 21.3201V23.4274C0.130834 24.52 1.01554 25.4048 2.10722 25.4048H2.56832V29.733C2.56832 32.0977 4.48497 34.0154 6.85069 34.0154C9.21545 34.0154 11.1331 32.0973 11.1331 29.733V29.2612C10.2354 29.0223 9.57148 28.2117 9.57148 27.2409L9.57142 27.2407Z"
-                        fill="#1939B7"
-                      />
-                    </svg>
-                  </div>
-                  <div class="content">
-                    <span class="label" title="Đối tượng áp dụng"
-                      >Đối tượng áp dụng</span
-                    >
-                    <p class="description">
-                      Chủ xe cơ giới tham gia giao thông trên lãnh thổ nước Cộng
-                      hòa Xã hội Chủ nghĩa Việt Nam
-                    </p>
-                  </div>
+            <div class="dg-layout__item secondary">
+              <div class="dg-card">
+                <div class="dg-card__title">
+                  <h3 title="Thông tin gói bảo hiểm">Thông tin gói bảo hiểm</h3>
                 </div>
-                <div class="dg-registers__card-content-item">
-                  <div class="icon-wrap">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 28 28"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M14.6617 5.59192C16.6866 5.78948 18.5427 6.58752 20.0569 7.80611L20.7038 7.14486L20.218 6.64828C20.0123 6.43799 20.0123 6.09338 20.218 5.8833L20.9244 5.16125C21.1301 4.95096 21.4673 4.95096 21.6728 5.16125L23.7174 7.25121C23.9231 7.4615 23.9231 7.80611 23.7174 8.01619L23.011 8.73824C22.8053 8.94853 22.4681 8.94853 22.2626 8.73824L21.7768 8.24166L21.1771 8.85469C22.9268 10.7471 24 13.2981 24 16.1078C24 19.0237 22.8426 21.6635 20.974 23.5761C19.1004 25.4838 16.5178 26.6668 13.6655 26.6668C10.8132 26.6668 8.23046 25.4838 6.35932 23.5737C4.4907 21.6609 3.33331 19.0213 3.33331 16.1053C3.33331 13.2984 4.40634 10.7445 6.15618 8.8522L5.55647 8.23917L5.07067 8.73576C4.86495 8.94604 4.52783 8.94604 4.3223 8.73576L3.61593 8.01371C3.41021 7.80342 3.41021 7.45881 3.61593 7.24873L5.66051 5.15876C5.86623 4.94847 6.20336 4.94847 6.40888 5.15876L7.11525 5.88081C7.32097 6.09109 7.32097 6.4357 7.11525 6.64579L6.62946 7.14237L7.27635 7.80362C8.79057 6.58255 10.6444 5.78717 12.6716 5.58943V4.09973H11.767C11.3828 4.09973 11.0706 3.77794 11.0706 3.38795V2.04528C11.0706 1.65262 11.3854 1.3335 11.767 1.3335H15.5712C15.9554 1.3335 16.2676 1.65529 16.2676 2.04528V3.38795C16.2676 3.78061 15.9528 4.09973 15.5712 4.09973H14.6666L14.6668 5.59187L14.6617 5.59192ZM20.5827 16.1053H13.6655V9.03455C9.84634 9.03455 6.74828 12.2012 6.74828 16.1053C6.74828 20.0094 9.8462 23.1761 13.6655 23.1761C17.4848 23.1761 20.5827 20.0094 20.5827 16.1053ZM19.6929 9.9443C18.1514 8.36607 16.02 7.39064 13.6657 7.39064C11.3114 7.39064 9.17993 8.36593 7.63849 9.9443C6.09453 11.52 5.14029 13.6987 5.14029 16.1053C5.14029 18.5119 6.0944 20.6907 7.63849 22.2663C9.18002 23.8447 11.3114 24.82 13.6657 24.82C16.02 24.82 18.1515 23.8447 19.6929 22.2663C21.2369 20.6906 22.1911 18.5119 22.1911 16.1053C22.1911 13.6987 21.2369 11.5199 19.6929 9.9443Z"
-                        fill="#091A7A"
-                      />
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M6.74828 16.1054C6.74828 12.2013 9.84633 9.0346 13.6655 9.0346V16.1054H20.5827C20.5827 20.0094 17.4848 23.1761 13.6655 23.1761C9.8462 23.1761 6.74828 20.0094 6.74828 16.1054Z"
-                        fill="#1939B7"
-                      />
-                    </svg>
+                <div class="dg-card__content">
+                  <div class="dg-card__content-item">
+                    <div class="icon-wrap">
+                      <svg
+                        width="35"
+                        height="38"
+                        viewBox="0 0 35 38"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M24.1076 24.8984V19.761C24.1076 16.0503 21.1002 13.043 17.3891 13.043C13.679 13.043 10.6707 16.0503 10.6707 19.761V27.0072C10.6707 28.0984 11.5554 28.9836 12.647 28.9836H13.1077V33.3136C13.1077 35.6766 15.0243 37.5945 17.39 37.5945C19.7553 37.5945 21.6715 35.6756 21.6715 33.3136V28.9836H22.1326C23.2242 28.9836 24.1085 28.0984 24.1085 27.0072L24.108 24.8984H24.1076Z"
+                          fill="#091A7A"
+                        />
+                        <path
+                          d="M21.8691 7.9698C21.8691 10.4443 19.8635 12.4499 17.389 12.4499C14.915 12.4499 12.9094 10.4443 12.9094 7.9698C12.9094 5.49576 14.915 3.48975 17.389 3.48975C19.8635 3.48975 21.8691 5.49576 21.8691 7.9698Z"
+                          fill="#091A7A"
+                        />
+                        <path
+                          d="M28.2972 8.95821C30.7693 8.95821 32.7744 6.95314 32.7744 4.4791C32.7744 2.00507 30.7693 0 28.2972 0C25.8217 0 23.8171 2.00507 23.8171 4.4791C23.8171 6.95314 25.8208 8.95821 28.2972 8.95821Z"
+                          fill="#091A7A"
+                        />
+                        <path
+                          d="M11.039 4.54454C11.039 7.01857 9.03346 9.02411 6.55943 9.02411C4.08586 9.02411 2.08032 7.01857 2.08032 4.54454C2.08032 2.07097 4.08586 0.0654297 6.55943 0.0654297C9.03346 0.0654297 11.039 2.07097 11.039 4.54454Z"
+                          fill="#1939B7"
+                        />
+                        <path
+                          d="M28.0053 9.4616C25.2673 9.4616 22.9146 11.1037 21.8674 13.4546C23.9142 14.7114 25.284 16.9615 25.284 19.5387V27.24C25.284 28.2108 24.6192 29.0218 23.7229 29.2603V29.7321C23.7229 32.0968 25.6405 34.0144 28.0043 34.0144C30.3682 34.0144 32.2843 32.0964 32.2843 29.7321V25.4038H32.7454C33.8371 25.4038 34.7233 24.5186 34.7233 23.4265L34.7237 21.3191V16.1817C34.7251 12.4693 31.7159 9.46143 28.0052 9.46143L28.0053 9.4616Z"
+                          fill="#091A7A"
+                        />
+                        <path
+                          d="M9.57142 27.2407V19.5386C9.57142 16.9613 10.9414 14.7114 12.9866 13.4544C11.9399 11.1035 9.58801 9.46143 6.84968 9.46143C3.13904 9.46143 0.130371 12.4693 0.130371 16.1812V20.7904L0.130834 21.3201V23.4274C0.130834 24.52 1.01554 25.4048 2.10722 25.4048H2.56832V29.733C2.56832 32.0977 4.48497 34.0154 6.85069 34.0154C9.21545 34.0154 11.1331 32.0973 11.1331 29.733V29.2612C10.2354 29.0223 9.57148 28.2117 9.57148 27.2409L9.57142 27.2407Z"
+                          fill="#1939B7"
+                        />
+                      </svg>
+                    </div>
+                    <div class="content">
+                      <span
+                        class="label"
+                        title="Mức TNDS với người thứ Ba và hành khách"
+                        >Mức TNDS với người thứ Ba và hành khách</span
+                      >
+                      <p class="description">
+                        Mức trách nhiệm tối đa (Cả người và tài sản) là 400.000
+                        USD/Vụ.
+                      </p>
+                      <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Chi tiết"
+                        >Chi tiết</a
+                      >
+                    </div>
                   </div>
-                  <div class="content">
-                    <spand class="label" title="Hiệu lực bảo hiểm"
-                      >Hiệu lực bảo hiểm</spand
-                    >
-                    <p class="description">
-                      Thời điểm bắt đầu có hiệu lực của Giấy chứng nhận bảo hiểm
-                      được ghi cụ thể trên Giấy chứng nhận bảo hiểm nhưng không
-                      được trước thời điểm chủ xe cơ giới đóng đủ phí bảo hiểm.
-                    </p>
+                  <div class="dg-card__content-item">
+                    <div class="icon-wrap">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_122_12759)">
+                          <path
+                            d="M16 3.2002C8.93081 3.2002 3.19995 8.93105 3.19995 16.0002C3.19995 23.0693 8.93081 28.8002 16 28.8002C23.0691 28.8002 28.8 23.0693 28.8 16.0002C28.8 8.93105 23.0691 3.2002 16 3.2002ZM16 4.79014C22.1777 4.79014 27.2 9.82208 27.2 16.0004C27.2 22.1788 22.1778 27.2004 16 27.2004C9.82207 27.2004 4.79995 22.1785 4.79995 16.0004C4.79995 9.82271 9.82207 4.79014 16 4.79014ZM16 6.08008C11.9281 6.08008 8.44109 8.51871 6.91024 12.0201L11.6401 12.7701C12.6325 11.4317 14.2118 10.56 16.0002 10.56C17.7886 10.56 19.3776 11.4315 20.3703 12.7701L25.0904 12.0201C23.5612 8.51894 20.0721 6.08008 16.0001 6.08008H16ZM16 11.8401C13.6948 11.8401 11.8399 13.695 11.8399 16.0001C11.8399 18.3053 13.6948 20.1602 16 20.1602C18.3051 20.1602 20.16 18.3053 20.16 16.0001C20.16 13.695 18.3051 11.8401 16 11.8401ZM6.45995 13.2401C6.26285 13.9253 6.14477 14.6421 6.09991 15.38L10.6499 16.97C10.4722 15.9559 10.6104 14.8256 10.96 13.9501L6.45995 13.2401ZM25.5302 13.2401L21.0504 13.9501C21.4115 14.9986 21.5267 15.947 21.3504 16.9501L25.9004 15.3602C25.8546 14.6289 25.7256 13.9196 25.5303 13.2401H25.5302ZM16 13.7602C17.2294 13.7602 18.2399 14.7707 18.2399 16.0001C18.2399 17.2295 17.2294 18.2401 16 18.2401C14.7705 18.2401 13.76 17.2295 13.76 16.0001C13.76 14.7707 14.7705 13.7602 16 13.7602ZM16 15.0401C15.4622 15.0401 15.0399 15.4624 15.0399 16.0001C15.0399 16.5379 15.4622 16.9602 16 16.9602C16.5377 16.9602 16.96 16.5379 16.96 16.0001C16.96 15.4624 16.5377 15.0401 16 15.0401ZM25.8897 16.7199L20.8397 18.4901C20.3542 19.4271 19.5944 20.1985 18.6796 20.7199L18.1595 25.6699C22.3736 24.7362 25.5727 21.1371 25.8892 16.7202L25.8897 16.7199ZM6.10967 16.7398C6.42708 21.0327 9.46304 24.5575 13.5097 25.5998L12.9697 20.4998C12.2217 19.9938 11.6007 19.3141 11.1798 18.5099L6.10967 16.7398ZM14.3394 21.1697L14.8293 25.8398C15.5352 25.928 16.1905 25.9153 16.8495 25.8699L17.3294 21.2699C16.2959 21.4318 15.2012 21.4336 14.3394 21.1699L14.3394 21.1697Z"
+                            fill="#091A7A"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M16 11.8401C13.6948 11.8401 11.8399 13.695 11.8399 16.0001C11.8399 18.3053 13.6948 20.1602 16 20.1602C18.3051 20.1602 20.16 18.3053 20.16 16.0001C20.16 13.695 18.3051 11.8401 16 11.8401ZM6.45995 13.2401C6.26285 13.9253 6.14477 14.6421 6.09991 15.38L10.6499 16.97C10.4722 15.9559 10.6104 14.8256 10.96 13.9501L6.45995 13.2401ZM25.5302 13.2401L21.0504 13.9501C21.4115 14.9986 21.5267 15.947 21.3504 16.9501L25.9004 15.3602C25.8546 14.6289 25.7256 13.9196 25.5302 13.2401ZM16 13.7602C17.2294 13.7602 18.2399 14.7707 18.2399 16.0001C18.2399 17.2295 17.2294 18.2401 16 18.2401C14.7705 18.2401 13.76 17.2295 13.76 16.0001C13.76 14.7707 14.7705 13.7602 16 13.7602ZM16 15.0401C15.4622 15.0401 15.0399 15.4624 15.0399 16.0001C15.0399 16.5379 15.4622 16.9602 16 16.9602C16.5377 16.9602 16.96 16.5379 16.96 16.0001C16.96 15.4624 16.5377 15.0401 16 15.0401ZM14.3394 21.1697L14.8293 25.8398C15.5352 25.928 16.1905 25.9153 16.8495 25.8699L17.3294 21.2699C16.2959 21.4318 15.2012 21.4333 14.3394 21.1697Z"
+                            fill="#1939B7"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_122_12759">
+                            <rect width="32" height="32" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="content">
+                      <spand
+                        class="label"
+                        title="Mức TNDS đối với Lái, phụ và người ngồi trên xe"
+                        >Mức TNDS đối với Lái, phụ và người ngồi trên xe</spand
+                      >
+                      <p class="description">
+                        Dưới 30 triệu đồng/Người/Vụ: Tỉ lệ phí x 0,1 Từ 30 - 50
+                        triệu đồng/Người/Vụ: Tỉ lệ phí x 0,2 Từ 50 - 100 triệu
+                        đồng/Người/Vụ: Tỉ lệ phí x 0,3
+                      </p>
+                      <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Chi tiết"
+                        >Chi tiết</a
+                      >
+                    </div>
                   </div>
-                </div>
-                <div class="dg-registers__card-content-item">
-                  <div class="icon-wrap">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0.670786 5.02955C0.645279 4.86571 0.74097 4.70726 0.89797 4.65317C3.86403 3.34723 6.82214 2.03547 9.77145 0.717505C9.90658 0.649504 10.0658 0.649504 10.2008 0.717505C13.1684 2.04304 16.1363 3.35719 19.1039 4.65997C19.2528 4.69951 19.3497 4.84278 19.3311 4.99555C19.3311 7.01328 19.3311 9.0332 19.3196 11.0508C19.3155 11.7121 19.2617 12.3722 19.1584 13.0255C18.8263 15.1055 17.9932 17.0737 16.7305 18.7613C15.1179 20.931 13.0557 22.4815 10.4438 23.2659C10.1616 23.3556 9.85835 23.3556 9.57619 23.2659C7.16131 22.5481 5.03867 21.0804 3.51657 19.0762C1.67041 16.7571 0.672179 13.8789 0.686617 10.9166V8.30035C0.686617 7.20995 0.686617 6.11943 0.670774 5.02903L0.670786 5.02955ZM16.9212 12.0009H17.2277C17.2277 11.9079 17.2414 11.8285 17.2414 11.7515V6.32625H17.2415C17.2673 6.19989 17.1968 6.07369 17.0757 6.02926C14.7802 5.0227 12.4862 4.0093 10.1939 2.98898C10.1372 2.96399 10.0759 2.94818 9.99637 2.91877V3.13415V11.8285C9.99637 11.8919 9.99637 11.9555 10.0122 12.0213C9.94869 12.0213 9.885 12.0031 9.8191 12.0031L2.95765 12.003H2.79178C3.11434 15.535 5.75561 19.9378 10.0118 21.2074L10.0119 12.0009L16.9212 12.0009Z"
-                        fill="#091A7A"
-                      />
-                    </svg>
+                  <div class="dg-card__content-item">
+                    <div class="icon-wrap">
+                      <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 28 28"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_122_12770)">
+                          <path
+                            d="M26.4724 14H14.5947V6.87257C14.594 6.24269 14.3431 5.63886 13.8971 5.19377C13.4514 4.7489 12.8469 4.49937 12.217 4.5H5.99989C5.42155 4.50045 4.86349 4.71205 4.43023 5.09509C3.99697 5.47812 3.71863 6.00623 3.64743 6.57989L2.82732 13.1296C2.79808 13.3582 2.70276 13.5729 2.55299 13.7479C2.40343 13.9229 2.20589 14.0503 1.98491 14.1146C1.51035 14.2707 1.09673 14.5718 0.802563 14.9755C0.508146 15.3791 0.348101 15.865 0.344975 16.3646H1.53246C1.84741 16.3653 2.1492 16.4905 2.37218 16.7131C2.59515 16.9356 2.72106 17.2372 2.7224 17.5522C2.72173 17.8691 2.59561 18.1729 2.37173 18.3972C2.14784 18.6218 1.84427 18.7484 1.52733 18.7497H0.339844V21.1271C0.341183 21.4416 0.466632 21.743 0.689175 21.9653C0.911495 22.1878 1.21284 22.3133 1.52735 22.3146H3.36237C3.36461 22.3425 3.36885 22.37 3.37487 22.3972C3.37242 22.3698 3.37242 22.3421 3.37487 22.3146H3.96728V22.2771C3.93602 22.1291 3.92018 21.9785 3.91995 21.8271C3.91728 21.7939 3.91728 21.7604 3.91995 21.7271C3.91303 21.5675 3.92152 21.4077 3.94495 21.2497C4.10054 20.3041 4.70364 19.4923 5.5637 19.07C6.42375 18.6476 7.4349 18.6671 8.27821 19.122C9.12152 19.5769 9.69296 20.4115 9.81238 21.3621C9.83515 21.4833 9.8452 21.6063 9.84229 21.7296C9.84854 21.8021 9.84854 21.8749 9.84229 21.9472C9.83828 22.0588 9.82488 22.1702 9.80234 22.2796V22.3171H10.3974C10.401 22.3546 10.401 22.3923 10.3974 22.4296C10.4001 22.4242 10.4001 22.4177 10.3974 22.4121C10.3974 22.3822 10.3974 22.3472 10.4148 22.3171H18.2171V22.2796C18.1859 22.1318 18.17 21.9809 18.1698 21.8296C18.1671 21.7963 18.1671 21.763 18.1698 21.7296C18.1649 21.5691 18.174 21.4086 18.1973 21.2496C18.3564 20.257 19.0075 19.4126 19.927 19.0059C20.8464 18.5992 21.9091 18.6858 22.7506 19.2358C23.5921 19.7858 24.0982 20.7244 24.0948 21.7296C24.0997 21.8021 24.0997 21.8746 24.0948 21.9472C24.0885 22.0588 24.0743 22.17 24.0522 22.2796V22.3171H26.4872C26.8017 22.3159 27.103 22.1903 27.3254 21.9679C27.5479 21.7454 27.6734 21.4443 27.6747 21.1295V15.1873C27.6734 14.8701 27.5457 14.5665 27.3202 14.3437C27.0946 14.1209 26.7894 13.9971 26.4722 13.9997L26.4724 14ZM5.0924 12.8125L6 6.87252H12.2171V12.8125H5.0924ZM12.2175 15.7826H11.0301C10.7171 15.7623 10.4736 15.5025 10.4736 15.1889C10.4736 14.875 10.7171 14.6154 11.0301 14.5951H12.2175C12.3818 14.5844 12.543 14.6422 12.6631 14.7547C12.7832 14.8672 12.8513 15.0243 12.8513 15.1888C12.8513 15.3533 12.7832 15.5105 12.6631 15.623C12.543 15.7355 12.3818 15.7931 12.2175 15.7826V15.7826ZM8.65503 21.7203C8.6557 21.2474 8.46843 20.7935 8.1345 20.4587C7.80056 20.1241 7.34724 19.9358 6.87421 19.9353C6.40144 19.9349 5.94764 20.1224 5.61307 20.4565C5.27847 20.7907 5.0903 21.244 5.09008 21.717C5.08985 22.1898 5.27758 22.6434 5.61195 22.9779C5.94633 23.3123 6.39967 23.5003 6.87264 23.5003C7.34473 23.4996 7.79744 23.3119 8.13132 22.9784C8.46548 22.6447 8.65364 22.1924 8.65499 21.7203L8.65503 21.7203ZM6.28006 21.7203C6.28006 21.4793 6.42537 21.2623 6.64814 21.1703C6.87068 21.0784 7.12671 21.1297 7.29683 21.3005C7.4667 21.471 7.51714 21.7275 7.42406 21.9496C7.3312 22.1719 7.11357 22.3163 6.87272 22.3152C6.54504 22.3138 6.2801 22.0478 6.2801 21.7203L6.28006 21.7203ZM22.9075 21.7203H22.9077C22.9084 21.2471 22.7209 20.7933 22.3867 20.4585C22.0526 20.1237 21.599 19.9355 21.126 19.9353C20.6531 19.9351 20.1992 20.1228 19.8647 20.4574C19.5303 20.7918 19.3424 21.2456 19.3426 21.7185C19.3428 22.1915 19.5312 22.6451 19.866 22.9792C20.2008 23.3134 20.6546 23.5009 21.1276 23.5002C21.5993 23.4989 22.0513 23.3109 22.3848 22.9774C22.7185 22.644 22.9064 22.192 22.9077 21.7203L22.9075 21.7203ZM20.5325 21.7203H20.5327C20.5327 21.4795 20.6776 21.2625 20.8999 21.1706C21.1222 21.0784 21.3783 21.1293 21.5484 21.2996C21.7185 21.4697 21.7694 21.7257 21.6774 21.948C21.5852 22.1704 21.3683 22.3152 21.1276 22.3152C20.7991 22.3152 20.5328 22.0489 20.5328 21.7204L20.5325 21.7203Z"
+                            fill="#091A7A"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_122_12770">
+                            <rect
+                              width="26.6667"
+                              height="26.6667"
+                              fill="white"
+                              transform="translate(0.666748 0.666992)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="content">
+                      <span
+                        class="label"
+                        title="Mức TNDS của chủ xe với hàng hóa vận chuyển trên xe"
+                      >
+                        Mức TNDS của chủ xe với hàng hóa vận chuyển trên xe
+                      </span>
+                      <p class="description">
+                        Mức trách nhiệm là số tiền tối đa doanh nghiệp bảo hiểm
+                        có thể phải trả đối với thiệt hại.
+                      </p>
+                      <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Chi tiết"
+                        >Chi tiết</a
+                      >
+                    </div>
                   </div>
-                  <div class="content">
-                    <span class="label" title="Mức trách nhiệm bảo hiểm">
-                      Mức trách nhiệm bảo hiểm
-                    </span>
-                    <p class="description">
-                      Mức trách nhiệm là số tiền tối đa doanh nghiệp bảo hiểm có
-                      thể phải trả đối với thiệt hại.
-                    </p>
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Chi tiết"
-                      >Chi tiết</a
-                    >
-                  </div>
-                </div>
-                <div class="dg-registers__card-content-item">
-                  <div class="icon-wrap">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M3.98281 14.9542C3.60406 14.9542 3.29724 14.6474 3.29724 14.2686C3.29724 13.8899 3.60406 13.5831 3.98281 13.5831H9.78327C9.11738 12.9581 8.62044 12.4036 8.33103 12.0606C8.23328 11.9449 8.16021 11.8173 8.09918 11.6857H3.98304C3.60429 11.6857 3.29746 11.3789 3.29746 11.0001C3.29746 10.6214 3.60429 10.3145 3.98304 10.3145H8.09938C8.16021 10.1829 8.23328 10.0555 8.33084 9.93999C8.62026 9.59701 9.11724 9.04227 9.78308 8.41732H3.98311C3.60436 8.41732 3.29754 8.1105 3.29754 7.73175C3.29754 7.35299 3.60436 7.04617 3.98311 7.04617H11.4231C12.9526 5.91624 14.913 4.87025 17.1202 4.6256L17.1204 1.45369C17.1204 1.15088 16.8748 0.905273 16.572 0.905273H1.2151C0.912289 0.905273 0.666687 1.15089 0.666687 1.45369V20.5465C0.666687 20.8493 0.912299 21.0949 1.2151 21.0949H16.572C16.8748 21.0949 17.1204 20.8493 17.1204 20.5465V17.3744C14.9137 17.1297 12.9536 16.0838 11.4238 14.954L3.98281 14.9542ZM6.09977 3.77786H11.6862C12.065 3.77786 12.3718 4.08469 12.3718 4.46344C12.3718 4.84219 12.065 5.14902 11.6862 5.14902H6.09977C5.72102 5.14902 5.4142 4.84219 5.4142 4.46344C5.4142 4.08469 5.72121 3.77786 6.09977 3.77786ZM5.27169 18.2229H3.98281C3.60406 18.2229 3.29724 17.9161 3.29724 17.5374C3.29724 17.1586 3.60406 16.8518 3.98281 16.8518H5.27169C5.65044 16.8518 5.95727 17.1586 5.95727 17.5374C5.95727 17.9159 5.65044 18.2229 5.27169 18.2229ZM14.4893 17.5374C14.4893 17.9161 14.1824 18.2229 13.8037 18.2229H7.42489C7.04614 18.2229 6.73932 17.9161 6.73932 17.5374C6.73932 17.1586 7.04614 16.8518 7.42489 16.8518H13.8032C14.1819 16.8518 14.4893 17.1586 14.4893 17.5374ZM26.786 10.8246C26.0321 9.93149 22.422 5.94218 18.0827 5.94218C13.7427 5.94218 10.1329 9.93149 9.37927 10.8246C9.29281 10.9269 9.293 11.0742 9.37946 11.1766C10.1335 12.0697 13.7433 16.0588 18.0828 16.0588C22.4224 16.0588 26.0321 12.0699 26.7862 11.1766C26.8725 11.0742 26.8723 10.9271 26.786 10.8246ZM18.0822 15.3572C15.68 15.3572 13.7258 13.4028 13.7258 11.0006C13.7258 8.59839 15.68 6.64401 18.0822 6.64401C20.4844 6.64401 22.4388 8.59839 22.4388 11.0006C22.4388 13.4028 20.4844 15.3572 18.0822 15.3572ZM18.0822 7.74093C16.285 7.74093 14.8228 9.20331 14.8228 11.0006C14.8228 12.7982 16.285 14.2604 18.0822 14.2604C19.8797 14.2604 21.3419 12.7982 21.3419 11.0006C21.3419 9.20331 19.8797 7.74093 18.0822 7.74093ZM19.9723 11.9211C20.2401 12.1887 20.2401 12.6228 19.9723 12.8906C19.8384 13.0245 19.663 13.0914 19.4876 13.0914C19.3122 13.0914 19.1368 13.0245 19.0029 12.8906L18.0822 11.9701L17.1617 12.8906C17.0278 13.0245 16.8524 13.0914 16.677 13.0914C16.5016 13.0914 16.3261 13.0245 16.1922 12.8906C15.9244 12.6228 15.9244 12.1888 16.1922 11.9211L17.1127 11.0006L16.1922 10.0802C15.9244 9.81256 15.9244 9.37833 16.1922 9.11071C16.4601 8.84291 16.8939 8.84291 17.1617 9.11071L18.0822 10.0312L19.0029 9.11071C19.2707 8.84291 19.7045 8.84291 19.9723 9.11071C20.2401 9.37832 20.2401 9.81255 19.9723 10.0802L19.0518 11.0006L19.9723 11.9211Z"
-                        fill="#091A7A"
-                      />
-                      <path
-                        d="M26.786 10.8246C26.0321 9.93149 22.422 5.94218 18.0827 5.94218C13.7427 5.94218 10.1329 9.93149 9.37927 10.8246C9.29281 10.9269 9.293 11.0742 9.37946 11.1766C10.1335 12.0697 13.7433 16.0588 18.0828 16.0588C22.4224 16.0588 26.0321 12.0699 26.7862 11.1766C26.8725 11.0742 26.8723 10.9271 26.786 10.8246ZM18.0822 15.3572C15.68 15.3572 13.7258 13.4028 13.7258 11.0006C13.7258 8.59839 15.68 6.64401 18.0822 6.64401C20.4844 6.64401 22.4388 8.59839 22.4388 11.0006C22.4388 13.4028 20.4844 15.3572 18.0822 15.3572ZM18.0822 7.74093C16.285 7.74093 14.8228 9.20331 14.8228 11.0006C14.8228 12.7982 16.285 14.2604 18.0822 14.2604C19.8797 14.2604 21.3419 12.7982 21.3419 11.0006C21.3419 9.20331 19.8797 7.74093 18.0822 7.74093ZM19.9723 11.9211C20.2401 12.1887 20.2401 12.6228 19.9723 12.8906C19.8384 13.0245 19.663 13.0914 19.4876 13.0914C19.3122 13.0914 19.1367 13.0245 19.0029 12.8906L18.0822 11.9701L17.1617 12.8906C17.0278 13.0245 16.8524 13.0914 16.677 13.0914C16.5016 13.0914 16.3261 13.0245 16.1922 12.8906C15.9244 12.6228 15.9244 12.1888 16.1922 11.9211L17.1127 11.0006L16.1922 10.0802C15.9244 9.81256 15.9244 9.37833 16.1922 9.11071C16.4601 8.84291 16.8939 8.84291 17.1617 9.11071L18.0822 10.0312L19.0029 9.11071C19.2707 8.84291 19.7045 8.84291 19.9723 9.11071C20.2401 9.37832 20.2401 9.81255 19.9723 10.0802L19.0518 11.0006L19.9723 11.9211Z"
-                        fill="#1939B7"
-                      />
-                    </svg>
-                  </div>
-                  <div class="content">
-                    <span class="label" title="Loại trừ bảo hiểm"
-                      >Loại trừ bảo hiểm</span
-                    >
-                    <p class="description">
-                      Các hành động không được bảo hiểm chấp nhận chi trả, thanh
-                      toán toàn bộ hoặc một phần.
-                    </p>
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Chi tiết"
-                      >Chi tiết</a
-                    >
+                  <div class="dg-card__content-item">
+                    <div class="icon-wrap">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_122_12777)">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M7.20705 4H24.8319C25.8732 4 26.6832 4.85277 26.6832 5.89925V13.7288H27.4932V10.9767L28.843 10.938C29.6143 10.938 30 11.6745 30 12.4496V14.3489C30 15.0466 29.6915 15.5117 29.0358 15.5117C28.2258 15.5504 27.493 15.5504 26.6832 15.5504V24.4264C26.6832 25.5892 25.7961 26.3256 24.6777 26.3256V28.2249C24.6777 28.6512 24.3306 29 23.9064 29H21.0524C20.6281 29 20.2811 28.6512 20.2811 28.2249V26.3256H11.7576V28.2249C11.7576 28.6512 11.3719 29 10.9476 29H8.13229C7.66952 29 7.32233 28.6512 7.32233 28.2249V26.3256C6.2425 26.3256 5.31681 25.5892 5.31681 24.4264V15.5504C4.54554 15.5504 3.77408 15.5504 3.00276 15.5117C2.3085 15.5117 2 15.0466 2 14.3489V12.4496C2 11.6745 2.38573 10.938 3.19554 10.938L4.50684 10.9767V13.7288H5.31681V5.89925C5.31681 4.85277 6.16534 4 7.20661 4L7.20705 4ZM8.36408 8.18601C7.74703 8.18601 7.20705 8.68981 7.20705 9.34883V14.5815C7.20705 15.2403 7.74703 15.7443 8.36408 15.7443H23.6364C24.292 15.7443 24.7934 15.2405 24.7934 14.5815V9.34883C24.7934 8.68999 24.2921 8.18601 23.6364 8.18601H8.36408ZM24.6394 20.0075C22.5568 20.4726 20.5128 20.744 18.4689 20.7827C17.9676 21.9455 17.659 23.1857 17.5047 24.4648C20.2815 24.7362 22.5571 24.5812 23.868 23.4958C24.2922 22.4105 24.5235 21.2478 24.6392 20.0073L24.6394 20.0075ZM7.40015 20.0075C9.44422 20.4726 11.4882 20.744 13.5324 20.7827C14.0724 21.9455 14.381 23.1857 14.5352 24.4648C11.7584 24.7362 9.44413 24.5812 8.17192 23.4958C7.74766 22.4105 7.47767 21.2478 7.40064 20.0073L7.40015 20.0075Z"
+                            fill="#091A7A"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_122_12777">
+                            <rect width="32" height="32" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="content">
+                      <span
+                        class="label"
+                        title="TNDS trong một số trường hợp khác"
+                        >TNDS trong một số trường hợp khác</span
+                      >
+                      <p class="description">
+                        Xe tập lái: Bằng 120% của phí xe cùng chủng loại. Xe
+                        taxi: Bằng 170% của phí xe kinh doanh cùng chỗ ngồi. Các
+                        loại xe khác: Xe chuyên dụng, Đầu kéo, Xe máy chuyên
+                        dụng, Xe bus, ...
+                      </p>
+                      <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Chi tiết"
+                        >Chi tiết</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
@@ -695,7 +810,9 @@
       </section>
       <section class="dg-questions">
         <div class="dg-container">
-          <h2 title="Câu hỏi thường gặp">Câu hỏi thường gặp</h2>
+          <h2 lass="dg-section__title" title="Câu hỏi thường gặp">
+            Câu hỏi thường gặp
+          </h2>
           <div class="dg-questions__wrap">
             <div class="dg-questions__info">
               <div class="dg-questions__info-item">

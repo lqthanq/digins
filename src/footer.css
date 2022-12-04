@@ -1,0 +1,84 @@
+footer {
+  background-color: #fff; }
+
+.dg-footer__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 24px;
+  padding-bottom: 25px;
+  padding-top: 80px; }
+  .dg-footer__content h3 {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #212B36; }
+  .dg-footer__content-links-inner, .dg-footer__content-resources-inner, .dg-footer__content-contacts-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    row-gap: 16px; }
+  .dg-footer__content-links-item, .dg-footer__content-resources-item, .dg-footer__content-contacts-item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #212B36; }
+  .dg-footer__content-links {
+    width: 10.7%; }
+  .dg-footer__content-resources {
+    width: 18.7%; }
+  .dg-footer__content-contacts {
+    width: 24.56%; }
+  .dg-footer__content-links, .dg-footer__content-resources, .dg-footer__content-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px; }
+  .dg-footer__content-site {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 40px;
+    max-width: 32.1%; }
+    .dg-footer__content-site .logo {
+      width: 104px;
+      height: 40px;
+      object-fit: cover; }
+    .dg-footer__content-site .bio {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: #212B36; }
+    .dg-footer__content-site .social-wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start; }
+      .dg-footer__content-site .social-wrap a {
+        display: inline-block;
+        padding: 8px; }
+
+.dg-footer__info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+  border-top: 1px solid #919eab3d;
+  padding: 24px 0; }
+  .dg-footer__info p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #212B36;
+    font-style: normal; }
+    .dg-footer__info p + p {
+      border-left: 1px solid #919eab3d;
+      padding-left: 24px; }
+  .dg-footer__info-policy {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+    flex-grow: 1; }

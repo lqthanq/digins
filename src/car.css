@@ -1,0 +1,19 @@
+.dg-page-car .dg-header {
+  background: url(../../assets/images/car-1.png) no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
+.dg-page-car .dg-hero__form {
+  background-color: rgba(37, 37, 37, 0.6);
+  backdrop-filter: blur(27.1828px);
+  color: #fff; }
+  .dg-page-car .dg-hero__form-title h2 {
+    color: inherit; }
+  .dg-page-car .dg-hero__form label {
+    color: inherit; }
+
+.dg-page-car .dg-information {
+  background-image: url(../../assets/images/car-2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center; }

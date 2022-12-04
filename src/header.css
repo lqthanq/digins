@@ -1,0 +1,33 @@
+header {
+  position: fixed;
+  top: 0;
+  height: 88px;
+  width: 100%;
+  z-index: 512; }
+
+.dg-header__wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: transparent; }
+  .dg-header__wrap nav {
+    flex-grow: 1; }
+
+.dg-header__logo {
+  max-width: 155px;
+  height: 60px; }
+
+.dg-header__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 40px;
+  height: 22px; }
+  .dg-header__menu-item {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #fff; }

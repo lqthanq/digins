@@ -1,0 +1,78 @@
+@import "./variables.scss";
+
+.dg-page-car {
+  .dg-header {
+    background: url(../../assets/images/car-1.png) no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+  .dg-hero {
+    padding-top: 75px;
+    &__wrap {
+      padding-bottom: 135px;
+    }
+
+    input {
+      &[type="checkbox"],
+      &[type="radio"] {
+        accent-color: $white-color;
+      }
+    }
+    input,
+    select {
+      background-color: transparent;
+    }
+
+    .dg-input-wrap .input-inner {
+      .input-icon {
+        background-color: transparent;
+      }
+
+      input,
+      select,
+      textarea {
+        color: $white-color;
+      }
+
+      legend {
+        color: $text-disabled;
+      }
+
+      fieldset {
+        input,
+        select,
+        textarea {
+          border-width: 0;
+        }
+      }
+    }
+    &__form {
+      background-color: #25252599;
+      backdrop-filter: blur(27.1828px);
+      color: #fff;
+
+      &-title {
+        h2 {
+          color: inherit;
+        }
+      }
+
+      label {
+        color: $text-disabled;
+        background-color: transparent;
+      }
+
+      &-actions .benefit-detail {
+        color: inherit;
+      }
+    }
+  }
+
+  .dg-information {
+    background-image: url(../../assets/images/car-2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+  }
+}
