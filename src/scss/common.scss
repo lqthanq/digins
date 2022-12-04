@@ -51,6 +51,14 @@ a {
     &.full {
       width: 100%;
     }
+
+    &.plain {
+      padding: 0;
+      border: none;
+      height: unset;
+      background-color: transparent;
+      color: #091a7a;
+    }
   }
 
   &-input-wrap {
@@ -137,12 +145,20 @@ a {
     flex-direction: row;
     column-gap: 24px;
 
+    &.vertical {
+      flex-direction: column;
+    }
+
     &__item {
       flex-grow: 1;
 
       &.secondary {
         max-width: 35.4%;
       }
+    }
+
+    + .dg-layout {
+      margin-bottom: 24px;
     }
   }
 
@@ -183,6 +199,12 @@ a {
         line-height: 28px;
         color: $text-subdued;
       }
+
+      &:has(.action) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
 
     &__content {
@@ -192,6 +214,10 @@ a {
       row-gap: 24px;
       padding: 24px;
       width: 100%;
+
+      &.p-0 {
+        padding: 0;
+      }
 
       &-item {
         display: flex;
@@ -723,6 +749,112 @@ a {
       }
     }
   }
+
+  &-backdrop {
+    position: fixed;
+    z-index: 518;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-color: #00000080;
+    animation: fade-in 200ms 1 forwards;
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: opacity;
+  }
+
+  &-modal {
+    &__wrap {
+      position: fixed;
+      z-index: 519;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    &__inner {
+      pointer-events: auto;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-height: calc(100vh - 100px);
+      background: $white-color;
+      box-shadow: -40px 40px 80px -8px #919eab3d;
+      justify-content: center;
+      position: relative;
+      max-width: 700px;
+      margin: 0 auto;
+      border-radius: 16px;
+    }
+
+    .dg-card__content {
+      .dg-card {
+        width: 100%;
+        &__title {
+          padding: 12px 16px;
+
+          h3 {
+            font-size: 15px;
+            line-height: 22px;
+            font-weight: 600;
+          }
+        }
+      }
+
+      &.section {
+        .dg-card__content {
+          row-gap: 16px;
+        }
+
+        .dg-card__content-item + .dg-card__content-item {
+          padding-top: 16px;
+          border-top: $border-base;
+        }
+
+        ul,
+        ol {
+          padding: 0;
+          margin: 0;
+          padding-left: 16px;
+
+          li {
+            font-size: 14px;
+            line-height: 22px;
+            color: #000;
+          }
+        }
+      }
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    thead {
+      background-color: #f4f6f8;
+    }
+
+    td {
+      padding: 16px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      color: $icon-color;
+    }
+  }
 }
 
 fieldset {
@@ -806,5 +938,11 @@ input {
   }
   from {
     transform: rotate(180deg);
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
   }
 }
