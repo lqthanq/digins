@@ -53,7 +53,8 @@ a {
     }
 
     &.plain {
-      padding: 0;
+      padding: 5px;
+      padding-left: 0;
       border: none;
       height: unset;
       background-color: transparent;
@@ -204,6 +205,10 @@ a {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        .action {
+          cursor: pointer;
+        }
       }
     }
 
@@ -794,7 +799,7 @@ a {
       box-shadow: -40px 40px 80px -8px #919eab3d;
       justify-content: center;
       position: relative;
-      max-width: 700px;
+      max-width: 900px;
       margin: 0 auto;
       border-radius: 16px;
     }
@@ -804,7 +809,6 @@ a {
         width: 100%;
         &__title {
           padding: 12px 16px;
-
           h3 {
             font-size: 15px;
             line-height: 22px;
@@ -814,10 +818,12 @@ a {
       }
 
       &.section {
-        .dg-card__content {
-          row-gap: 16px;
+        row-gap: 16px;
+        .dg-card__title {
+          p {
+            color: #212b36;
+          }
         }
-
         .dg-card__content-item + .dg-card__content-item {
           padding-top: 16px;
           border-top: $border-base;
@@ -828,12 +834,30 @@ a {
           padding: 0;
           margin: 0;
           padding-left: 16px;
+          display: flex;
+          flex-direction: column;
+          row-gap: 8px;
 
           li {
             font-size: 14px;
-            line-height: 22px;
+            line-height: 24px;
             color: #000;
           }
+        }
+
+        span,
+        p {
+          font-size: 14px;
+          line-height: 24px;
+        }
+
+        p {
+          color: $icon-color;
+        }
+
+        .label {
+          margin-bottom: 3px;
+          display: inline-block;
         }
       }
     }
@@ -876,6 +900,12 @@ legend {
   line-height: 13px;
   padding: 0 3px;
   margin-left: 7px;
+}
+
+button[disabled] {
+  background-color: $border-color !important;
+  border-color: $border-color !important;
+  cursor: not-allowed;
 }
 
 input {

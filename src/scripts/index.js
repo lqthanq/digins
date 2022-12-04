@@ -4,12 +4,13 @@ const data = {
       {
         name: "responsibility",
         type: "table",
-        title:
-          "Mức trách nhiệm bảo hiểm là số tiền tối đa doanh nghiệp bảo hiểm có thể phải trả đối với thiệt hại về thân thể, tính mạng và tải sản của bên thứ ba và hành khách do xe cơ giới gây ra trong mỗi vụ tai nạn xảy ra thuộc phạm vi trách hiệm bảo hiểm. Cụ thể như sau:",
+        title: "Mức trách nhiệm bảo hiểm",
         data: [
           {
-            title:
-              "Mức trách nhiệm bảo hiểm là số tiền tối đa doanh nghiệp bảo hiểm có thể phải trả đối với thiệt hại về thân thể, tính mạng và tải sản của bên thứ ba và hành khách do xe cơ giới gây ra trong mỗi vụ tai nạn xảy ra thuộc phạm vi trách hiệm bảo hiểm. Cụ thể như sau:",
+            title: [
+              "Mức trách nhiệm bảo hiểm là số tiền tối đa doanh nghiệp bảo hiểm có thể phải trả đối với thiệt hại về thân thể, tính mạng và tải sản của bên thứ ba và hành khách do xe cơ giới gây ra trong mỗi vụ tai nạn xảy ra thuộc phạm vi trách hiệm bảo hiểm.",
+              "Cụ thể như sau:",
+            ],
             headers: ["STT", "Mức Trách Nhiệm", "Số Tiền (VNĐ)"],
             rows: [
               [
@@ -104,7 +105,6 @@ const data = {
         data: [
           {
             type: "list",
-            order: true,
             content: [
               "Mức trách nhiệm bảo hiểm theo yêu cầu của chủ xe nhưng tối đa không vượt quá 40 triệu đồng/tấn và không vượt quá 1,6 tỷ đồng.",
               "Số tấn hàng hóa được bảo hiểm (theo yêu cầu của chủ xe): Tối đa là trọng tải cho phép của xe.",
@@ -164,10 +164,49 @@ const data = {
   },
 };
 
+const closeNode = `<svg
+  width="13"
+  height="13"
+  viewBox="0 0 13 13"
+  fill="currentColor"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+    d="M8.40324 6.99375L12.6976 2.70905C13.0892 2.31741 13.0892 1.68244 12.6976 1.2908C12.306 0.899161 11.6711 0.899161 11.2795 1.2908L6.99509 5.58549L2.71069 1.2908C2.31908 0.899161 1.68415 0.899161 1.29254 1.2908C0.900933 1.68244 0.900933 2.31741 1.29254 2.70905L5.58693 6.99375L1.29254 11.2784C1.10348 11.466 0.997131 11.7213 0.997131 11.9876C0.997131 12.2539 1.10348 12.5092 1.29254 12.6967C1.48006 12.8858 1.73533 12.9921 2.00162 12.9921C2.26791 12.9921 2.52317 12.8858 2.71069 12.6967L6.99509 8.40201L11.2795 12.6967C11.467 12.8858 11.7223 12.9921 11.9886 12.9921C12.2548 12.9921 12.5101 12.8858 12.6976 12.6967C12.8867 12.5092 12.993 12.2539 12.993 11.9876C12.993 11.7213 12.8867 11.466 12.6976 11.2784L8.40324 6.99375Z"
+    fill="#637381"
+  />
+  </svg>`;
+
+const CLS = {
+  modal: "dg-modal",
+  card: "dg-card",
+};
+
 (function () {
-  // window.addEventListener("scroll", function (e) {
-  //   console.log("event:", e);
-  // });
+  // Sticky header
+  const header = document.querySelector("header");
+  const docBody = document.documentElement || document.body;
+  const hasOffset = window.scrollY !== undefined;
+  let scrollTop;
+
+  window.addEventListener("scroll", () => {
+    scrollTop = hasOffset ? window.scrollY : docBody.scrollTop;
+    if (scrollTop >= 88) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  });
+
+  // Hidden scroll when open modal
+  const preventScroll = (isPrevent = true) => {
+    if (isPrevent) {
+      document.body.style.overflow = "hidden";
+      return;
+    }
+
+    document.body.style.overflow = "auto";
+  };
 
   const dataForModal = Object.values(data)
     .reduce((acc, item) => {
@@ -186,10 +225,257 @@ const data = {
   const activator = document.querySelectorAll("[data-modal-control]");
   for (let i = 0; i < activator.length; i++) {
     const act = activator[i];
-    act.addEventListener("click", function (e) {
+    act.addEventListener("click", function () {
       const { name } = this.dataset;
       const matched = matchDataByName(dataForModal, name);
-      console.log("matched:", matched);
+      if (isNullable(matched)) return;
+
+      preventScroll();
+      const { type, data, title } = matched || {};
+      const fn = {
+        section: createSection,
+        table: createTable,
+      };
+      const bodyMarkup = typeof fn[type] === "function" ? fn[type](data) : null;
+      if (bodyMarkup) {
+        createModal(title, bodyMarkup);
+      }
     });
   }
+
+  // Create elements
+  const isNullable = (val) => typeof val === "undefined" || val === null;
+  const createElement = ({ as = "div", cls, content, children, ...attrs }) => {
+    const el = document.createElement(as);
+    const attrKeys = Object.keys(attrs);
+    for (let i = 0; i < attrKeys.length; i++) {
+      const key = attrKeys[i];
+      el.setAttribute(key, attrs[key]);
+    }
+
+    if (!isNullable(cls)) {
+      el.classList = cls;
+    }
+
+    if (!isNullable(content)) {
+      el.innerHTML = content;
+    }
+
+    if (!isNullable(children)) {
+      if (Array.isArray(children)) {
+        children.forEach((child) => {
+          el.appendChild(child);
+        });
+      } else {
+        el.appendChild(children);
+      }
+    }
+    return el;
+  };
+
+  const closeBtn = createElement({
+    as: "span",
+    content: closeNode,
+    cls: "action",
+    "data-modal-close": true,
+  });
+
+  const createSection = (data = []) => {
+    const itemsMarkup = [];
+    for (let i = 0; i < data.length; i++) {
+      const itemMarkup = [];
+      const { type, content = [], label } = data[i];
+      if (!isNullable(type) && "list" === type) {
+        const cts = [];
+        for (let j = 0; j < content.length; j++) {
+          const ct = content[j];
+          const li = createElement({ as: "li", content: ct });
+          cts.push(li);
+        }
+        const ol = createElement({ as: "ol", children: cts });
+        itemMarkup.push(ol);
+      } else if (!isNullable(label)) {
+        const cts = [];
+        for (let j = 0; j < content.length; j++) {
+          const ct = content[j];
+          const span = createElement({ as: "span", content: ct });
+          cts.push(span);
+        }
+
+        const labelMarkup = createElement({
+          as: "label",
+          cls: "label",
+          content: label,
+        });
+        const span = createElement({ as: "p", children: cts });
+        const div = createElement({ children: [labelMarkup, span] });
+        itemMarkup.push(div);
+      } else {
+        const cts = [];
+        for (let i = 0; i < content.length; i++) {
+          const ct = content[i];
+          const span = createElement({ as: "span", content: ct });
+          cts.push(span);
+        }
+        const div = createElement({ children: cts });
+        itemMarkup.push(div);
+      }
+
+      const item = createElement({
+        cls: `${CLS.card}__content-item`,
+        children: itemMarkup,
+      });
+      itemsMarkup.push(item);
+    }
+
+    const items = createElement({
+      cls: `${CLS.card}__content section`,
+      children: itemsMarkup,
+    });
+    return items;
+  };
+
+  const createTable = (data = []) => {
+    const items = [];
+    for (let i = 0; i < data.length; i++) {
+      const { title, headers, rows } = data[i];
+      const titles = [];
+      for (let j = 0; j < title.length; j++) {
+        const t = title[j];
+        const p = createElement({ as: "p", content: t });
+        titles.push(p);
+      }
+      const titleMarkup = createElement({
+        as: "h3",
+        cls: `${CLS.card}__title`,
+        title,
+        children: titles,
+      });
+
+      const headersMarkup = [];
+      for (let j = 0; j < headers.length; j++) {
+        const header = headers[j];
+        const td = createElement({ as: "td", content: header });
+        headersMarkup.push(td);
+      }
+      // const tdHeader = createElement({ as: "td", content: "STT" });
+      const trHeader = createElement({
+        as: "tr",
+        children: [...headersMarkup],
+      });
+      const tHead = createElement({ as: "thead", children: trHeader });
+
+      const trBodies = [];
+      for (let j = 0; j < rows.length; j++) {
+        const trBody = [];
+        const tdFirst = createElement({ as: "td", content: j + 1 });
+        const content = rows[j];
+        for (let k = 0; k < content.length; k++) {
+          const c = content[k];
+          const td = createElement({ as: "td", content: c });
+          trBody.push(td);
+        }
+
+        const trBodyMarkup = createElement({
+          as: "tr",
+          children: [tdFirst, ...trBody],
+        });
+        trBodies.push(trBodyMarkup);
+      }
+
+      const trBodiesMarkup = createElement({ as: "tbody", children: trBodies });
+      const tableMarkup = createElement({
+        as: "table",
+        children: [tHead, trBodiesMarkup],
+      });
+      const cardSection = createElement({
+        cls: `${CLS.card}__content p-0`,
+        children: tableMarkup,
+      });
+
+      const itemMarkup = createElement({
+        cls: `${CLS.card}`,
+        children: [titleMarkup, cardSection],
+      });
+      items.push(itemMarkup);
+    }
+    const itemsMarkup = createElement({
+      cls: `${CLS.card}__content section`,
+      children: items,
+    });
+    return itemsMarkup;
+  };
+
+  const createModal = (title, bodyMarkup) => {
+    const h3 = createElement({
+      as: "h3",
+      title: title,
+      content: title,
+    });
+    const titleMarkup = createElement({
+      cls: `${CLS.card}__title`,
+      children: [h3, closeBtn],
+    });
+
+    // const content = createElement({
+    //   cls: `${CLS.card}__content section`,
+    //   // children: bodyMarkup,
+    // });
+
+    const card = createElement({
+      cls: CLS.card,
+      children: [titleMarkup, bodyMarkup],
+    });
+    const modalInner = createElement({
+      cls: `${CLS.modal}__inner`,
+      children: card,
+    });
+    const dialog = createElement({ role: "dialog", children: modalInner });
+    const modalWrap = createElement({
+      cls: `${CLS.modal}__wrap`,
+      children: dialog,
+    });
+    const backdrop = createElement({ cls: "dg-backdrop" });
+    handleClickBackdrop(backdrop);
+    const modal = createElement({
+      id: "modal",
+      cls: CLS.modal,
+      children: [modalWrap, backdrop],
+    });
+    document.body.append(modal);
+    handleCloseModal(closeBtn);
+  };
+
+  // Handle actions
+  const getModal = () => document.querySelector("#modal");
+  const closeModal = () => {
+    preventScroll(false);
+    const modal = getModal();
+    document.body.removeChild(modal);
+  };
+
+  // Close modal by click outside modal.
+  const handleClickBackdrop = (node) => {
+    if (!isNullable(node)) {
+      node.addEventListener("click", () => {
+        closeModal();
+      });
+    }
+  };
+
+  // Close modal by click "X" button.
+  const handleCloseModal = (node) => {
+    if (!isNullable(node)) {
+      node.addEventListener("click", () => {
+        closeModal();
+      });
+    }
+  };
+
+  // Close modal by key press "Escape" button.
+  window.addEventListener("keydown", (e) => {
+    if (getModal() && e.key === "Escape") {
+      closeModal();
+    }
+  });
 })();
