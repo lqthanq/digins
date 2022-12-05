@@ -198,6 +198,26 @@ const CLS = {
     }
   });
 
+  // Scroll to sections
+  const links = document.querySelectorAll("a");
+  for (let link of links) {
+    link.addEventListener("click", handleClickLink);
+  }
+
+  function handleClickLink(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+    let offsetTop = 0;
+    if (document.querySelector(href)) {
+      offsetTop = document.querySelector(href).offsetTop - 88;
+    }
+
+    scroll({
+      top: offsetTop,
+      behavior: "smooth",
+    });
+  }
+
   // Hidden scroll when open modal
   const preventScroll = (isPrevent = true) => {
     if (isPrevent) {

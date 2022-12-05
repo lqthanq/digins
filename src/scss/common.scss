@@ -430,6 +430,11 @@ a {
         .input-inner {
           width: 100%;
 
+          &:has(.action) {
+            .label {
+              top: -11px;
+            }
+          }
           .action {
             position: absolute;
             right: 12px;
@@ -951,6 +956,10 @@ input {
     color: $text-subdued;
     display: inline-block;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @keyframes rotate-up {

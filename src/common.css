@@ -228,7 +228,7 @@ a {
     .dg-upload__inner-img {
       width: 168px;
       height: 168px;
-      background: url("../../assets/images/upload.png") no-repeat;
+      background: url("../assets/images/upload.png") no-repeat;
       background-size: cover;
       background-position: center center; }
     .dg-upload__inner-control {
@@ -315,6 +315,8 @@ a {
       color: #1C0EC5; }
     .dg-customer-info .dg-layout__item.secondary .dg-input-wrap .input-inner {
       width: 100%; }
+      .dg-customer-info .dg-layout__item.secondary .dg-input-wrap .input-inner:has(.action) .label {
+        top: -11px; }
       .dg-customer-info .dg-layout__item.secondary .dg-input-wrap .input-inner .action {
         position: absolute;
         right: 12px; }
@@ -691,6 +693,9 @@ input {
     line-height: 22px;
     color: #212B36;
     display: inline-block; }
+
+html {
+  scroll-behavior: smooth; }
 
 @keyframes rotate-up {
   to {
