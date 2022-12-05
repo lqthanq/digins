@@ -167,6 +167,17 @@ ul {
   padding: 0;
   list-style-type: none; }
 
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px; }
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 3px solid transparent;
+    background-clip: content-box; }
+  ::-webkit-scrollbar-track {
+    background-color: transparent; }
+
 svg {
   color: #637381; }
 
@@ -396,7 +407,7 @@ a {
     .dg-upload__inner-img {
       width: 168px;
       height: 168px;
-      background: url("../../assets/images/upload.png") no-repeat;
+      background: url("../assets/images/upload.png") no-repeat;
       background-size: cover;
       background-position: center center; }
     .dg-upload__inner-control {
@@ -1002,7 +1013,7 @@ footer {
   background-color: #232271; }
 
 .dg-page-bike .dg-hero__background {
-  background: url(../../assets/images/bike-1.png) no-repeat;
+  background: url(../assets/images/bike-1.png) no-repeat;
   position: absolute;
   width: 745px;
   height: 745px;
@@ -1010,13 +1021,13 @@ footer {
   background-size: 90%; }
 
 .dg-page-bike .dg-information {
-  background-image: url(../../assets/images/bike-3.png);
+  background-image: url(../assets/images/bike-3.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 80% center; }
 
 .dg-page-car .dg-header {
-  background: url(../../assets/images/car-1.png) no-repeat;
+  background: url(../assets/images/car-1.png) no-repeat;
   background-size: cover;
   background-position: center bottom; }
   .dg-page-car .dg-header header.sticky {
@@ -1070,7 +1081,7 @@ footer {
       color: inherit; }
 
 .dg-page-car .dg-information {
-  background-image: url(../../assets/images/car-2.png);
+  background-image: url(../assets/images/car-2.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right center; }
