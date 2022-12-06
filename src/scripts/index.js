@@ -183,21 +183,35 @@ const CLS = {
 };
 
 (function () {
+  // Utils
+  let throttleTimer = false;
+  function throttle(cb, time = 250) {
+    if (throttleTimer) return;
+
+    throttleTimer = true;
+    setTimeout(() => {
+      cb();
+      throttleTimer = false;
+    }, time);
+  }
+
   // Sticky header
   const header = document.querySelector("header");
   const headerOffsetHeight = header?.offsetHeight || 88;
-  // const docBody = document.documentElement || document.body;
-  // const hasOffset = window.scrollY !== undefined;
-  // let scrollTop;
+  const docBody = document.documentElement || document.body;
+  const hasOffset = window.scrollY !== undefined;
+  let scrollTop;
 
-  // window.addEventListener("scroll", () => {
-  //   scrollTop = hasOffset ? window.scrollY : docBody.scrollTop;
-  //   if (scrollTop >= headerOffsetHeight) {
-  //     header.classList.add("sticky");
-  //   } else {
-  //     header.classList.remove("sticky");
-  //   }
-  // });
+  window.addEventListener("scroll", () => {
+    throttle(() => {
+      scrollTop = hasOffset ? window.scrollY : docBody.scrollTop;
+      if (scrollTop >= headerOffsetHeight) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    });
+  });
 
   // Scroll to sections
   const links = document.querySelectorAll("a");

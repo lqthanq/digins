@@ -121,8 +121,7 @@ footer {
 
     // gap: 24px;
     // flex-direction: row;
-    // padding: 24px 0;
-    padding: 16px 0;
+    padding: 24px 0;
     gap: 16px;
     flex-direction: column;
     p {
@@ -154,10 +153,48 @@ footer {
   }
 }
 
+@include min-md {
+  .dg-footer {
+    &__content {
+      flex-wrap: wrap;
+      flex-direction: row;
+
+      &-links,
+      &-resources,
+      &-contacts {
+        width: calc(calc(100% / 3) - 16px);
+      }
+    }
+
+    &__info {
+      // gap: 24px;
+      // flex-direction: row;
+      // padding: 24px 0;
+      align-items: center;
+      padding: 32px;
+
+      &-policy {
+        flex-direction: row;
+        gap: 50px;
+        align-items: center;
+      }
+
+      p {
+        font-size: 14px;
+
+        + p {
+          border-left: $border-base;
+          padding-left: 50px;
+        }
+      }
+    }
+  }
+}
+
 @include min-lg {
   .dg-footer {
     &__content {
-      flex-direction: row;
+      // flex-direction: row;
       padding-bottom: 25px;
       padding-top: 80px;
 
@@ -200,18 +237,18 @@ footer {
       padding: 24px 0;
 
       p {
-        font-size: 14px;
+        // font-size: 14px;
 
         + p {
-          border-left: $border-base;
+          // border-left: $border-base;
           padding-left: 24px;
         }
       }
 
       &-policy {
-        flex-direction: row;
+        // flex-direction: row;
         gap: 24px;
-        align-items: center;
+        // align-items: center;
       }
     }
   }

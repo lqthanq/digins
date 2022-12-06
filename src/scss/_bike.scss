@@ -46,6 +46,14 @@
       background-image: url(../assets/images/bike-3.png);
       background-repeat: no-repeat;
       background-size: contain;
+      background-position: 140% center;
+    }
+  }
+}
+
+@include min-xl {
+  .dg-page-bike {
+    .dg-information {
       background-position: 80% center;
     }
   }

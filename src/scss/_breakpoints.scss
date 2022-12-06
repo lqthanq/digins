@@ -28,7 +28,7 @@ $xxl: 1536px;
   }
 }
 
-@mixin min-xl {
+@mixin min-xxl {
   @media (min-width: $xxl) {
     @content;
   }

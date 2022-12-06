@@ -17,8 +17,6 @@
     gap: 8px;
     height: 48px;
     border-radius: 8px;
-    // padding: 11px 22px;
-    // font-size: 16px;
     font-weight: 700;
     outline: 0px;
     border: 0px;
@@ -58,9 +56,6 @@
   &-input-wrap {
     display: flex;
     width: 100%;
-    // flex-direction: row;
-    // align-items: center;
-
     gap: 16px;
     flex-direction: column;
     align-items: flex-start;
@@ -70,10 +65,7 @@
       align-items: center;
       position: relative;
       flex-grow: 1;
-
-      // width: 50%;
       width: 100%;
-
       &:has(input[type="checkbox"]) {
         align-items: flex-start;
         margin-top: 8px;
@@ -348,8 +340,6 @@
         align-items: flex-start;
         row-gap: 8px;
 
-        // margin-left: 80px;
-        margin-left: 40px;
         .label {
           font-weight: 600;
           line-height: 24px;
@@ -1098,15 +1088,51 @@ a {
   .icon-wrap {
     display: block;
   }
+
+  .dg {
+    &-container {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    &-hero {
+      &__form {
+        margin-top: 24px;
+      }
+    }
+
+    &-input-wrap {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-registers {
+      .dg-layout__item.secondary {
+        .dg-card__content {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 32px;
+
+          > * {
+            width: calc(50% - 16px);
+          }
+        }
+      }
+    }
+
+    // &-footer__content {
+    //   flex-wrap: wrap;
+    //   flex-direction: row;
+    // }
+
+    &-upload__inner-control {
+      margin-left: 40px;
+    }
+  }
 }
 
 @include min-lg {
   .dg {
-    &-container {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
     &-btn {
       padding: 11px 22px;
       font-size: 16px;
@@ -1356,6 +1382,25 @@ a {
           align-items: center;
         }
       }
+    }
+
+    &-registers .dg-layout__item.secondary .dg-card__content {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 24px;
+
+      > * {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include min-xl {
+  .dg {
+    &-container {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
