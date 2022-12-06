@@ -185,18 +185,19 @@ const CLS = {
 (function () {
   // Sticky header
   const header = document.querySelector("header");
-  const docBody = document.documentElement || document.body;
-  const hasOffset = window.scrollY !== undefined;
-  let scrollTop;
+  const headerOffsetHeight = header?.offsetHeight || 88;
+  // const docBody = document.documentElement || document.body;
+  // const hasOffset = window.scrollY !== undefined;
+  // let scrollTop;
 
-  window.addEventListener("scroll", () => {
-    scrollTop = hasOffset ? window.scrollY : docBody.scrollTop;
-    if (scrollTop >= 88) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-  });
+  // window.addEventListener("scroll", () => {
+  //   scrollTop = hasOffset ? window.scrollY : docBody.scrollTop;
+  //   if (scrollTop >= headerOffsetHeight) {
+  //     header.classList.add("sticky");
+  //   } else {
+  //     header.classList.remove("sticky");
+  //   }
+  // });
 
   // Scroll to sections
   const links = document.querySelectorAll("a");
@@ -209,7 +210,7 @@ const CLS = {
     const href = this.getAttribute("href");
     let offsetTop = 0;
     if (document.querySelector(href)) {
-      offsetTop = document.querySelector(href).offsetTop - 88;
+      offsetTop = document.querySelector(href).offsetTop - headerOffsetHeight;
     }
 
     scroll({
@@ -442,9 +443,13 @@ const CLS = {
     //   // children: bodyMarkup,
     // });
 
+    const wrapContent = createElement({
+      cls: `${CLS.modal}__content`,
+      children: bodyMarkup,
+    });
     const card = createElement({
       cls: CLS.card,
-      children: [titleMarkup, bodyMarkup],
+      children: [titleMarkup, wrapContent],
     });
     const modalInner = createElement({
       cls: `${CLS.modal}__inner`,

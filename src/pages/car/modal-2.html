@@ -15,7 +15,7 @@
   </head>
   <body class="dg-page-car">
     <div class="dg-header">
-      <header>
+      <header class="sticky">
         <div class="dg-header__wrap dg-container">
           <img class="dg-header__logo" src="../../../assets/images/logo.png" />
           <nav>
@@ -145,17 +145,20 @@
                   </div>
                 </div>
                 <div class="dg-input-wrap confirm">
-                  <input
-                    type="checkbox"
-                    checked
-                    aria-checked
-                    name="bao-hiem-tai-nan-xe"
-                  />
-                  <label
-                    for="bao-hiem-tai-nan-xe"
-                    label="Bảo hiểm tai nạn lái xe, phụ xe, người ngồi trên xe"
-                    >Bảo hiểm tai nạn lái xe, phụ xe, người ngồi trên xe</label
-                  >
+                  <div class="input-inner">
+                    <input
+                      type="checkbox"
+                      checked
+                      aria-checked
+                      name="bao-hiem-tai-nan-xe"
+                    />
+                    <label
+                      for="bao-hiem-tai-nan-xe"
+                      label="Bảo hiểm tai nạn lái xe, phụ xe, người ngồi trên xe"
+                      >Bảo hiểm tai nạn lái xe, phụ xe, người ngồi trên
+                      xe</label
+                    >
+                  </div>
                 </div>
                 <div class="dg-input-wrap">
                   <div class="input-inner">
@@ -239,7 +242,7 @@
       <section class="dg-information">
         <div class="dg-container">
           <div class="dg-information__wrap">
-            <h2 lass="dg-section__title" title="Tự tin trên mọi nẻo đường">
+            <h2 class="dg-section__title" title="Tự tin trên mọi nẻo đường">
               Tự tin trên mọi nẻo đường
             </h2>
             <p class="sub-title">
@@ -815,7 +818,7 @@
       </section>
       <section class="dg-questions">
         <div class="dg-container">
-          <h2 lass="dg-section__title" title="Câu hỏi thường gặp">
+          <h2 class="dg-section__title" title="Câu hỏi thường gặp">
             Câu hỏi thường gặp
           </h2>
           <div class="dg-questions__wrap">
@@ -1024,7 +1027,7 @@
                     ></textarea>
                   </div>
                 </div>
-                <div>
+                <div class="questions__action">
                   <button type="button" class="dg-btn primary">
                     Gửi yêu cầu
                   </button>

@@ -1,0 +1,52 @@
+@import "./variables";
+@import "./breakpoints";
+
+.dg-page-bike {
+  header {
+    background-color: #232271;
+  }
+  .dg-hero {
+    &__wrap {
+      background-color: #232271;
+    }
+    // &__background {
+    // background: url(../assets/images/bike-1.png) no-repeat;
+    // position: absolute;
+    // width: 745px;
+    // height: 745px;
+    // top: 70px;
+    // background-size: 90%;
+    // }
+  }
+
+  // .dg-information {
+  // background-image: url(../assets/images/bike-3.png);
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  // background-position: 80% center;
+  // }
+}
+
+@include min-lg {
+  .dg-page-bike {
+    .dg-hero {
+      &__wrap {
+        padding-bottom: 160px;
+      }
+      &__background {
+        background: url(../assets/images/bike-1.png) no-repeat;
+        position: absolute;
+        width: 745px;
+        height: 745px;
+        top: 70px;
+        background-size: 85%;
+      }
+    }
+    .dg-information {
+      background-image: url(../assets/images/bike-3.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 80% center;
+    }
+  }
+}

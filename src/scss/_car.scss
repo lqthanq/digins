@@ -1,4 +1,5 @@
-@import "./variables.scss";
+@import "./variables";
+@import "./breakpoints";
 
 .dg-page-car {
   .dg-header {
@@ -7,17 +8,19 @@
     background-position: center bottom;
 
     header.sticky {
-      background: inherit;
+      background: url("../assets/images/car-header-bg.png") no-repeat;
       background-size: inherit;
-      background-position: center top;
+      background-position: center center;
       box-shadow: $box-shadow;
     }
   }
 
   .dg-hero {
-    padding-top: 75px;
+    // padding-top: 75px;
+    padding-top: 30px;
     &__wrap {
-      padding-bottom: 135px;
+      // padding-bottom: 135px;
+      padding-bottom: 60px;
     }
 
     input {
@@ -89,10 +92,28 @@
     }
   }
 
-  .dg-information {
-    background-image: url(../assets/images/car-2.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
+  // .dg-information {
+    // background-image: url(../assets/images/car-2.png);
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    // background-position: right center;
+  // }
+}
+
+@include min-lg {
+  .dg-page-car {
+    .dg-hero {
+      padding-top: 75px;
+      &__wrap {
+        padding-bottom: 135px;
+      }
+    }
+
+    .dg-information {
+      background-image: url(../assets/images/car-2.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right center;
+    }
   }
 }
