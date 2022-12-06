@@ -394,34 +394,24 @@
                 <div class="dg-card__content">
                   <div class="dg-input-wrap">
                     <div class="input-inner">
+                      <input name="ho-ten" type="text" id="ho-ten" />
                       <label title="Họ tên" aria-required class="required"
                         >Họ tên</label
                       >
-                      <input
-                        name="ho-ten"
-                        type="text"
-                        id="ho-ten"
-                        placeholder="Nguyễn Ngọc Thế Anh"
-                      />
                     </div>
                     <div class="input-inner">
+                      <input name="so-cmtnd" type="text" id="so-cmtnd" />
                       <label title="Số CMT/CCCD" aria-required class="required"
                         >Số CMT/CCCD</label
                       >
-                      <input
-                        name="so-cmtnd"
-                        type="text"
-                        id="so-cmtnd"
-                        placeholder="21110000291029"
-                      />
                     </div>
                   </div>
                   <div class="dg-input-wrap">
                     <div class="input-inner">
+                      <input name="ngay-sinh" type="date" id="ngay-sinh" />
                       <label title="Ngày sinh" aria-required class="required"
                         >Ngày sinh</label
                       >
-                      <input name="ngay-sinh" type="date" id="ngay-sinh" />
                       <span class="input-icon">
                         <svg
                           width="18"
@@ -438,11 +428,11 @@
                       </span>
                     </div>
                     <div class="input-inner">
-                      <label title="Giới tính">Giới tính</label>
                       <select name="gioi-tinh">
                         <option value="nam" aria-checked checked>Nam</option>
                         <option value="nu">Nữ</option>
                       </select>
+                      <label title="Giới tính">Giới tính</label>
                       <span class="input-icon">
                         <svg
                           width="14"
@@ -461,40 +451,29 @@
                   </div>
                   <div class="dg-input-wrap">
                     <div class="input-inner">
+                      <input name="dia-chi" type="text" id="dia-chi" />
                       <label title="Địa chỉ" aria-required class="required"
                         >Địa chỉ</label
                       >
-                      <input
-                        name="dia-chi"
-                        type="text"
-                        id="dia-chi"
-                        placeholder="121 Hoàng Quốc Việt, Cầu Giấy, Hà Nội"
-                      />
                     </div>
                   </div>
                   <div class="dg-input-wrap">
                     <div class="input-inner">
+                      <input
+                        name="so-dien-thoai"
+                        type="text"
+                        id="so-dien-thoai"
+                      />
                       <label
                         title="Số điện thoại"
                         aria-required
                         class="required"
                         >Số điện thoại</label
                       >
-                      <input
-                        name="so-dien-thoai"
-                        type="text"
-                        id="so-dien-thoai"
-                        placeholder="0989 889 889"
-                      />
                     </div>
                     <div class="input-inner">
+                      <input name="email" type="text" id="email" />
                       <label title="Email">Email</label>
-                      <input
-                        name="email"
-                        type="text"
-                        id="email"
-                        placeholder="theanh9281@gmail.com"
-                      />
                     </div>
                   </div>
                 </div>
@@ -526,15 +505,14 @@
                   <div class="dg-card__content-item">
                     <div class="dg-input-wrap">
                       <div class="input-inner">
-                        <label class="label" title="Mã giảm giá"
-                          >Mã giảm giá</label
-                        >
                         <input
                           name="ma-giam-gia"
                           type="text"
                           id="ma-giam-gia"
-                          placeholder="JHA100000"
                         />
+                        <label class="label" title="Mã giảm giá"
+                          >Mã giảm giá</label
+                        >
                         <div class="action">
                           <button class="dg-btn primary" type="button">
                             Áp dụng
@@ -557,12 +535,6 @@
                   <div class="dg-card__content-item">
                     <div class="dg-input-wrap">
                       <div class="input-inner">
-                        <label
-                          title="Phương thức thanh toán"
-                          aria-required
-                          class="required"
-                          >Phương thức thanh toán</label
-                        >
                         <select name="phuong-thuc-thanh-toan">
                           <option value="VNPay" aria-checked checked>
                             Thanh toán qua VNPay
@@ -570,6 +542,12 @@
                           <option value="VNPay2">Thanh toán qua VNPay 2</option>
                           <option value="VNPay3">Thanh toán qua VNPay 3</option>
                         </select>
+                        <label
+                          title="Phương thức thanh toán"
+                          aria-required
+                          class="required"
+                          >Phương thức thanh toán</label
+                        >
                         <span class="input-icon">
                           <svg
                             width="14"

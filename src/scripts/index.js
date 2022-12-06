@@ -233,6 +233,21 @@ const CLS = {
     });
   }
 
+  // Floating label
+  (function () {
+    const inputs = document.querySelectorAll("input,select");
+    for (let input of inputs) {
+      input.addEventListener("blur", function (e) {
+        const { value } = e.target;
+        if (value) {
+          this.classList.add('has-value')
+        } else {
+          this.classList.remove('has-value');
+        }
+      });
+    }
+  })();
+
   // Hidden scroll when open modal
   const preventScroll = (isPrevent = true) => {
     if (isPrevent) {

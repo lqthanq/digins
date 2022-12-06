@@ -247,25 +247,40 @@ ul {
     .dg-input-wrap .input-inner:not(:has(fieldset)) textarea {
       border: 1px solid #919eab52;
       padding: 14px;
-      color: #212B36; }
+      color: #212B36;
+      padding-top: 1rem; }
       .dg-input-wrap .input-inner:not(:has(fieldset)) input:focus,
       .dg-input-wrap .input-inner:not(:has(fieldset)) select:focus,
       .dg-input-wrap .input-inner:not(:has(fieldset)) textarea:focus {
         outline: 2px solid #1C0EC5; }
+      .dg-input-wrap .input-inner:not(:has(fieldset)) input:focus ~ label, .dg-input-wrap .input-inner:not(:has(fieldset)) input.has-value ~ label,
+      .dg-input-wrap .input-inner:not(:has(fieldset)) select:focus ~ label,
+      .dg-input-wrap .input-inner:not(:has(fieldset)) select.has-value ~ label,
+      .dg-input-wrap .input-inner:not(:has(fieldset)) textarea:focus ~ label,
+      .dg-input-wrap .input-inner:not(:has(fieldset)) textarea.has-value ~ label {
+        transform: translateY(-1rem);
+        top: 0.3rem; }
   .dg-input-wrap:has(input[type="radio"]) {
     gap: 16px; }
   .dg-input-wrap:has(input[type="text"]), .dg-input-wrap:has(input[type="date"]), .dg-input-wrap:has(select), .dg-input-wrap:has(textarea) {
     column-gap: 16px; }
     .dg-input-wrap:has(input[type="text"]) label, .dg-input-wrap:has(input[type="date"]) label, .dg-input-wrap:has(select) label, .dg-input-wrap:has(textarea) label {
       font-weight: 400;
-      line-height: 13px;
       z-index: 1;
       position: absolute;
-      top: -6px;
       left: 16px;
       padding-left: 2px;
       padding-right: 3px;
-      font-size: 13px; }
+      font-size: 14px;
+      transform: translateY(-50%);
+      top: 50%;
+      left: 0.75rem;
+      transition: 0.3s;
+      transform-origin: 0;
+      line-height: 1.25rem;
+      padding-left: 0.3rem;
+      padding-right: 0.3rem;
+      pointer-events: none; }
     .dg-input-wrap:has(input[type="text"]) input,
     .dg-input-wrap:has(input[type="text"]) select,
     .dg-input-wrap:has(input[type="text"]) textarea, .dg-input-wrap:has(input[type="date"]) input,
@@ -282,8 +297,27 @@ ul {
       outline: 0;
       appearance: none;
       -webkit-appearance: none;
-      font-size: 13px;
+      font-size: 14px;
       line-height: 18px; }
+      .dg-input-wrap:has(input[type="text"]) input:focus ~ label, .dg-input-wrap:has(input[type="text"]) input.has-value ~ label,
+      .dg-input-wrap:has(input[type="text"]) select:focus ~ label,
+      .dg-input-wrap:has(input[type="text"]) select.has-value ~ label,
+      .dg-input-wrap:has(input[type="text"]) textarea:focus ~ label,
+      .dg-input-wrap:has(input[type="text"]) textarea.has-value ~ label, .dg-input-wrap:has(input[type="date"]) input:focus ~ label, .dg-input-wrap:has(input[type="date"]) input.has-value ~ label,
+      .dg-input-wrap:has(input[type="date"]) select:focus ~ label,
+      .dg-input-wrap:has(input[type="date"]) select.has-value ~ label,
+      .dg-input-wrap:has(input[type="date"]) textarea:focus ~ label,
+      .dg-input-wrap:has(input[type="date"]) textarea.has-value ~ label, .dg-input-wrap:has(select) input:focus ~ label, .dg-input-wrap:has(select) input.has-value ~ label,
+      .dg-input-wrap:has(select) select:focus ~ label,
+      .dg-input-wrap:has(select) select.has-value ~ label,
+      .dg-input-wrap:has(select) textarea:focus ~ label,
+      .dg-input-wrap:has(select) textarea.has-value ~ label, .dg-input-wrap:has(textarea) input:focus ~ label, .dg-input-wrap:has(textarea) input.has-value ~ label,
+      .dg-input-wrap:has(textarea) select:focus ~ label,
+      .dg-input-wrap:has(textarea) select.has-value ~ label,
+      .dg-input-wrap:has(textarea) textarea:focus ~ label,
+      .dg-input-wrap:has(textarea) textarea.has-value ~ label {
+        transform: translateY(-1rem);
+        top: 0.3rem; }
 
 .dg-layout {
   display: flex;
@@ -491,8 +525,6 @@ ul {
       font-size: 16px; }
     .dg-customer-info .dg-layout__item.secondary .dg-input-wrap .input-inner {
       width: 100%; }
-      .dg-customer-info .dg-layout__item.secondary .dg-input-wrap .input-inner:has(.action) .label {
-        top: -11px; }
       .dg-customer-info .dg-layout__item.secondary .dg-input-wrap .input-inner .action {
         position: absolute;
         right: 12px; }
@@ -822,8 +854,15 @@ ul {
 .icon-wrap {
   display: none; }
 
+input:focus ~ .required::after, input.has-value ~ .required::after,
+select:focus ~ .required::after,
+select.has-value ~ .required::after,
+textarea:focus ~ .required::after,
+textarea.has-value ~ .required::after {
+  content: "*"; }
+
 .required::after {
-  content: "*";
+  content: "";
   color: #ff5630;
   margin-left: 5px; }
 
@@ -921,8 +960,6 @@ a {
       width: 50%; }
     .dg-input-wrap:has(input[type="radio"]) {
       gap: 32px; }
-    .dg-input-wrap:has(input[type="text"]) label, .dg-input-wrap:has(input[type="date"]) label, .dg-input-wrap:has(select) label, .dg-input-wrap:has(textarea) label {
-      font-size: 13px; }
     .dg-input-wrap:has(input[type="text"]) input,
     .dg-input-wrap:has(input[type="text"]) select,
     .dg-input-wrap:has(input[type="text"]) textarea, .dg-input-wrap:has(input[type="date"]) input,
