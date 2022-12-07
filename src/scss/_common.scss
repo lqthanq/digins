@@ -66,24 +66,27 @@
       position: relative;
       flex-grow: 1;
       width: 100%;
+      &__container {
+        width: 100%;
+
+        .help-text {
+          padding: 12px 8px 0;
+          span {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+            color: $icon-color;
+          }
+          &.error {
+            span {
+              color: #ff5630;
+            }
+          }
+        }
+      }
       &:has(input[type="checkbox"]) {
         align-items: flex-start;
         margin-top: 8px;
-      }
-
-      .help-text {
-        padding: 12px 8px 0;
-        span {
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 18px;
-          color: $icon-color;
-        }
-        &.error {
-          span {
-            color: #ff5630;
-          }
-        }
       }
 
       .input-icon {
@@ -510,6 +513,9 @@
 
         .input-inner {
           width: 100%;
+          &__container {
+            width: 100%;
+          }
           .action {
             position: absolute;
             right: 12px;
@@ -1017,7 +1023,6 @@
 
 .icon-wrap {
   display: none;
-  // TODO:
 }
 
 input,
@@ -1027,6 +1032,37 @@ textarea {
   &.has-value {
     ~ .required::after {
       content: "*";
+    }
+
+    width: fit-content;
+  }
+
+  &:not([type="checkbox"]):not([type="radio"]) {
+    ~ label {
+      width: calc(100% - 50px);
+    }
+    &[disabled] {
+      background-color: #fafafa !important;
+      ~ label {
+        background-color: #fafafa !important;
+      }
+    }
+
+    &:focus,
+    &.has-value,
+    &#ma-giam-gia {
+      ~ label {
+        content: "*";
+        width: fit-content;
+      }
+    }
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    ~ label {
+      color: #919eab !important;
+      cursor: not-allowed;
     }
   }
 }
@@ -1181,10 +1217,13 @@ a {
 
     &-input-wrap {
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
 
       .input-inner {
-        width: 50%;
+        width: 100%;
+        &__container {
+          width: 50%;
+        }
       }
 
       &:has(input[type="radio"]) {

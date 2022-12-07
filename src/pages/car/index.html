@@ -19,7 +19,17 @@
         <div class="dg-header__wrap dg-container">
           <img class="dg-header__logo" src="../../../assets/images/logo.png" />
           <nav>
-            <ul class="dg-header__menu">
+            <!-- <div class="nav-curtain"></div>
+            <div class="nav-curtain__wrap">
+              <button class="menu-button" aria-label="Menu button">
+                <span class="menu-button__lines">
+                  <span class="menu-button__line"></span>
+                  <span class="menu-button__line"></span>
+                  <span class="menu-button__line"></span>
+                </span>
+                Menu
+              </button> -->
+            <ul class="dg-header__menu" id="menu">
               <li class="dg-header__menu-item">
                 <a href="#gioi-thieu" rel="noopener noreferrer">Giới thiệu</a>
               </li>
@@ -32,7 +42,28 @@
                 <a href="#fags" rel="noopener noreferrer">FAQs</a>
               </li>
             </ul>
+            <!-- </div> -->
           </nav>
+          <!-- <div class="menu-mobile">
+            <svg
+              viewBox="0 0 20 20"
+              style="width: 20px; height: 20px"
+              fill="#fff"
+            >
+              <path
+                d="M19 11h-18a1 1 0 0 1 0-2h18a1 1 0 1 1 0 2zm0-7h-18a1 1 0 0 1 0-2h18a1 1 0 1 1 0 2zm0 14h-18a1 1 0 0 1 0-2h18a1 1 0 0 1 0 2z"
+              ></path>
+            </svg>
+            <svg
+              viewBox="0 0 20 20"
+              style="width: 20px; height: 20px"
+              fill="#fff"
+            >
+              <path
+                d="m11.414 10 6.293-6.293a1 1 0 1 0-1.414-1.414l-6.293 6.293-6.293-6.293a1 1 0 0 0-1.414 1.414l6.293 6.293-6.293 6.293a1 1 0 1 0 1.414 1.414l6.293-6.293 6.293 6.293a.998.998 0 0 0 1.707-.707.999.999 0 0 0-.293-.707l-6.293-6.293z"
+              ></path>
+            </svg>
+          </div> -->
         </div>
       </header>
       <section class="dg-hero__wrap" id="gioi-thieu">
@@ -76,42 +107,44 @@
                   </div>
                 </div>
                 <div class="dg-input-wrap">
-                  <div class="input-inner">
-                    <fieldset>
-                      <legend title="Loại xe">Loại xe</legend>
-                      <select name="loai-xe">
-                        <option value="xe-cuu-ho-1">
-                          Xe cứu hộ
-                        </option>
-                        <option value="xe-cuu-ho-2">Xe cứu hộ 2</option>
-                        <option value="xe-cuu-ho-3">Xe cứu hộ 3</option>
-                      </select>
-                      <span class="input-icon">
-                        <svg
-                          width="14"
-                          height="7"
-                          viewBox="0 0 15 8"
-                          fill="currentColor"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                  <div class="input-inner__container">
+                    <div class="input-inner">
+                      <fieldset>
+                        <legend title="Loại xe">Loại xe</legend>
+                        <select name="loai-xe">
+                          <option value="xe-cuu-ho-1">Xe cứu hộ</option>
+                          <option value="xe-cuu-ho-2">Xe cứu hộ 2</option>
+                          <option value="xe-cuu-ho-3">Xe cứu hộ 3</option>
+                        </select>
+                        <span class="input-icon">
+                          <svg
+                            width="14"
+                            height="7"
+                            viewBox="0 0 15 8"
                             fill="currentColor"
-                          ></path>
-                        </svg>
-                      </span>
-                    </fieldset>
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </span>
+                      </fieldset>
+                    </div>
                   </div>
-                  <div class="input-inner">
-                    <fieldset>
-                      <legend title="Trọng tải">Trọng tải</legend>
-                      <input
-                        name="trong-tai"
-                        type="text"
-                        id="trong-tai"
-                        placeholder="12 Tấn"
-                      />
-                    </fieldset>
+                  <div class="input-inner__container">
+                    <div class="input-inner">
+                      <fieldset>
+                        <legend title="Trọng tải">Trọng tải</legend>
+                        <input
+                          name="trong-tai"
+                          type="text"
+                          id="trong-tai"
+                          placeholder="12 Tấn"
+                        />
+                      </fieldset>
+                    </div>
                   </div>
                 </div>
                 <div class="dg-input-wrap">
@@ -159,48 +192,52 @@
                   </div>
                 </div>
                 <div class="dg-input-wrap">
-                  <div class="input-inner">
-                    <fieldset>
-                      <legend title="Quyền lợi">Quyền lợi</legend>
-                      <select name="quyen-loi">
-                        <option value="100.000.000">
-                          100,000,000 đ / Người / Vụ
-                        </option>
-                        <option value="200.000.000">
-                          200,000,000 đ / Người / Vụ
-                        </option>
-                        <option value="300.000.000">
-                          300,000,000 đ / Người / Vụ
-                        </option>
-                      </select>
-                      <span class="input-icon">
-                        <svg
-                          width="14"
-                          height="7"
-                          viewBox="0 0 15 8"
-                          fill="currentColor"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                  <div class="input-inner__container">
+                    <div class="input-inner">
+                      <fieldset>
+                        <legend title="Quyền lợi">Quyền lợi</legend>
+                        <select name="quyen-loi">
+                          <option value="100.000.000">
+                            100,000,000 đ / Người / Vụ
+                          </option>
+                          <option value="200.000.000">
+                            200,000,000 đ / Người / Vụ
+                          </option>
+                          <option value="300.000.000">
+                            300,000,000 đ / Người / Vụ
+                          </option>
+                        </select>
+                        <span class="input-icon">
+                          <svg
+                            width="14"
+                            height="7"
+                            viewBox="0 0 15 8"
                             fill="currentColor"
-                          ></path>
-                        </svg>
-                      </span>
-                    </fieldset>
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </span>
+                      </fieldset>
+                    </div>
                   </div>
-                  <div class="input-inner">
-                    <fieldset>
-                      <legend title="Phí BH tai nạn người ngồi trên xe">
-                        Phí BH tai nạn người ngồi trên xe
-                      </legend>
-                      <input
-                        name="phi-bh-tai-nan"
-                        type="text"
-                        id="phi-bh-tai-nan"
-                        placeholder="60,000 đ"
-                      />
-                    </fieldset>
+                  <div class="input-inner__container">
+                    <div class="input-inner">
+                      <fieldset>
+                        <legend title="Phí BH tai nạn người ngồi trên xe">
+                          Phí BH tai nạn người ngồi trên xe
+                        </legend>
+                        <input
+                          name="phi-bh-tai-nan"
+                          type="text"
+                          id="phi-bh-tai-nan"
+                          placeholder="60,000 đ"
+                        />
+                      </fieldset>
+                    </div>
                   </div>
                 </div>
                 <div class="dg-hero__form-actions">
@@ -437,90 +474,109 @@
                     </div>
                   </div>
                   <div class="dg-input-wrap">
-                    <div class="input-inner">
-                      <select name="loai-xe-2">
-                        <option value="xe-cuu-ho-1">
-                          Xe cứu hộ
-                        </option>
-                        <option value="xe-cuu-ho-2">Xe cứu hộ 2</option>
-                        <option value="xe-cuu-ho-3">Xe cứu hộ 3</option>
-                      </select>
-                      <label title="Loại xe">Loại xe</label>
-                      <span class="input-icon">
-                        <svg
-                          width="14"
-                          height="7"
-                          viewBox="0 0 15 8"
-                          fill="currentColor"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                    <div class="input-inner__container">
+                      <div class="input-inner">
+                        <select name="loai-xe-2">
+                          <option value="xe-cuu-ho-1">Xe cứu hộ</option>
+                          <option value="xe-cuu-ho-2">Xe cứu hộ 2</option>
+                          <option value="xe-cuu-ho-3">Xe cứu hộ 3</option>
+                        </select>
+                        <label title="Loại xe">Loại xe</label>
+                        <span class="input-icon">
+                          <svg
+                            width="14"
+                            height="7"
+                            viewBox="0 0 15 8"
                             fill="currentColor"
-                          ></path>
-                        </svg>
-                      </span>
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </span>
+                      </div>
                     </div>
-                    <div class="input-inner">
-                      <input name="trong-tai-2" type="text" id="trong-tai-2" />
-                      <label title="Trọng tải">Trọng tải</label>
+                    <div class="input-inner__container">
+                      <div class="input-inner">
+                        <input
+                          name="trong-tai-2"
+                          type="text"
+                          id="trong-tai-2"
+                        />
+                        <label title="Trọng tải">Trọng tải</label>
+                      </div>
                     </div>
                   </div>
                   <div class="dg-input-wrap">
-                    <div class="input-inner">
-                      <input
-                        name="ngay-hieu-luc-2"
-                        type="date"
-                        id="ngay-hieu-luc-2"
-                      />
-                      <label
-                        title="Ngày hiệu lực"
-                        aria-required
-                        class="required"
-                        >Ngày hiệu lực</label
-                      >
-                      <span class="input-icon">
-                        <svg
-                          width="18"
-                          height="20"
-                          viewBox="0 0 18 20"
-                          fill="currentColor"
-                          xmlns="http://www.w3.org/2000/svg"
+                    <div class="input-inner__container">
+                      <div class="input-inner">
+                        <input
+                          name="ngay-hieu-luc-2"
+                          type="date"
+                          id="ngay-hieu-luc-2"
+                        />
+                        <label
+                          title="Ngày hiệu lực"
+                          aria-required
+                          class="required"
+                          >Ngày hiệu lực</label
                         >
-                          <path
-                            d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
-                            fill="#637381"
-                          />
-                        </svg>
-                      </span>
+                        <span class="input-icon">
+                          <svg
+                            width="18"
+                            height="20"
+                            viewBox="0 0 18 20"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
+                              fill="#637381"
+                            />
+                          </svg>
+                        </span>
+                      </div>
                     </div>
-                    <div class="input-inner">
-                      <input name="bien-so-xe" type="text" id="bien-so-xe" />
-                      <label title="Biển số xe">Biển số xe</label>
+                    <div class="input-inner__container">
+                      <div class="input-inner">
+                        <input name="bien-so-xe" type="text" id="bien-so-xe" />
+                        <label title="Biển số xe">Biển số xe</label>
+                      </div>
                     </div>
                   </div>
                   <div class="dg-input-wrap">
-                    <div class="input-inner">
-                      <input name="so-khung" type="text" id="so-khung" />
-                      <label title="Số khung">Số khung</label>
+                    <div class="input-inner__container">
+                      <div class="input-inner">
+                        <input name="so-khung" type="text" id="so-khung" />
+                        <label title="Số khung">Số khung</label>
+                      </div>
                     </div>
-                    <div class="input-inner">
-                      <input name="so-may" type="text" id="so-may" />
-                      <label title="Số máy">Số máy</label>
+                    <div class="input-inner__container">
+                      <div class="input-inner">
+                        <input name="so-may" type="text" id="so-may" />
+                        <label title="Số máy">Số máy</label>
+                      </div>
                     </div>
                   </div>
                   <div class="dg-input-wrap">
-                    <div class="input-inner">
-                      <input name="ten-chu-xe" type="text" id="ten-chu-xe" />
-                      <label title="Tên chủ xe">Tên chủ xe</label>
+                    <div class="input-inner__container">
+                      <div class="input-inner">
+                        <input name="ten-chu-xe" type="text" id="ten-chu-xe" />
+                        <label title="Tên chủ xe">Tên chủ xe</label>
+                      </div>
                     </div>
-                    <div class="input-inner">
-                      <input
-                        name="dia-chi-chu-xe"
-                        type="text"
-                        id="dia-chi-chu-xe"
-                      />
-                      <label title="Địa chỉ chủ xe">Địa chỉ chủ xe</label>
+
+                    <div class="input-inner__container">
+                      <div class="input-inner">
+                        <input
+                          name="dia-chi-chu-xe"
+                          type="text"
+                          id="dia-chi-chu-xe"
+                        />
+                        <label title="Địa chỉ chủ xe">Địa chỉ chủ xe</label>
+                      </div>
                     </div>
                   </div>
                   <div class="dg-input-wrap">

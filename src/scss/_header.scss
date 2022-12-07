@@ -4,7 +4,6 @@
 header {
   position: fixed;
   top: 0;
-  // height: 88px;
   width: 100%;
   z-index: 512;
   height: 96px;
@@ -14,9 +13,6 @@ header {
   &__wrap {
     display: flex;
     align-items: center;
-    // flex-direction: row;
-    // padding-top: 14px;
-    // padding-bottom: 14px;
     background-color: transparent;
 
     flex-direction: column;
@@ -30,9 +26,6 @@ header {
   }
 
   &__logo {
-    // max-width: 155px;
-    // height: 60px;
-
     max-width: 116px;
     height: 45px;
   }
@@ -70,5 +63,70 @@ header {
       max-width: 155px;
       height: 45px;
     }
+  }
+}
+
+.curtain-up {
+  animation-name: curtaiUp;
+}
+
+.nav-curtain {
+  visibility: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: #9a7c6a;
+  border-radius: 50%;
+  transform: translateY(100%) scale(0);
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes curtainUp {
+  0% {
+    border-radius: 50%;
+    transform: translateY(100%) scale(1);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  50% {
+    border-radius: 50%;
+  }
+  100% {
+    transform: translateY(0%) scale(3, 1);
+    visibility: visible;
+    opacity: 1;
+    border-radius: 0;
+  }
+}
+
+@keyframes curtainDown {
+  0% {
+    border-radius: 0;
+    transform: translateY(0%) scale(3, 1);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  50% {
+    opacity: 1;
+    visibility: visible;
+    border-radius: 50%;
+  }
+
+  99% {
+    transform: translateY(100%) scale(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100%) scale(0);
+    opacity: 0;
+    visibility: hidden;
   }
 }
