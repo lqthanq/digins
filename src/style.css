@@ -233,6 +233,15 @@ ul {
     .dg-input-wrap .input-inner:has(input[type="checkbox"]) {
       align-items: flex-start;
       margin-top: 8px; }
+    .dg-input-wrap .input-inner .help-text {
+      padding: 12px 8px 0; }
+      .dg-input-wrap .input-inner .help-text span {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        color: #637381; }
+      .dg-input-wrap .input-inner .help-text.error span {
+        color: #ff5630; }
     .dg-input-wrap .input-inner .input-icon {
       position: absolute;
       right: 14px;
@@ -253,13 +262,6 @@ ul {
       .dg-input-wrap .input-inner:not(:has(fieldset)) select:focus,
       .dg-input-wrap .input-inner:not(:has(fieldset)) textarea:focus {
         outline: 2px solid #1C0EC5; }
-      .dg-input-wrap .input-inner:not(:has(fieldset)) input:focus ~ label, .dg-input-wrap .input-inner:not(:has(fieldset)) input.has-value ~ label,
-      .dg-input-wrap .input-inner:not(:has(fieldset)) select:focus ~ label,
-      .dg-input-wrap .input-inner:not(:has(fieldset)) select.has-value ~ label,
-      .dg-input-wrap .input-inner:not(:has(fieldset)) textarea:focus ~ label,
-      .dg-input-wrap .input-inner:not(:has(fieldset)) textarea.has-value ~ label {
-        transform: translateY(-1rem);
-        top: 0.3rem; }
   .dg-input-wrap:has(input[type="radio"]) {
     gap: 16px; }
   .dg-input-wrap:has(input[type="text"]), .dg-input-wrap:has(input[type="date"]), .dg-input-wrap:has(select), .dg-input-wrap:has(textarea) {
@@ -271,8 +273,8 @@ ul {
       left: 16px;
       padding-left: 2px;
       padding-right: 3px;
-      font-size: 14px;
-      transform: translateY(-50%);
+      font-size: 16px;
+      transform: translateY(-50%) scale(1);
       top: 50%;
       left: 0.75rem;
       transition: 0.3s;
@@ -297,26 +299,26 @@ ul {
       outline: 0;
       appearance: none;
       -webkit-appearance: none;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 18px; }
-      .dg-input-wrap:has(input[type="text"]) input:focus ~ label, .dg-input-wrap:has(input[type="text"]) input.has-value ~ label,
-      .dg-input-wrap:has(input[type="text"]) select:focus ~ label,
-      .dg-input-wrap:has(input[type="text"]) select.has-value ~ label,
-      .dg-input-wrap:has(input[type="text"]) textarea:focus ~ label,
-      .dg-input-wrap:has(input[type="text"]) textarea.has-value ~ label, .dg-input-wrap:has(input[type="date"]) input:focus ~ label, .dg-input-wrap:has(input[type="date"]) input.has-value ~ label,
-      .dg-input-wrap:has(input[type="date"]) select:focus ~ label,
-      .dg-input-wrap:has(input[type="date"]) select.has-value ~ label,
-      .dg-input-wrap:has(input[type="date"]) textarea:focus ~ label,
-      .dg-input-wrap:has(input[type="date"]) textarea.has-value ~ label, .dg-input-wrap:has(select) input:focus ~ label, .dg-input-wrap:has(select) input.has-value ~ label,
-      .dg-input-wrap:has(select) select:focus ~ label,
-      .dg-input-wrap:has(select) select.has-value ~ label,
-      .dg-input-wrap:has(select) textarea:focus ~ label,
-      .dg-input-wrap:has(select) textarea.has-value ~ label, .dg-input-wrap:has(textarea) input:focus ~ label, .dg-input-wrap:has(textarea) input.has-value ~ label,
-      .dg-input-wrap:has(textarea) select:focus ~ label,
-      .dg-input-wrap:has(textarea) select.has-value ~ label,
-      .dg-input-wrap:has(textarea) textarea:focus ~ label,
-      .dg-input-wrap:has(textarea) textarea.has-value ~ label {
-        transform: translateY(-1rem);
+      .dg-input-wrap:has(input[type="text"]) input:focus:not([type="checkbox"]):not([type="radio"]) ~ label, .dg-input-wrap:has(input[type="text"]) input.has-value:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(input[type="text"]) select:focus:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(input[type="text"]) select.has-value:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(input[type="text"]) textarea:focus:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(input[type="text"]) textarea.has-value:not([type="checkbox"]):not([type="radio"]) ~ label, .dg-input-wrap:has(input[type="date"]) input:focus:not([type="checkbox"]):not([type="radio"]) ~ label, .dg-input-wrap:has(input[type="date"]) input.has-value:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(input[type="date"]) select:focus:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(input[type="date"]) select.has-value:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(input[type="date"]) textarea:focus:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(input[type="date"]) textarea.has-value:not([type="checkbox"]):not([type="radio"]) ~ label, .dg-input-wrap:has(select) input:focus:not([type="checkbox"]):not([type="radio"]) ~ label, .dg-input-wrap:has(select) input.has-value:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(select) select:focus:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(select) select.has-value:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(select) textarea:focus:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(select) textarea.has-value:not([type="checkbox"]):not([type="radio"]) ~ label, .dg-input-wrap:has(textarea) input:focus:not([type="checkbox"]):not([type="radio"]) ~ label, .dg-input-wrap:has(textarea) input.has-value:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(textarea) select:focus:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(textarea) select.has-value:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(textarea) textarea:focus:not([type="checkbox"]):not([type="radio"]) ~ label,
+      .dg-input-wrap:has(textarea) textarea.has-value:not([type="checkbox"]):not([type="radio"]) ~ label {
+        transform: translateY(-1rem) scale(0.75);
         top: 0.3rem; }
 
 .dg-layout {
@@ -969,7 +971,7 @@ a {
     .dg-input-wrap:has(select) textarea, .dg-input-wrap:has(textarea) input,
     .dg-input-wrap:has(textarea) select,
     .dg-input-wrap:has(textarea) textarea {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 24px; }
   .dg-layout {
     flex-direction: row; }

@@ -71,6 +71,21 @@
         margin-top: 8px;
       }
 
+      .help-text {
+        padding: 12px 8px 0;
+        span {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18px;
+          color: $icon-color;
+        }
+        &.error {
+          span {
+            color: #ff5630;
+          }
+        }
+      }
+
       .input-icon {
         position: absolute;
         right: 14px;
@@ -95,14 +110,6 @@
 
           &:focus {
             outline: 2px solid $primary-color;
-          }
-
-          &:focus,
-          &.has-value {
-            ~ label {
-              transform: translateY(-1rem);
-              top: 0.3rem;
-            }
           }
         }
       }
@@ -131,8 +138,8 @@
         padding-right: 3px;
 
         // font-size: 14px;
-        font-size: 14px;
-        transform: translateY(-50%);
+        font-size: 16px;
+        transform: translateY(-50%) scale(1);
         top: 50%;
         left: 0.75rem;
         transition: 0.3s;
@@ -156,15 +163,16 @@
 
         // font-size: 14px;
         // line-height: 24px;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 18px;
-        
 
         &:focus,
         &.has-value {
-          ~ label {
-            transform: translateY(-1rem);
-            top: 0.3rem;
+          &:not([type="checkbox"]):not([type="radio"]) {
+            ~ label {
+              transform: translateY(-1rem) scale(0.75);
+              top: 0.3rem;
+            }
           }
         }
       }
@@ -1190,7 +1198,8 @@ a {
         input,
         select,
         textarea {
-          font-size: 14px;
+          // font-size: 14px;
+          font-size: 16px;
           line-height: 24px;
         }
       }
@@ -1457,39 +1466,3 @@ a {
     opacity: 1;
   }
 }
-
-// input {
-//   color: #000;
-//     border-color: rgb(75 85 99/1);
-//     font-size: .875rem;
-//     line-height: 1.25rem;
-//     padding-bottom: 0.625rem;
-//     padding-top: 1rem;
-//     padding-left: 0.635rem;
-//     padding-right: 0.625rem;
-//     background-color: transparent;
-//     border-radius: 0.5rem;
-//     appearance: none;
-//     width: 100%;
-//     display: block;
-//     border-width: 1px;
-//     margin: 0;
-// }
-
-// label {
-//   transform: translate(0, -50%) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
-//   top: 50%;
-//   color: rgb(156 163 175/1);
-//   background-color: rgb(17 24 39/1);
-//   transition-duration: .3s;
-//   font-size: .875rem;
-//   line-height: 1.25rem;
-//   padding-left: 0.5rem;
-//   padding-right: 0.5rem;
-//   transform-origin: 0;
-//   z-index: 10;
-//   left: 0.25rem;
-//   position: absolute;
-//   transform: translate(0, -1rem) rotate(0) skewX(0) skewY(0) scaleX(.75) scaleY(.75);
-//   top: 0.5rem;
-// }
