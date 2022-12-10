@@ -17,26 +17,44 @@
     <header>
       <div class="dg-header__wrap dg-container">
         <img class="dg-header__logo" src="../../../assets/images/logo.png" />
-        <nav>
+        <nav class="dg-nav">
           <ul class="dg-header__menu">
             <li class="dg-header__menu-item">
-              <a
-                href="#gioi-thieu"
-                data-link-to
-                rel="noopener noreferrer"
-                data-link-to
-                >Giới thiệu</a
-              >
+              <a href="#gioi-thieu" rel="noopener noreferrer">Giới thiệu</a>
             </li>
             <li class="dg-header__menu-item">
-              <a href="#goi-bao-hiem" rel="noopener noreferrer" data-link-to
-                >Gói bảo hiểm</a
-              >
+              <a href="#goi-bao-hiem" rel="noopener noreferrer">Gói bảo hiểm</a>
             </li>
             <li class="dg-header__menu-item">
-              <a href="#fags" rel="noopener noreferrer" data-link-to>FAQs</a>
+              <a href="#fags" rel="noopener noreferrer">FAQs</a>
             </li>
           </ul>
+        </nav>
+        <nav class="dg-nav mobile">
+          <div class="dg-nav__curtain"></div>
+          <div class="dg-nav__wrap">
+            <button class="menu-button" aria-label="Menu button">
+              <span class="menu-button__lines">
+                <span class="menu-button__line"></span>
+                <span class="menu-button__line"></span>
+                <span class="menu-button__line"></span>
+              </span>
+              Menu
+            </button>
+            <ul class="dg-nav__menu dg-header__menu" id="menu">
+              <li class="dg-header__menu-item">
+                <a href="#gioi-thieu" rel="noopener noreferrer">Giới thiệu</a>
+              </li>
+              <li class="dg-header__menu-item">
+                <a href="#goi-bao-hiem" rel="noopener noreferrer"
+                  >Gói bảo hiểm</a
+                >
+              </li>
+              <li class="dg-header__menu-item">
+                <a href="#fags" rel="noopener noreferrer">FAQs</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -47,9 +65,8 @@
           <div class="dg-container">
             <div class="dg-hero__info">
               <p class="dg-hero__info-title">Bảo hiểm TNDS xe máy</p>
-              <p class="dg-hero__info-description">
-                An tâm xa lộ Bảo hộ toàn dân
-              </p>
+              <p class="dg-hero__info-description">An tâm xa lộ</p>
+              <p class="dg-hero__info-description">Bảo hộ toàn dân</p>
               <small class="dg-hero__info-sub-title"
                 >Nhận giấy chứng nhận điện tử chỉ trong 1 phút!</small
               >
@@ -138,7 +155,7 @@
                         >
                           <path
                             d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
-                            fill="#637381"
+                            fill="currentColor"
                           />
                         </svg>
                       </span>
@@ -544,7 +561,7 @@
                           >
                             <path
                               d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
-                              fill="#637381"
+                              fill="currentColor"
                             />
                           </svg>
                         </span>
@@ -591,7 +608,7 @@
                         >
                           <path
                             d="M9.00008 0.666504C4.40008 0.666504 0.666748 4.39984 0.666748 8.99984C0.666748 13.5998 4.40008 17.3332 9.00008 17.3332C13.6001 17.3332 17.3334 13.5998 17.3334 8.99984C17.3334 4.39984 13.6001 0.666504 9.00008 0.666504ZM9.83341 13.1665H8.16675V8.1665H9.83341V13.1665ZM9.83341 6.49984H8.16675V4.83317H9.83341V6.49984Z"
-                            fill="#637381"
+                            fill="currentColor"
                           />
                         </svg>
                       </span>
@@ -1162,19 +1179,6 @@
             <p>Miễn trừ trách nhiệm</p>
             <p>Chính sách bảo mật trực tuyến</p>
           </div>
-        </div>
-        <div class="relative">
-          <input
-            type="text"
-            id="floating_outlined"
-            class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-            placeholder=" "
-          />
-          <label
-            for="floating_outlined"
-            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
-            >Floating outlined</label
-          >
         </div>
       </section>
     </footer>

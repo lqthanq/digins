@@ -18,18 +18,8 @@
       <header>
         <div class="dg-header__wrap dg-container">
           <img class="dg-header__logo" src="../../../assets/images/logo.png" />
-          <nav>
-            <!-- <div class="nav-curtain"></div>
-            <div class="nav-curtain__wrap">
-              <button class="menu-button" aria-label="Menu button">
-                <span class="menu-button__lines">
-                  <span class="menu-button__line"></span>
-                  <span class="menu-button__line"></span>
-                  <span class="menu-button__line"></span>
-                </span>
-                Menu
-              </button> -->
-            <ul class="dg-header__menu" id="menu">
+          <nav class="dg-nav">
+            <ul class="dg-header__menu">
               <li class="dg-header__menu-item">
                 <a href="#gioi-thieu" rel="noopener noreferrer">Giới thiệu</a>
               </li>
@@ -42,28 +32,33 @@
                 <a href="#fags" rel="noopener noreferrer">FAQs</a>
               </li>
             </ul>
-            <!-- </div> -->
           </nav>
-          <!-- <div class="menu-mobile">
-            <svg
-              viewBox="0 0 20 20"
-              style="width: 20px; height: 20px"
-              fill="#fff"
-            >
-              <path
-                d="M19 11h-18a1 1 0 0 1 0-2h18a1 1 0 1 1 0 2zm0-7h-18a1 1 0 0 1 0-2h18a1 1 0 1 1 0 2zm0 14h-18a1 1 0 0 1 0-2h18a1 1 0 0 1 0 2z"
-              ></path>
-            </svg>
-            <svg
-              viewBox="0 0 20 20"
-              style="width: 20px; height: 20px"
-              fill="#fff"
-            >
-              <path
-                d="m11.414 10 6.293-6.293a1 1 0 1 0-1.414-1.414l-6.293 6.293-6.293-6.293a1 1 0 0 0-1.414 1.414l6.293 6.293-6.293 6.293a1 1 0 1 0 1.414 1.414l6.293-6.293 6.293 6.293a.998.998 0 0 0 1.707-.707.999.999 0 0 0-.293-.707l-6.293-6.293z"
-              ></path>
-            </svg>
-          </div> -->
+          <nav class="dg-nav mobile">
+            <div class="dg-nav__curtain"></div>
+            <div class="dg-nav__wrap">
+              <button class="menu-button" aria-label="Menu button">
+                <span class="menu-button__lines">
+                  <span class="menu-button__line"></span>
+                  <span class="menu-button__line"></span>
+                  <span class="menu-button__line"></span>
+                </span>
+                Menu
+              </button>
+              <ul class="dg-nav__menu dg-header__menu" id="menu">
+                <li class="dg-header__menu-item">
+                  <a href="#gioi-thieu" rel="noopener noreferrer">Giới thiệu</a>
+                </li>
+                <li class="dg-header__menu-item">
+                  <a href="#goi-bao-hiem" rel="noopener noreferrer"
+                    >Gói bảo hiểm</a
+                  >
+                </li>
+                <li class="dg-header__menu-item">
+                  <a href="#fags" rel="noopener noreferrer">FAQs</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
       </header>
       <section class="dg-hero__wrap" id="gioi-thieu">
@@ -71,9 +66,8 @@
           <div class="dg-container">
             <div class="dg-hero__info">
               <p class="dg-hero__info-title">Bảo hiểm TNDS ô tô</p>
-              <p class="dg-hero__info-description">
-                An tâm xa lộ Bảo hộ toàn dân
-              </p>
+              <p class="dg-hero__info-description">An tâm xa lộ</p>
+              <p class="dg-hero__info-description">Bảo hộ toàn dân</p>
               <small class="dg-hero__info-sub-title"
                 >Nhận giấy chứng nhận điện tử chỉ trong 1 phút!</small
               >
@@ -168,7 +162,7 @@
                         >
                           <path
                             d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
-                            fill="#637381"
+                            fill="currentColor"
                           />
                         </svg>
                       </span>
@@ -533,7 +527,7 @@
                           >
                             <path
                               d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
-                              fill="#637381"
+                              fill="currentColor"
                             />
                           </svg>
                         </span>
@@ -599,7 +593,7 @@
                         >
                           <path
                             d="M9.00008 0.666504C4.40008 0.666504 0.666748 4.39984 0.666748 8.99984C0.666748 13.5998 4.40008 17.3332 9.00008 17.3332C13.6001 17.3332 17.3334 13.5998 17.3334 8.99984C17.3334 4.39984 13.6001 0.666504 9.00008 0.666504ZM9.83341 13.1665H8.16675V8.1665H9.83341V13.1665ZM9.83341 6.49984H8.16675V4.83317H9.83341V6.49984Z"
-                            fill="#637381"
+                            fill="currentColor"
                           ></path>
                         </svg>
                       </span>

@@ -21,20 +21,24 @@
       padding-bottom: 60px;
     }
 
-    input {
-      &[type="checkbox"],
-      &[type="radio"] {
-        accent-color: $white-color;
-      }
-    }
-    input,
-    select {
-      background-color: transparent;
-    }
+    // input {
+    //   &[type="checkbox"],
+    //   &[type="radio"] {
+    //     // accent-color: $white-color;
+    //   }
+    // }
+    // input,
+    // select {
+    //   background-color: transparent;
+    // }
 
     .dg-input-wrap .input-inner {
       .input-icon {
         background-color: transparent;
+      }
+
+      svg {
+        color: $white-color;
       }
 
       input,
@@ -52,6 +56,7 @@
         select,
         textarea {
           border-width: 0;
+          background-color: transparent;
         }
       }
 
@@ -64,8 +69,8 @@
         bottom: 0;
         transform: scale(0.7);
         border-radius: 50%;
-        background-color: #25252599;
-        backdrop-filter: blur(27.1828px);
+        // background-color: #25252599;
+        // backdrop-filter: blur(27.1828px);
       }
     }
     &__form {
@@ -90,6 +95,25 @@
     }
   }
 
+}
+
+@include min-md {
+  .dg-page-car  {
+    .dg-hero {
+      input {
+        &[type="checkbox"],
+        &[type="radio"] {
+          accent-color: $white-color;
+        }
+      }
+      .dg-input-wrap .input-inner {
+        input[type="radio"]:not(:checked)::after {
+          background-color: #25252599;
+          backdrop-filter: blur(27.1828px);
+        }
+      }
+    }
+  }
 }
 
 @include min-lg {
