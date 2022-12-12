@@ -1639,6 +1639,8 @@ footer {
   .dg-page-car .dg-hero .dg-input-wrap .input-inner select,
   .dg-page-car .dg-hero .dg-input-wrap .input-inner textarea {
     color: #fff; }
+  .dg-page-car .dg-hero .dg-input-wrap .input-inner select * {
+    color: #000; }
   .dg-page-car .dg-hero .dg-input-wrap .input-inner legend {
     color: #919EAB; }
   .dg-page-car .dg-hero .dg-input-wrap .input-inner fieldset input,

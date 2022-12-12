@@ -17,10 +17,6 @@
 
   .dg-hero {
     padding-top: 30px;
-
-    #quyen-loi * {
-      color: #000;
-    }
     &__wrap {
       padding-bottom: 60px;
     }
@@ -43,6 +39,10 @@
       select,
       textarea {
         color: $white-color;
+      }
+
+      select * {
+        color: #000;
       }
 
       legend {
