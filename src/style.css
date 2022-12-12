@@ -1338,12 +1338,13 @@ header {
     .dg-nav.mobile .dg-nav__curtain {
       visibility: hidden;
       position: fixed;
-      bottom: 0;
+      top: 0;
+      right: 0;
       width: 100vw;
-      height: 100vh;
+      height: 50vh;
       z-index: 0;
       background: #232271;
-      transform: translateY(100%) scale(3);
+      transform: translateY(0%) scale(3);
       animation-duration: 0.6s;
       animation-timing-function: ease-out;
       animation-fill-mode: forwards;
@@ -1357,7 +1358,7 @@ header {
       animation-duration: 0.2s;
       animation-timing-function: ease-in-out;
       justify-content: center;
-      align-items: center;
+      align-items: flex-end;
       margin-top: 3rem; }
 
 .curtain-up {
@@ -1436,13 +1437,9 @@ header {
 
 @keyframes curtainUp {
   0% {
-    transform: translateY(100%);
+    transform: translateY(-100%);
     visibility: hidden;
     opacity: 0; }
-  50% {
-    transform: translateY(50%);
-    visibility: visible;
-    opacity: 0.5; }
   100% {
     transform: translateY(0%);
     visibility: visible;
@@ -1454,16 +1451,8 @@ header {
     transform: translateY(0%) scale(3, 1);
     opacity: 1;
     visibility: visible; }
-  50% {
-    opacity: 1;
-    visibility: visible;
-    border-radius: 50%; }
-  99% {
-    transform: translateY(100%) scale(0);
-    visibility: visible;
-    opacity: 1; }
   100% {
-    transform: translateY(100%) scale(0);
+    transform: translateY(-100%) scale(0);
     opacity: 0;
     visibility: hidden; } }
 
@@ -1641,6 +1630,9 @@ footer {
     padding-bottom: 60px; }
   .dg-page-car .dg-hero .dg-input-wrap .input-inner .input-icon {
     background-color: transparent; }
+  .dg-page-car .dg-hero .dg-input-wrap .input-inner input[type="date"] {
+    padding: 0 !important;
+    height: auto !important; }
   .dg-page-car .dg-hero .dg-input-wrap .input-inner svg {
     color: #fff; }
   .dg-page-car .dg-hero .dg-input-wrap .input-inner input,

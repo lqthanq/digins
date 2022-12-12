@@ -21,20 +21,14 @@
       padding-bottom: 60px;
     }
 
-    // input {
-    //   &[type="checkbox"],
-    //   &[type="radio"] {
-    //     // accent-color: $white-color;
-    //   }
-    // }
-    // input,
-    // select {
-    //   background-color: transparent;
-    // }
-
     .dg-input-wrap .input-inner {
       .input-icon {
         background-color: transparent;
+      }
+
+      input[type="date"] {
+        padding: 0 !important;
+        height: auto !important;
       }
 
       svg {
@@ -94,11 +88,10 @@
       }
     }
   }
-
 }
 
 @include min-md {
-  .dg-page-car  {
+  .dg-page-car {
     .dg-hero {
       input {
         &[type="checkbox"],
