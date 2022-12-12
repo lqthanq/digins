@@ -1262,6 +1262,10 @@ summary {
       // TODO:
       margin-top: 6px;
     }
+
+    &[type="date"] {
+      height: 56px !important;
+    }
   }
   .icon-wrap {
     display: block;
@@ -1305,16 +1309,6 @@ summary {
 
     &-upload__inner-control {
       margin-left: 40px;
-    }
-  }
-
-  input {
-    &[type="radio"] {
-      transform: scale(1.54);
-    }
-    &[type=":checked"] {
-      transform: scale(1.4);
-      margin-top: 6px;
     }
   }
 }
