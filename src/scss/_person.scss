@@ -1,0 +1,23 @@
+.dg-page-person {
+  .dg-header {
+    background: url(../assets/images/person-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+
+    // header.sticky {
+    //   background: url("../assets/images/car-header-bg.png") no-repeat;
+    //   background-size: inherit;
+    //   background-position: center center;
+    //   box-shadow: $box-shadow;
+    // }
+
+    header {
+      background-color: #fff;
+      box-shadow: $box-shadow;
+    }
+
+    &__menu-item {
+      color: #151452;
+    }
+  }
+}

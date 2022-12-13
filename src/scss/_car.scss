@@ -1,21 +1,7 @@
 @import "./variables";
 @import "./breakpoints";
 
-.dg-page-car {
-  .dg-header {
-    background: url(../assets/images/car-1.png) no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-
-    header.sticky {
-      // background: url("../assets/images/car-header-bg.png") no-repeat;
-      // background-size: inherit;
-      // background-position: center center;
-      // box-shadow: $box-shadow;
-      background-color: #232271;
-    }
-  }
-
+body.has-bg {
   .dg-hero {
     padding-top: 30px;
     &__wrap {
@@ -95,8 +81,32 @@
   }
 }
 
+.dg-page-car {
+  .dg-header {
+    background: url(../assets/images/car-1.png) no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+
+    // header.sticky {
+    //   background: url("../assets/images/car-header-bg.png") no-repeat;
+    //   background-size: inherit;
+    //   background-position: center center;
+    //   box-shadow: $box-shadow;
+    // }
+
+    header {
+      background-color: #fff;
+      box-shadow: $box-shadow;
+    }
+
+    &__menu-item {
+      color: #151452;
+    }
+  }
+}
+
 @include min-md {
-  .dg-page-car {
+  body.has-bg {
     .dg-hero {
       input {
         &[type="checkbox"],
@@ -115,14 +125,15 @@
 }
 
 @include min-lg {
-  .dg-page-car {
+  body.has-bg {
     .dg-hero {
       padding-top: 75px;
       &__wrap {
         padding-bottom: 135px;
       }
     }
-
+  }
+  .dg-page-car {
     .dg-information {
       background-image: url(../assets/images/car-2.png);
       background-repeat: no-repeat;
@@ -133,7 +144,7 @@
 }
 
 @include min-lg {
-  .dg-page-car {
+  body.has-bg {
     .dg-information {
       .dg-information {
         background-size: cover;

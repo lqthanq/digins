@@ -302,7 +302,6 @@ const CLS = {
 
   // Scroll to sections
   const links = document.querySelectorAll("a:not([data-redirect])");
-  console.log('links:', links)
   for (let link of links) {
     link.addEventListener("click", handleClickLink);
   }
