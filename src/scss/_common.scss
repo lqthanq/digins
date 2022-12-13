@@ -1013,6 +1013,17 @@
       }
     }
   }
+
+  &-header {
+    &__menu-item {
+      color: #151452;
+    }
+  }
+}
+
+header {
+  background-color: #fff;
+  box-shadow: $box-shadow;
 }
 
 .icon-wrap {

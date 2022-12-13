@@ -215,9 +215,9 @@ const CLS = {
 
   // Mobile menu
   const nav = document.querySelector(".dg-nav.mobile");
-  const menuButton = document.querySelector(".menu-button");
-  const menu = document.querySelector(".dg-nav__menu");
-  const navCurtain = document.querySelector(".dg-nav__curtain");
+  const menuButton = document.querySelector(".dg-nav.mobile .menu-button");
+  const menu = document.querySelector(".dg-nav.mobile .dg-nav__menu");
+  const navCurtain = document.querySelector(".dg-nav.mobile .dg-nav__curtain");
 
   const navMobileHieght = nav.offsetHeight;
   const state = { isOpen: false };
@@ -226,6 +226,9 @@ const CLS = {
     nav.classList.add("open");
     menu.classList.remove("fade-out");
     menu.classList.add("fade-in");
+
+    const { top = 0, height = 0 } = menu.getBoundingClientRect() || {};
+    navCurtain.style.height = `${Math.ceil(top + height + 35)}px`;
   }
 
   function hideMenu() {

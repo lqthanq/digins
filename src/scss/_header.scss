@@ -40,7 +40,8 @@ header {
         font-weight: 600;
         font-size: $font-base;
         line-height: 22px;
-        color: $white-color;
+        // color: $white-color;
+        color: #151452;
       }
     }
   }
@@ -70,7 +71,8 @@ header {
 
           &__menu {
             display: flex;
-            color: #fff;
+            // color: #fff;
+            color: #151452;
             gap: 16px;
           }
         }
@@ -89,9 +91,10 @@ header {
           top: 0;
           right: 0;
           width: 100vw;
-          height: 50vh;
+          height: 180px;
           z-index: 0;
-          background: #232271;
+          // background: #232271;
+          background: #fff;
           transform: translateY(0%) scale(3);
           animation-duration: 0.6s;
           animation-timing-function: ease-out;
@@ -129,7 +132,8 @@ header {
   border: none;
   outline: none;
   padding: 0.5rem 0 0.5rem 2rem;
-  color: #fffdf7;
+  // color: #fffdf7;
+  color: #151452;
   position: sticky;
   left: 0;
   top: 0;
@@ -138,7 +142,6 @@ header {
   z-index: 10;
   margin-left: auto;
   margin-right: 0;
-  // grid-area: menuButton;
 
   &.open {
     gap: 0;
@@ -172,7 +175,8 @@ header {
     content: "";
     width: 1.2rem;
     height: 2px;
-    background-color: #fffdf7;
+    // background-color: #fffdf7;
+    background-color: #151452;
     transform-origin: center;
   }
 }

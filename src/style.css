@@ -899,6 +899,13 @@ ol {
       line-height: 24px;
       color: #637381; }
 
+.dg-header__menu-item {
+  color: #151452; }
+
+header {
+  background-color: #fff;
+  box-shadow: 0px 0px 2px rgba(145, 158, 171, 0.2), 0px 12px 24px -4px rgba(145, 158, 171, 0.12); }
+
 .icon-wrap {
   display: none; }
 
@@ -1309,7 +1316,7 @@ header {
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
-    color: #fff; }
+    color: #151452; }
 
 .dg-nav {
   display: none; }
@@ -1331,7 +1338,7 @@ header {
         padding-top: 13px; }
       .dg-nav.mobile.open .dg-nav__menu {
         display: flex;
-        color: #fff;
+        color: #151452;
         gap: 16px; }
     .dg-nav.mobile .dg-nav__wrap {
       height: 100%;
@@ -1343,9 +1350,9 @@ header {
       top: 0;
       right: 0;
       width: 100vw;
-      height: 50vh;
+      height: 180px;
       z-index: 0;
-      background: #232271;
+      background: #fff;
       transform: translateY(0%) scale(3);
       animation-duration: 0.6s;
       animation-timing-function: ease-out;
@@ -1375,7 +1382,7 @@ header {
   border: none;
   outline: none;
   padding: 0.5rem 0 0.5rem 2rem;
-  color: #fffdf7;
+  color: #151452;
   position: sticky;
   left: 0;
   top: 0;
@@ -1410,7 +1417,7 @@ header {
     content: "";
     width: 1.2rem;
     height: 2px;
-    background-color: #fffdf7;
+    background-color: #151452;
     transform-origin: center; }
 
 .fade-out {
@@ -1590,9 +1597,6 @@ footer {
       padding-left: 24px; }
     .dg-footer__info-policy {
       gap: 24px; } }
-
-.dg-page-bike header {
-  background-color: #232271; }
 
 .dg-page-bike .dg-hero__wrap {
   background-color: #232271; }
