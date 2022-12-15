@@ -222,6 +222,9 @@ ol {
     height: unset;
     background-color: transparent;
     color: #091a7a; }
+  .dg-btn.outline {
+    background-color: #fff;
+    color: #091a7a; }
 
 .dg-input-wrap {
   display: flex;
@@ -1091,6 +1094,9 @@ summary {
     margin: 0 -15px;
     line-height: 22px; }
 
+.cam-ket-text {
+  color: #212b36; }
+
 /* Responsive */
 @media (min-width: 768px) {
   input[type="checkbox"], input[type="radio"] {
@@ -1688,16 +1694,14 @@ body.has-bg .dg-hero {
     padding-top: 75px; }
     body.has-bg .dg-hero__wrap {
       padding-bottom: 135px; }
+  body.has-bg .dg-information .dg-information {
+    background-size: cover;
+    background-position: right center; }
   .dg-page-car .dg-information {
     background-image: url(../assets/images/car-2.png);
     background-repeat: no-repeat;
     background-size: 65%;
     background-position: 120% center; } }
-
-@media (min-width: 1024px) {
-  body.has-bg .dg-information .dg-information {
-    background-size: cover;
-    background-position: right center; } }
 
 .dg-page-person .dg-header {
   background: url(../assets/images/person-bg.png) no-repeat;
@@ -1708,3 +1712,327 @@ body.has-bg .dg-hero {
     box-shadow: 0px 0px 2px rgba(145, 158, 171, 0.2), 0px 12px 24px -4px rgba(145, 158, 171, 0.12); }
   .dg-page-person .dg-header__menu-item {
     color: #151452; }
+
+.dg-page-person .dg-information {
+  background-color: #fff; }
+  .dg-page-person .dg-information__wrap {
+    padding-top: 40px; }
+  .dg-page-person .dg-information ol {
+    padding-left: 24px; }
+  .dg-page-person .dg-information__content-item ol {
+    font-size: 14px;
+    line-height: 22px;
+    color: #637381;
+    font-weight: 400; }
+
+.dg-page-person .dg-benefit__content-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 24px; }
+
+.dg-page-person .dg-benefit__content-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 40px;
+  background-color: #fff;
+  border-radius: 16px;
+  max-width: 100%;
+  gap: 24px;
+  padding: 24px 32px; }
+
+.dg-page-person .dg-benefit__content-title {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  color: #212b36;
+  display: inline-block;
+  margin-bottom: 16px; }
+
+.dg-page-person .dg-benefit__content-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #637381;
+  display: inline-block; }
+
+.dg-page-person .dg-insurance-package, .dg-page-person .dg-benefit {
+  background-color: #f9fafb;
+  padding-top: 40px;
+  padding-bottom: 30px; }
+  .dg-page-person .dg-insurance-package__title, .dg-page-person .dg-benefit__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 85%;
+    margin: 0 auto;
+    text-align: center; }
+    .dg-page-person .dg-insurance-package__title .title, .dg-page-person .dg-benefit__title .title {
+      color: #000;
+      line-height: 40px;
+      font-size: 26px; }
+    .dg-page-person .dg-insurance-package__title .subtitle, .dg-page-person .dg-benefit__title .subtitle {
+      font-size: 16px;
+      line-height: 24px;
+      color: #637381;
+      margin-top: 8px; }
+
+.dg-page-person .dg-insurance-package__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  flex-direction: column;
+  gap: 24px; }
+  .dg-page-person .dg-insurance-package__form-radio {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px; }
+  .dg-page-person .dg-insurance-package__form-input {
+    width: 80%; }
+    .dg-page-person .dg-insurance-package__form-input .dg-input-wrap .input-inner__container {
+      width: 100%; }
+      .dg-page-person .dg-insurance-package__form-input .dg-input-wrap .input-inner__container input[type="date"] {
+        padding: 10px !important;
+        height: 44px !important; }
+
+.dg-page-person .dg-insurance-package__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+.dg-page-person .dg-insurance-package__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 24px 24px;
+  gap: 40px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px dashed rgba(145, 158, 171, 0.24);
+  position: relative;
+  box-shadow: none;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 80%;
+  margin: 0 auto; }
+  .dg-page-person .dg-insurance-package__card:hover {
+    box-shadow: 0px 0px 2px #00000033, 0px 12px 24px -4px #0000001f;
+    border-color: transparent; }
+    .dg-page-person .dg-insurance-package__card:hover button:first-child {
+      background-color: #091a7a;
+      color: #fff; }
+  .dg-page-person .dg-insurance-package__card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px; }
+  .dg-page-person .dg-insurance-package__card-body {
+    width: 100%; }
+    .dg-page-person .dg-insurance-package__card-body .item {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      justify-content: space-between;
+      width: 100%; }
+      .dg-page-person .dg-insurance-package__card-body .item label {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #212b36; }
+      .dg-page-person .dg-insurance-package__card-body .item span {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: right;
+        color: #212b36; }
+  .dg-page-person .dg-insurance-package__card-type span {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #637381; }
+  .dg-page-person .dg-insurance-package__card-price span {
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 48px;
+    text-align: center;
+    color: #212b36;
+    position: relative; }
+    .dg-page-person .dg-insurance-package__card-price span::after {
+      content: "";
+      height: 8px;
+      width: 40px;
+      background-color: #1c0ec5;
+      position: absolute;
+      left: 0;
+      opacity: 0.48;
+      bottom: 4px; }
+  .dg-page-person .dg-insurance-package__card-price.gold span:after {
+    background-color: #ffab00; }
+  .dg-page-person .dg-insurance-package__card-price.platinum span:after {
+    background-color: #ff5630; }
+  .dg-page-person .dg-insurance-package__card-price.diamond span:after {
+    background-color: #33ffff; }
+  .dg-page-person .dg-insurance-package__card-metadata {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(145, 158, 171, 0.24); }
+  .dg-page-person .dg-insurance-package__card-metadata, .dg-page-person .dg-insurance-package__card-total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px; }
+  .dg-page-person .dg-insurance-package__card-badge {
+    padding: 2px 8px;
+    background-color: rgba(0, 184, 217, 0.16);
+    border-radius: 6px;
+    position: absolute;
+    top: 18px;
+    right: 24px; }
+    .dg-page-person .dg-insurance-package__card-badge span {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+      color: #006c9c; }
+  .dg-page-person .dg-insurance-package__card-actions {
+    width: 100%; }
+    .dg-page-person .dg-insurance-package__card-actions button:first-child {
+      margin-bottom: 10px;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; }
+
+.dg-page-person .dg-registers .dg-card__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+  .dg-page-person .dg-registers .dg-card__title .dg-btn {
+    padding: 4px 12px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    height: auto; }
+
+.dg-page-person .dg-registers__benefit {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; }
+  .dg-page-person .dg-registers__benefit h4 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #212b36; }
+  .dg-page-person .dg-registers__benefit-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px; }
+    .dg-page-person .dg-registers__benefit-content .input-inner {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 8px; }
+    .dg-page-person .dg-registers__benefit-content-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px; }
+      .dg-page-person .dg-registers__benefit-content-text label {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        color: #212b36; }
+      .dg-page-person .dg-registers__benefit-content-text .description {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        color: #637381; }
+
+.dg-page-person .dg-registers .dg-card__content-item {
+  background-color: #fff;
+  border: 1px dashed #dfe3e8;
+  border-radius: 8px;
+  padding: 16px;
+  position: relative; }
+  .dg-page-person .dg-registers .dg-card__content-item .dg-card__content-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; }
+    .dg-page-person .dg-registers .dg-card__content-item .dg-card__content-inner .name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #000; }
+    .dg-page-person .dg-registers .dg-card__content-item .dg-card__content-inner .birth-day {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #637381; }
+    .dg-page-person .dg-registers .dg-card__content-item .dg-card__content-inner .goi-bao-hiem {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: #212b36; }
+  .dg-page-person .dg-registers .dg-card__content-item .icon-close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer; }
+
+@media (min-width: 768px) {
+  .dg-page-person .dg-benefit__title {
+    max-width: 68%; }
+  .dg-page-person .dg-benefit__content-wrap {
+    flex-direction: row; }
+  .dg-page-person .dg-benefit__content-item {
+    max-width: calc(50% - 16px); }
+  .dg-page-person .dg-insurance-package__form {
+    flex-direction: row; }
+    .dg-page-person .dg-insurance-package__form-input {
+      width: 35%; }
+  .dg-page-person .dg-insurance-package__content {
+    flex-direction: row; }
+  .dg-page-person .dg-insurance-package__card {
+    width: calc(50% - 8px);
+    margin: 0; } }
+
+@media (min-width: 1024px) {
+  .dg-page-person .dg-information {
+    background-image: url(../assets/images/person-2.png);
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position: 85% center; }
+    .dg-page-person .dg-information__wrap {
+      max-width: 47%;
+      padding-top: 60px; }
+    .dg-page-person .dg-information ol {
+      padding-left: 16px; }
+  .dg-page-person .dg-benefit__content-wrap {
+    gap: 40px;
+    margin-top: 60px; }
+  .dg-page-person .dg-benefit__content-item {
+    max-width: 30.5%;
+    gap: 32px; }
+  .dg-page-person .dg-insurance-package, .dg-page-person .dg-benefit {
+    padding-top: 60px; }
+    .dg-page-person .dg-insurance-package__title, .dg-page-person .dg-benefit__title {
+      max-width: 58%; }
+      .dg-page-person .dg-insurance-package__title .ttile, .dg-page-person .dg-benefit__title .ttile {
+        font-size: 44px;
+        line-height: 120%; }
+  .dg-page-person .dg-insurance-package__form {
+    gap: 50px; }
+    .dg-page-person .dg-insurance-package__form-input {
+      width: 21%; }
+  .dg-page-person .dg-insurance-package__card {
+    width: unset; } }

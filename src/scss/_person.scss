@@ -1,23 +1,508 @@
 .dg-page-person {
-  .dg-header {
-    background: url(../assets/images/person-bg.png) no-repeat;
-    background-size: cover;
-    background-position: center bottom;
+  .dg {
+    &-header {
+      background: url(../assets/images/person-bg.png) no-repeat;
+      background-size: cover;
+      background-position: center bottom;
 
-    // header.sticky {
-    //   background: url("../assets/images/car-header-bg.png") no-repeat;
-    //   background-size: inherit;
-    //   background-position: center center;
-    //   box-shadow: $box-shadow;
-    // }
+      header {
+        background-color: #fff;
+        box-shadow: $box-shadow;
+      }
 
-    header {
-      background-color: #fff;
-      box-shadow: $box-shadow;
+      &__menu-item {
+        color: #151452;
+      }
     }
 
-    &__menu-item {
-      color: #151452;
+    &-information {
+      background-color: #fff;
+
+      &__wrap {
+        padding-top: 40px;
+      }
+
+      ol {
+        padding-left: 24px;
+      }
+
+      &__content-item {
+        ol {
+          font-size: 14px;
+          line-height: 22px;
+          color: $icon-color;
+          font-weight: 400;
+        }
+      }
+    }
+
+    &-benefit {
+      &__content {
+        &-wrap {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          flex-direction: column;
+          margin-top: 40px;
+          gap: 24px;
+        }
+
+        &-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 32px 40px;
+          background-color: #fff;
+          border-radius: 16px;
+          max-width: 100%;
+          gap: 24px;
+          padding: 24px 32px;
+        }
+
+        &-title {
+          font-size: 19px;
+          font-weight: 700;
+          line-height: 30px;
+          text-align: center;
+          color: #212b36;
+          display: inline-block;
+          margin-bottom: 16px;
+        }
+
+        &-description {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          color: #637381;
+          display: inline-block;
+        }
+      }
+    }
+
+    &-insurance-package,
+    &-benefit {
+      background-color: #f9fafb;
+      // padding-top: 60px;
+      padding-top: 40px;
+      padding-bottom: 30px;
+
+      &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        max-width: 85%;
+        margin: 0 auto;
+        text-align: center;
+
+        .title {
+          color: #000;
+          line-height: 40px;
+          font-size: 26px;
+        }
+
+        .subtitle {
+          font-size: 16px;
+          line-height: 24px;
+          color: #637381;
+          margin-top: 8px;
+        }
+      }
+    }
+
+    &-insurance-package {
+      &__form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
+        margin-top: 24px;
+        flex-direction: column;
+        gap: 24px;
+
+        &-radio {
+          display: flex;
+          flex-direction: row;
+          column-gap: 30px;
+        }
+
+        &-input {
+          width: 80%;
+
+          .dg-input-wrap {
+            .input-inner__container {
+              width: 100%;
+
+              input[type="date"] {
+                padding: 10px !important;
+                height: 44px !important;
+              }
+            }
+          }
+        }
+      }
+      &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+
+      &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 24px 24px;
+        gap: 40px;
+        background: #fff;
+        border-radius: 16px;
+        border: 1px dashed rgba(145, 158, 171, 0.24);
+        position: relative;
+        box-shadow: none;
+        transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+        width: 80%;
+        margin: 0 auto;
+
+        &:hover {
+          box-shadow: 0px 0px 2px #00000033, 0px 12px 24px -4px #0000001f;
+          border-color: transparent;
+
+          button:first-child {
+            background-color: #091a7a;
+            color: #fff;
+          }
+        }
+
+        &-header {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+        }
+
+        &-body {
+          width: 100%;
+          .item {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            justify-content: space-between;
+            width: 100%;
+
+            label {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 22px;
+              color: #212b36;
+            }
+
+            span {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 22px;
+              text-align: right;
+              color: #212b36;
+            }
+          }
+        }
+        &-type span {
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 18px;
+          text-align: center;
+          text-transform: uppercase;
+          color: #637381;
+        }
+
+        &-price {
+          span {
+            font-weight: 700;
+            font-size: 31px;
+            line-height: 48px;
+            text-align: center;
+            color: #212b36;
+            position: relative;
+            &::after {
+              content: "";
+              height: 8px;
+              width: 40px;
+              background-color: #1c0ec5;
+              position: absolute;
+              left: 0;
+              opacity: 0.48;
+              bottom: 4px;
+            }
+          }
+          &.gold {
+            span:after {
+              background-color: #ffab00;
+            }
+          }
+          &.platinum {
+            span:after {
+              background-color: #ff5630;
+            }
+          }
+          &.diamond {
+            span:after {
+              background-color: #33ffff;
+            }
+          }
+        }
+
+        &-metadata {
+          padding-bottom: 16px;
+          margin-bottom: 16px;
+          border-bottom: 1px solid rgba(145, 158, 171, 0.24);
+        }
+
+        &-metadata,
+        &-total {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+        }
+
+        &-badge {
+          padding: 2px 8px;
+          background-color: rgba(0, 184, 217, 0.16);
+          border-radius: 6px;
+          position: absolute;
+          top: 18px;
+          right: 24px;
+
+          span {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: center;
+            color: #006c9c;
+          }
+        }
+
+        &-actions {
+          width: 100%;
+          button:first-child {
+            margin-bottom: 10px;
+            transition: background-color 0.2s ease-in-out,
+              color 0.2s ease-in-out;
+          }
+        }
+      }
+    }
+
+    &-registers {
+      .dg-card__title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .dg-btn {
+          padding: 4px 12px;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 24px;
+          height: auto;
+        }
+      }
+      &__benefit {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        h4 {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          color: #212b36;
+        }
+
+        &-content {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+
+          .input-inner {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 8px;
+          }
+
+          &-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+
+            label {
+              font-weight: 400;
+              font-size: 15px;
+              line-height: 24px;
+              color: #212b36;
+            }
+
+            .description {
+              font-weight: 400;
+              font-size: 13px;
+              line-height: 18px;
+              color: #637381;
+            }
+          }
+        }
+      }
+
+      .dg-card__content-item {
+        background-color: #fff;
+        border: 1px dashed #dfe3e8;
+        border-radius: 8px;
+        padding: 16px;
+        position: relative;
+
+        .dg-card__content-inner {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          .name {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #000;
+          }
+          .birth-day {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: #637381;
+          }
+
+          .goi-bao-hiem {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: #212b36;
+          }
+        }
+
+        .icon-close {
+          position: absolute;
+          right: 16px;
+          top: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@include min-md {
+  .dg-page-person {
+    .dg {
+      &-benefit {
+        &__title {
+          max-width: 68%;
+        }
+
+        &__content {
+          &-wrap {
+            flex-direction: row;
+          }
+
+          &-item {
+            max-width: calc(50% - 16px);
+          }
+        }
+      }
+
+      &-insurance-package {
+        &__form {
+          flex-direction: row;
+
+          &-input {
+            width: 35%;
+          }
+        }
+
+        &__content {
+          flex-direction: row;
+        }
+
+        &__card {
+          width: calc(50% - 8px);
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@include min-lg {
+  .dg-page-person {
+    .dg {
+      &-information {
+        background-image: url(../assets/images/person-2.png);
+        background-repeat: no-repeat;
+        background-size: 45%;
+        background-position: 85% center;
+
+        &__wrap {
+          max-width: 47%;
+          padding-top: 60px;
+        }
+
+        ol {
+          padding-left: 16px;
+        }
+      }
+
+      &-benefit {
+        &__content {
+          &-wrap {
+            gap: 40px;
+            margin-top: 60px;
+          }
+
+          &-item {
+            max-width: 30.5%;
+            gap: 32px;
+          }
+        }
+      }
+
+      &-insurance-package,
+      &-benefit {
+        padding-top: 60px;
+
+        &__title {
+          max-width: 58%;
+
+          .ttile {
+            font-size: 44px;
+            line-height: 120%;
+          }
+        }
+      }
+
+      &-insurance-package {
+        &__form {
+          gap: 50px;
+
+          &-input {
+            width: 21%;
+          }
+        }
+
+        &__card {
+          width: unset;
+        }
+      }
     }
   }
 }

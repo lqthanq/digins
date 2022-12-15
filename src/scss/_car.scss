@@ -54,8 +54,6 @@ body.has-bg {
         bottom: 0;
         transform: scale(0.7);
         border-radius: 50%;
-        // background-color: #25252599;
-        // backdrop-filter: blur(27.1828px);
       }
     }
     &__form {
@@ -86,13 +84,6 @@ body.has-bg {
     background: url(../assets/images/car-1.png) no-repeat;
     background-size: cover;
     background-position: center bottom;
-
-    // header.sticky {
-    //   background: url("../assets/images/car-header-bg.png") no-repeat;
-    //   background-size: inherit;
-    //   background-position: center center;
-    //   box-shadow: $box-shadow;
-    // }
 
     header {
       background-color: #fff;
@@ -132,6 +123,12 @@ body.has-bg {
         padding-bottom: 135px;
       }
     }
+    .dg-information {
+      .dg-information {
+        background-size: cover;
+        background-position: right center;
+      }
+    }
   }
   .dg-page-car {
     .dg-information {
@@ -139,17 +136,6 @@ body.has-bg {
       background-repeat: no-repeat;
       background-size: 65%;
       background-position: 120% center;
-    }
-  }
-}
-
-@include min-lg {
-  body.has-bg {
-    .dg-information {
-      .dg-information {
-        background-size: cover;
-        background-position: right center;
-      }
     }
   }
 }

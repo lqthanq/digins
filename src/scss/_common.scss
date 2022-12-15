@@ -51,6 +51,11 @@
       background-color: transparent;
       color: #091a7a;
     }
+
+    &.outline {
+      background-color: #fff;
+      color: #091a7a;
+    }
   }
 
   &-input-wrap {
@@ -1254,6 +1259,10 @@ summary {
     margin: 0 -15px;
     line-height: 22px;
   }
+}
+
+.cam-ket-text {
+  color: #212b36;
 }
 
 /* Responsive */
