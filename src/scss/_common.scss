@@ -502,9 +502,11 @@
         margin-bottom: 24px;
         display: flex;
         align-items: flex-start;
+        &-checkbox {
+          display: inline-block;
+        }
 
         input {
-          margin-top: 7px;
           margin-right: 15px;
         }
         a {
@@ -1134,6 +1136,7 @@ input {
   &[type="radio"] {
     accent-color: $primary-color;
     margin-right: 10px;
+    margin-top: 6px;
 
     &:focus {
       outline: none !important;

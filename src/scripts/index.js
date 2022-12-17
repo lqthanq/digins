@@ -627,3 +627,51 @@ const CLS = {
     }
   });
 })();
+
+$(document).ready(function () {
+  // Carousel
+  $(".dg-insurance-package__content")
+    .not(".slick-initialized")
+    .slick({
+      // normal options...
+      infinite: true,
+      // the magic
+      responsive: [
+        {
+          breakpoint: 9999,
+          settings: "unslick",
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToShow: 1,
+            arrows: false,
+            dots: true,
+          }, // destroys slick
+        },
+      ],
+    });
+  $(".dg-person-list")
+    .not(".slick-initialized")
+    .slick({
+      // normal options...
+      infinite: true,
+      // the magic
+      responsive: [
+        {
+          breakpoint: 9999,
+          settings: "unslick",
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToShow: 1,
+            arrows: false,
+            dots: true,
+          }, // destroys slick
+        },
+      ],
+    });
+});

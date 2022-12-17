@@ -547,8 +547,9 @@ ol {
     margin-bottom: 24px;
     display: flex;
     align-items: flex-start; }
+    .dg-customer-info .dg-layout__item.secondary .commit-checkbox {
+      display: inline-block; }
     .dg-customer-info .dg-layout__item.secondary .commit input {
-      margin-top: 7px;
       margin-right: 15px; }
     .dg-customer-info .dg-layout__item.secondary .commit a {
       text-decoration: underline;
@@ -1003,7 +1004,8 @@ input {
       width: auto; }
   input[type="checkbox"], input[type="radio"] {
     accent-color: #1C0EC5;
-    margin-right: 10px; }
+    margin-right: 10px;
+    margin-top: 6px; }
     input[type="checkbox"]:focus, input[type="radio"]:focus {
       outline: none !important; }
   input + label {
@@ -1703,6 +1705,14 @@ body.has-bg .dg-hero {
     background-size: 65%;
     background-position: 120% center; } }
 
+.dg-page-person .slick-initialized.slick-slider {
+  display: block !important;
+  padding-bottom: 30px !important;
+  display: block !important; }
+
+.dg-page-person .slick-dots li button:before {
+  font-size: 15px; }
+
 .dg-page-person .dg-header {
   background: url(../assets/images/person-bg.png) no-repeat;
   background-size: cover;
@@ -1811,7 +1821,7 @@ body.has-bg .dg-hero {
   flex-wrap: wrap; }
 
 .dg-page-person .dg-insurance-package__card {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: flex-start;
   padding: 40px 24px 24px;
@@ -1821,11 +1831,8 @@ body.has-bg .dg-hero {
   border: 1px dashed rgba(145, 158, 171, 0.24);
   position: relative;
   box-shadow: none;
-  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  width: 80%;
-  margin: 0 auto; }
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
   .dg-page-person .dg-insurance-package__card:hover {
-    box-shadow: 0px 0px 2px #00000033, 0px 12px 24px -4px #0000001f;
     border-color: transparent; }
     .dg-page-person .dg-insurance-package__card:hover button:first-child {
       background-color: #091a7a;
@@ -1936,7 +1943,7 @@ body.has-bg .dg-hero {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px; }
+    gap: 16px; }
     .dg-page-person .dg-registers__benefit-content .input-inner {
       display: flex;
       flex-direction: row;
@@ -1946,7 +1953,7 @@ body.has-bg .dg-hero {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 16px; }
+      gap: 4px; }
       .dg-page-person .dg-registers__benefit-content-text label {
         font-weight: 400;
         font-size: 15px;
@@ -2004,7 +2011,9 @@ body.has-bg .dg-hero {
     flex-direction: row; }
   .dg-page-person .dg-insurance-package__card {
     width: calc(50% - 8px);
-    margin: 0; } }
+    margin: 0; }
+    .dg-page-person .dg-insurance-package__card:hover {
+      box-shadow: 0px 0px 2px #00000033, 0px 12px 24px -4px #0000001f; } }
 
 @media (min-width: 1024px) {
   .dg-page-person .dg-information {
