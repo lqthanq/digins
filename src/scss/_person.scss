@@ -2,11 +2,14 @@
   .slick {
     &-initialized.slick-slider {
       display: block !important;
-      padding-bottom: 30px !important;
+      padding-bottom: 20px !important;
       display: block !important;
     }
 
     &-dots {
+      transform: translateX(-50%);
+      left: 50%;
+      width: auto;
       li button:before {
         font-size: 15px;
       }
@@ -126,6 +129,10 @@
     }
 
     &-insurance-package {
+      .dg-container {
+        margin-left: -8px;
+        margin-right: -8px;
+      }
       &__form {
         display: flex;
         align-items: center;
@@ -169,16 +176,18 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 40px 24px 24px;
+        margin: 10px;
+        margin-bottom: 30px;
         gap: 40px;
         background: #fff;
         border-radius: 16px;
         border: 1px dashed rgba(145, 158, 171, 0.24);
         position: relative;
-        box-shadow: none;
+        border-color: transparent;
         transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        box-shadow: 0px 0px 2px #00000033, 0px 12px 24px -4px #0000001f;
 
         &:hover {
-          border-color: transparent;
           button:first-child {
             background-color: #091a7a;
             color: #fff;
@@ -366,6 +375,12 @@
         }
       }
 
+      .dg-person-list {
+        .dg-card__content-item {
+          margin: 10px;
+        }
+      }
+
       .dg-card__content-item {
         background-color: #fff;
         border: 1px dashed #dfe3e8;
@@ -430,6 +445,10 @@
       }
 
       &-insurance-package {
+        .dg-container {
+          margin-left: auto;
+          margin-right: auto;
+        }
         &__form {
           flex-direction: row;
 
@@ -445,8 +464,12 @@
         &__card {
           width: calc(50% - 8px);
           margin: 0;
+          box-shadow: none;
+          border-color: rgba(145, 158, 171, 0.24);
+          margin: 0;
 
           &:hover {
+            border-color: transparent;
             box-shadow: 0px 0px 2px #00000033, 0px 12px 24px -4px #0000001f;
           }
         }

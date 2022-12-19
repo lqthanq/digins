@@ -648,6 +648,10 @@ $(document).ready(function () {
             slidesToShow: 1,
             arrows: false,
             dots: true,
+            centerMode: true,
+            centerPadding: "40px",
+            autoplay: true,
+            autoplaySpeed: 2000,
           }, // destroys slick
         },
       ],
@@ -670,6 +674,10 @@ $(document).ready(function () {
             slidesToShow: 1,
             arrows: false,
             dots: true,
+            centerMode: true,
+            centerPadding: "30px",
+            autoplay: true,
+            autoplaySpeed: 2000,
           }, // destroys slick
         },
       ],
