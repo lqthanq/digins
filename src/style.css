@@ -829,6 +829,13 @@ ol {
   .dg-modal .dg-card__content.section .dg-card__content-item + .dg-card__content-item {
     padding-top: 16px;
     border-top: 1px solid #919eab3d; }
+  .dg-modal .dg-card__content.section .dg-card__content-item .item-wrap {
+    display: flex;
+    flex-direction: row; }
+    .dg-modal .dg-card__content.section .dg-card__content-item .item-wrap label {
+      flex-grow: 1; }
+  .dg-modal .dg-card__content.section ol.special {
+    gap: 10px; }
   .dg-modal .dg-card__content.section ul,
   .dg-modal .dg-card__content.section ol {
     padding: 0;
@@ -836,7 +843,8 @@ ol {
     padding-left: 16px;
     display: flex;
     flex-direction: column;
-    row-gap: 8px; }
+    row-gap: 8px;
+    width: 100%; }
     .dg-modal .dg-card__content.section ul li,
     .dg-modal .dg-card__content.section ol li {
       font-size: 14px;

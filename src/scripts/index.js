@@ -162,6 +162,73 @@ const data = {
       },
     ],
   },
+  person: {
+    insurancePackage: [
+      {
+        name: "person",
+        type: "section",
+        title: "SILVER - QUYỀN LỢI BẢO HIỂM CHÍNH",
+        data: [
+          {
+            type: "list",
+            liType: "upper-roman",
+            content: [
+              {
+                label: "Chi phí y tê cho nằm viên, phẫu thuật do ốm đau",
+                value: "120.000.000 đ",
+                data: [
+                  {
+                    label: "Chi phí nằm viện",
+                    value: "100.000.000 đ",
+                  },
+                  {
+                    label: "Phòng chăm sóc đặc biệt",
+                    value: "100.000.000 đ",
+                  },
+                ],
+              },
+              {
+                label: "Các quyền lợi khác",
+                value: "120.000.000 đ",
+                data: [
+                  {
+                    label: "Điều trị sau khi xuất viện",
+                    value: "100.000.000 đ",
+                  },
+                  {
+                    label: "Chăm sóc y tá tại nhà",
+                    value: "100.000.000 đ",
+                  },
+                  {
+                    label: "Cấy ghép nội tạng",
+                    value: "100.000.000 đ",
+                  },
+                  {
+                    label: "Điều trị sau khi xuất viện",
+                    value: "100.000.000 đ",
+                  },
+                  {
+                    label: "Trợ cấp nằm viện",
+                    value: "100.000.000 đ",
+                  },
+                ],
+              },
+              {
+                label: "Giới hạn Điều trị Ung thư",
+                value: "120.000.000 đ",
+                data: [
+                  {
+                    label: "Trợ cấp nằm viện",
+                    value: "100.000.000 đ",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 };
 
 const closeNode = `<svg
@@ -425,15 +492,49 @@ const CLS = {
     const itemsMarkup = [];
     for (let i = 0; i < data.length; i++) {
       const itemMarkup = [];
-      const { type, content = [], label } = data[i];
+      const { type, content = [], label, liType = "decimal" } = data[i];
       if (!isNullable(type) && "list" === type) {
         const cts = [];
         for (let j = 0; j < content.length; j++) {
           const ct = content[j];
-          const li = createElement({ as: "li", content: ct });
+          let props = { content: ct };
+          if (typeof ct === "object") {
+            const { label, value, data } = ct;
+            const labelM = createElement({ as: "label", content: label });
+            const valueM = createElement({ as: "span", content: value });
+
+            const contentM = [];
+            if (data && data.length > 0) {
+              for (let k = 0; k < data.length; k++) {
+                const { label, value } = data[k] || {};
+                const labelM2 = createElement({ as: "label", content: label });
+                const valueM2 = createElement({ as: "span", content: value });
+                const li2 = createElement({
+                  as: "li",
+                  cls: "item-wrap",
+                  children: [labelM2, valueM2],
+                });
+                contentM.push(li2);
+              }
+            }
+            const lis = createElement({ as: "ul", children: contentM });
+            const contentD = createElement({ children: lis });
+            const d = createElement({
+              cls: "item-wrap",
+              children: [labelM, valueM],
+            });
+            const dWrap = createElement({ children: [d, contentD] });
+            props = { children: dWrap };
+          }
+          const li = createElement({ as: "li", ...props });
           cts.push(li);
         }
-        const ol = createElement({ as: "ol", children: cts });
+        const ol = createElement({
+          as: "ol",
+          children: cts,
+          style: `list-style-type: ${liType};`,
+          cls: liType !== "decimal" ? "special" : "",
+        });
         itemMarkup.push(ol);
       } else if (!isNullable(label)) {
         const cts = [];
@@ -628,58 +729,60 @@ const CLS = {
   });
 })();
 
-$(document).ready(function () {
-  // Carousel
-  $(".dg-insurance-package__content")
-    .not(".slick-initialized")
-    .slick({
-      // normal options...
-      infinite: true,
-      // the magic
-      responsive: [
-        {
-          breakpoint: 9999,
-          settings: "unslick",
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToShow: 1,
-            arrows: false,
-            dots: true,
-            centerMode: true,
-            centerPadding: "40px",
-            autoplay: true,
-            autoplaySpeed: 2000,
-          }, // destroys slick
-        },
-      ],
-    });
-  $(".dg-person-list")
-    .not(".slick-initialized")
-    .slick({
-      // normal options...
-      infinite: true,
-      // the magic
-      responsive: [
-        {
-          breakpoint: 9999,
-          settings: "unslick",
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToShow: 1,
-            arrows: false,
-            dots: true,
-            centerMode: true,
-            centerPadding: "30px",
-            autoplay: true,
-            autoplaySpeed: 2000,
-          }, // destroys slick
-        },
-      ],
-    });
-});
+if (window.$ != null) {
+  $(document).ready(function () {
+    // Carousel
+    $(".dg-insurance-package__content")
+      .not(".slick-initialized")
+      .slick({
+        // normal options...
+        infinite: true,
+        // the magic
+        responsive: [
+          {
+            breakpoint: 9999,
+            settings: "unslick",
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToShow: 1,
+              arrows: false,
+              dots: true,
+              centerMode: true,
+              centerPadding: "40px",
+              autoplay: true,
+              autoplaySpeed: 2000,
+            }, // destroys slick
+          },
+        ],
+      });
+    $(".dg-person-list")
+      .not(".slick-initialized")
+      .slick({
+        // normal options...
+        infinite: true,
+        // the magic
+        responsive: [
+          {
+            breakpoint: 9999,
+            settings: "unslick",
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToShow: 1,
+              arrows: false,
+              dots: true,
+              centerMode: true,
+              centerPadding: "30px",
+              autoplay: true,
+              autoplaySpeed: 2000,
+            }, // destroys slick
+          },
+        ],
+      });
+  });
+}

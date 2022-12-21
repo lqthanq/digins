@@ -917,9 +917,24 @@
             color: #212b36;
           }
         }
-        .dg-card__content-item + .dg-card__content-item {
-          padding-top: 16px;
-          border-top: $border-base;
+        .dg-card__content-item {
+          + .dg-card__content-item {
+            padding-top: 16px;
+            border-top: $border-base;
+          }
+
+          .item-wrap {
+            display: flex;
+            flex-direction: row;
+
+            label {
+              flex-grow: 1;
+            }
+          }
+        }
+
+        ol.special {
+          gap: 10px;
         }
 
         ul,
@@ -930,6 +945,7 @@
           display: flex;
           flex-direction: column;
           row-gap: 8px;
+          width: 100%;
 
           li {
             font-size: 14px;
