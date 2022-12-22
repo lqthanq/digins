@@ -1726,9 +1726,7 @@ body.has-bg .dg-hero {
     font-size: 15px; }
 
 .dg-page-person .dg-header {
-  background: url(../assets/images/person-bg.png) no-repeat;
-  background-size: cover;
-  background-position: center bottom; }
+  background-color: #ed7019; }
   .dg-page-person .dg-header header {
     background-color: #fff;
     box-shadow: 0px 0px 2px rgba(145, 158, 171, 0.2), 0px 12px 24px -4px rgba(145, 158, 171, 0.12); }
@@ -2043,6 +2041,11 @@ body.has-bg .dg-hero {
       box-shadow: 0px 0px 2px #00000033, 0px 12px 24px -4px #0000001f; } }
 
 @media (min-width: 1024px) {
+  .dg-page-person .dg-header {
+    background: url(../assets/images/person-3.png) no-repeat;
+    background-color: #ed7019;
+    background-size: cover;
+    background-position: center bottom; }
   .dg-page-person .dg-information {
     background-image: url(../assets/images/person-2.png);
     background-repeat: no-repeat;
